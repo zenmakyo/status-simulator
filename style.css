@@ -90,7 +90,10 @@ h1 {
   color: black;
   width: 75%;
   height: 24px;
-  border: 1px solid #d4acad;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #d4acad;
   text-align: left;
   padding-left: 8px;
 }
