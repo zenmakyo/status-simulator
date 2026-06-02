@@ -29,9 +29,12 @@ h1 {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
   overflow: hidden;
-  border: 2px solid #333;
+  border-top: 2px solid #333;
+  border-left: 2px solid #333;
+  border-right: 2px solid #333;
+  border-bottom: none;
   table-layout: fixed;
   font-sixe:10px;
 }
@@ -41,36 +44,53 @@ h1 {
   color: black;
   width: 25%;
   height: 24px;
-  border: 1px solid #d4acad;
+  border-top: none;
+  border-left: none;
+  border-right: 1px solid #d4acad;
+  border-bottom: 1px solid #d4acad;
 }
 
 .genju-name {
   color: black;
   width: 60%;
   height: 24px;
-  border: 1px solid #d4acad;
+  border-top: none;
+  border-left: none;
+  border-right: 1px solid #d4acad;
+  border-bottom: 1px solid #d4acad;
   text-align: left;
-  padding-left: 6px;
+  padding-left: 8px;
 }
 
 .genju-re {
   color: black;
   width: 15%;
   height: 24px;
-  border: 1px solid #d4acad;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #d4acad;
+}
+
+.genju-item {
+  background-color: #fef4f4;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  border-top: none;
+  border-left: 2px solid #333;
+  border-right: 2px solid #333;
+  border-bottom: none;
+  table-layout: fixed;
+  font-sixe:10px;
 }
 
 .item-name {
   color: black;
-  width: 50%;
+  width: 75%;
   height: 24px;
   border: 1px solid #d4acad;
   text-align: left;
-  padding-left: 6px;
-}
-
-.item-rare {
-  border: 1px solid #d4acad;
-  height: 24px;
-  width: 25%;
+  padding-left: 8px;
 }
