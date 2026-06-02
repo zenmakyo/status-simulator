@@ -36,7 +36,6 @@ h1 {
   border-right: 2px solid #333;
   border-bottom: none;
   table-layout: fixed;
-  font-sixe:10px;
 }
 
 .genju-ex {
@@ -83,7 +82,6 @@ h1 {
   border-right: 2px solid #333;
   border-bottom: none;
   table-layout: fixed;
-  font-sixe:10px;
 }
 
 .item-name {
@@ -96,4 +94,44 @@ h1 {
   border-bottom: 1px solid #d4acad;
   text-align: left;
   padding-left: 8px;
+}
+.genju-status {
+  background-color: #fef4f4;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  border-left: 2px solid #333;
+  border-right: 2px solid #333;
+  border-bottom: 2px solid #333;
+  table-layout: fixed;
+}
+
+.genju-display {
+  color: black;
+  width: 25%;
+  height: 24px;
+  border-top: none;
+  border-left: none;
+  border-right: 1px solid #d4acad;
+  border-bottom: 1px solid #d4acad;
+}
+
+.genju-value {
+  background-color: #e9dfe5;
+  height: 60%;
+  font-size: 12px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.genju-point {
+  background-color: #e9dfe5;
+  height: 40%;
+  font-size: 8px;
+  font-color: #eee;
+  box-sizing: border-box;
+  text-align: right;
 }
