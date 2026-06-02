@@ -20,51 +20,55 @@ h1 {
 }
 
 .box-master {
-  border-radius: 10px;
-   overflow: hidden;
-}
-
-.genju {
   background-color: #fef4f4;
   width: 100%;
   max-width: 500px;
-  border-collapse: collapse;
+}
+
+.genju {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 10px;
+  overflow: hidden;
   border: 2px solid #333;
   table-layout: fixed;
+  font-sixe:12px;
 }
 
 .genju-ex {
   background-color: #e9dfe5;
   color: black;
   width: 25%;
-  line-height: 2;
+  height: 30px;
   border: 1px solid #d4acad;
 }
 
 .genju-name {
   color: black;
   width: 60%;
-  line-height: 2;
+  height: 30px;
   border: 1px solid #d4acad;
   text-align: left;
+  padding-left: 6px;
 }
 
 .genju-re {
   color: black;
   width: 15%;
-  line-height: 2;
+  height: 30px;
   border: 1px solid #d4acad;
 }
 
 .item-name {
   color: black;
   width: 50%;
-  line-height: 2;
+  height: 30px;
   border: 1px solid #d4acad;
   text-align: left;
+  padding-left: 6px;
 }
 
 .item-rare {
   border: 1px solid #d4acad;
-  line-height: 2;
+  height: 30px;
 }
