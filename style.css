@@ -137,6 +137,7 @@ h1 {
   box-sizing: border-box;
   text-align: left;
   padding-left: 16px;
+  display: flex;
 }
 
 .genju-point {
@@ -151,6 +152,7 @@ h1 {
   border-left: none;
   border-right: none;
   border-bottom: 1px solid #d4acad;
+  display: flex;
 }
 
 .output {
