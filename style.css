@@ -46,6 +46,7 @@ h1 {
   width: 60%;
   line-height: 2;
   border: 1px solid #d4acad;
+  text-align: left;
 }
 
 .genju-re {
@@ -60,6 +61,7 @@ h1 {
   width: 50%;
   line-height: 2;
   border: 1px solid #d4acad;
+  text-align: left;
 }
 
 .item-rare {
