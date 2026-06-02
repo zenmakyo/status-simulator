@@ -119,6 +119,17 @@ h1 {
   border-bottom: 1px solid #d4acad;
 }
 
+.genju-sp {
+  color: black;
+  width: 25%;
+  height: 24px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #d4acad;
+}
+  
+
 .genju-value {
   background-color: #e9dfe5;
   height: 60%;
@@ -136,6 +147,10 @@ h1 {
   box-sizing: border-box;
   text-align: right;
   padding-right: 12px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #d4acad;
 }
 
 .output {
