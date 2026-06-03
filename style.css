@@ -43,6 +43,7 @@ h1 {
   color: black;
   width: 25%;
   height: 24px;
+  line-height: 1.1;
   border-top: none;
   border-left: none;
   border-right: 1px solid #d4acad;
@@ -151,7 +152,6 @@ h1 {
   border-left: none;
   border-right: none;
   border-bottom: 1px solid #d4acad;
-  display: flex;
 }
 
 .genju-output {
