@@ -43,7 +43,7 @@ h1 {
   background-color: #e9dfe5;
   color: black;
   width: 25%;
-  height: 30px;
+  height: 40px;
   line-height: 1.1;
   border-top: none;
   border-left: none;
@@ -54,7 +54,7 @@ h1 {
 .genju-name {
   color: black;
   width: 60%;
-  height: 30px;
+  height: 40px;
   line-height: 1.1;
   border-top: none;
   border-left: none;
@@ -67,7 +67,7 @@ h1 {
 .genju-re {
   color: black;
   width: 15%;
-  height: 30px;
+  height: 40px;
   line-height: 1.1;
   border-top: none;
   border-left: none;
@@ -91,7 +91,7 @@ h1 {
 .item-name {
   color: black;
   width: 75%;
-  height: 30px;
+  height: 40px;
   border-top: none;
   border-left: none;
   border-right: none;
@@ -115,7 +115,7 @@ h1 {
 .genju-display {
   color: black;
   width: 25%;
-  height: 30px;
+  height: 40px;
   border-top: none;
   border-left: none;
   border-right: 1px solid #d4acad;
@@ -125,7 +125,7 @@ h1 {
 .genju-sp {
   color: black;
   width: 25%;
-  height: 30px;
+  height: 40px;
   border-top: none;
   border-left: none;
   border-right: none;
