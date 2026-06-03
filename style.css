@@ -25,10 +25,6 @@ h1 {
   margin: 0 auto;
 }
 
-.genju tr, .genju-item tr, .genju-status tr, .genju-output tr {
-  height: 24px !important;
-}
-
 .genju {
   background-color: #fef4f4;
   width: 100%;
@@ -47,7 +43,7 @@ h1 {
   background-color: #e9dfe5;
   color: black;
   width: 25%;
-  height: 24px;
+  height: 30px;
   line-height: 1.1;
   border-top: none;
   border-left: none;
@@ -58,7 +54,7 @@ h1 {
 .genju-name {
   color: black;
   width: 60%;
-  height: 24px;
+  height: 30px;
   line-height: 1.1;
   border-top: none;
   border-left: none;
@@ -71,7 +67,7 @@ h1 {
 .genju-re {
   color: black;
   width: 15%;
-  height: 24px;
+  height: 30px;
   line-height: 1.1;
   border-top: none;
   border-left: none;
@@ -95,7 +91,7 @@ h1 {
 .item-name {
   color: black;
   width: 75%;
-  height: 24px;
+  height: 30px;
   border-top: none;
   border-left: none;
   border-right: none;
@@ -119,7 +115,7 @@ h1 {
 .genju-display {
   color: black;
   width: 25%;
-  height: 24px;
+  height: 30px;
   border-top: none;
   border-left: none;
   border-right: 1px solid #d4acad;
@@ -129,7 +125,7 @@ h1 {
 .genju-sp {
   color: black;
   width: 25%;
-  height: 24px;
+  height: 30px;
   border-top: none;
   border-left: none;
   border-right: none;
