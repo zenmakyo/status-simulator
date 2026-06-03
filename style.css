@@ -22,7 +22,11 @@ h1 {
 .box-master {
   width: 100%;
   max-width: 500px;
-  align: center;
+  margin: 0 auto;
+}
+
+.genju tr, .genju-item tr, .genju-status tr, .genju-output tr {
+  height: 24px !important;
 }
 
 .genju {
