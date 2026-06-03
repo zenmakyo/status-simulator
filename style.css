@@ -102,10 +102,9 @@ h1 {
   border-spacing: 0;
   overflow: hidden;
   border-top: none;
-  border-radius: 0 0 10px 10px;
   border-left: 2px solid #333;
   border-right: 2px solid #333;
-  border-bottom: 2px solid #333;
+  border-bottom: none;
   table-layout: fixed;
 }
 
@@ -153,6 +152,20 @@ h1 {
   border-right: none;
   border-bottom: 1px solid #d4acad;
   display: flex;
+}
+
+.genju-output {
+  background-color: #fef4f4;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  border-left: 2px solid #333;
+  border-right: 2px solid #333;
+  border-bottom: 2px solid #333;
+  table-layout: fixed;
 }
 
 .output {
