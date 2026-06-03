@@ -55,6 +55,7 @@ h1 {
   color: black;
   width: 60%;
   height: 24px;
+  line-height: 1.1;
   border-top: none;
   border-left: none;
   border-right: 1px solid #d4acad;
@@ -67,6 +68,7 @@ h1 {
   color: black;
   width: 15%;
   height: 24px;
+  line-height: 1.1;
   border-top: none;
   border-left: none;
   border-right: none;
