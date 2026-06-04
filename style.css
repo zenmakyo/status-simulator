@@ -178,15 +178,22 @@ h1 {
   width: 100%;
   border: 2px solid #333;
   border-radius: 10px;
+  border-collapse: separate;
+  border-spacing: 0;
+  over-flow: hidden;
 }
 
 .change-title {
   width: 100%;
-  border-bottom: 1px solid #e7e7eb;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #d4acad;
   background-color: #e9dfe5;
 }
 
 .change-genju {
   width: 100%;
   background-color: #fef4f4;
+  height: 200px;
 }
