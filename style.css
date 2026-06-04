@@ -204,6 +204,7 @@ h1 {
   width: 100%;
   table-layout: fixed;
   border-collapse: collapse;
+  margin-bottom: 6px;
 }
 
 .number-ex {
@@ -216,7 +217,7 @@ h1 {
 }
 
 .num-btn {
-  width: 100%;
+  width: 90%;
   box-sizing: border-box;
   -webkit-appearance: none;
   appearance: none;
