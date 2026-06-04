@@ -200,6 +200,12 @@ h1 {
   height: 200px;
 }
 
+.number-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
 .number-ex {
   width: 10%;
   text-align: left;
