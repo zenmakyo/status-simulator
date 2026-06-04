@@ -181,6 +181,7 @@ h1 {
   border-collapse: separate;
   border-spacing: 0;
   overflow: hidden;
+  margin-top: 6px;
 }
 
 .change-title {
