@@ -180,7 +180,7 @@ h1 {
   border-radius: 10px;
   border-collapse: separate;
   border-spacing: 0;
-  over-flow: hidden;
+  overflow: hidden;
 }
 
 .change-title {
