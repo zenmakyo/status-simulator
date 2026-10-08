@@ -1,16 +1,30 @@
-// 現在の幻獣ID
+// ==============================
+// 現在の幻獣
+// ==============================
+
 let currentGenjuId = 0;
 
-// 現在の幻獣データを取得
-const currentGenju = genjuData[currentGenjuId];
 
-console.log("現在の幻獣:", currentGenju);
+// ==============================
+// 現在の幻獣を表示
+// ==============================
 
-// HTMLに表示
-document.getElementById("genjuName").textContent = currentGenju.name;
-document.getElementById("changeName").textContent = currentGenju.itemName;
-document.getElementById("genjuClass").textContent = currentGenju.class;
-document.getElementById("attribute").textContent = currentGenju.attribute;
+function displayCurrentGenju() {
+
+    const currentGenju = genjuData[currentGenjuId];
+
+    console.log("現在の幻獣:", currentGenju);
+
+    // HTMLに表示
+    document.getElementById("genjuName").textContent = currentGenju.name;
+    document.getElementById("changeName").textContent = currentGenju.itemName;
+    document.getElementById("genjuClass").textContent = currentGenju.class;
+    document.getElementById("attribute").textContent = currentGenju.attribute;
+
+    // 変化先を表示
+    displayChangesTo();
+}
+
 
 // ==============================
 // 変化先を表示
@@ -22,6 +36,9 @@ function displayChangesTo() {
 
     // 一度中身を空にする
     changeContainer.innerHTML = "";
+
+    // 現在の幻獣データ
+    const currentGenju = genjuData[currentGenjuId];
 
     // 現在の幻獣が持っている変化先ID
     currentGenju.changesTo.forEach(targetId => {
@@ -46,11 +63,27 @@ function displayChangesTo() {
         button.appendChild(name);
         button.appendChild(item);
 
-        // クリック処理はまだ作らない
+        // ==============================
+        // ボタンを押したとき
+        // ==============================
+
+        button.addEventListener("click", () => {
+
+            // 変化先のIDに変更
+            currentGenjuId = targetId;
+
+            // 表示を更新
+            displayCurrentGenju();
+        });
+
+        // ボタンを追加
         changeContainer.appendChild(button);
     });
 }
 
 
-// 変化先を表示
-displayChangesTo();
+// ==============================
+// 初期表示
+// ==============================
+
+displayCurrentGenju();
