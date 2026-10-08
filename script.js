@@ -43,42 +43,63 @@ function displayChangesTo() {
     // 現在の幻獣が持っている変化先ID
     currentGenju.changesTo.forEach(targetId => {
 
-        const targetGenju = genjuData[targetId];
+    const targetGenju = genjuData[targetId];
 
-        // ボタン作成
-        const button = document.createElement("button");
-        button.className = "change-button";
+    // ボタン作成
+    const button = document.createElement("button");
+    button.className = "change-button";
 
-        // 幻獣名
-        const name = document.createElement("div");
-        name.className = "change-button-name";
-        name.textContent = targetGenju.name;
+    // 幻獣名
+    const name = document.createElement("div");
+    name.className = "change-button-name";
+    name.textContent = targetGenju.name;
 
-        // 変化名
-        const item = document.createElement("div");
-        item.className = "change-button-item";
-        item.textContent = targetGenju.itemName;
+    // 変化名
+    const item = document.createElement("div");
+    item.className = "change-button-item";
+    item.textContent = targetGenju.itemName;
 
-        // ボタンに追加
-        button.appendChild(name);
-        button.appendChild(item);
+    // ボタンに追加
+    button.appendChild(name);
+    button.appendChild(item);
 
-        // ==============================
-        // ボタンを押したとき
-        // ==============================
+// ==============================
+// ボタンを押したとき
+// ==============================
 
         button.addEventListener("click", () => {
 
-            // 変化先のIDに変更
-            currentGenjuId = targetId;
+// ==============================
+// 変化ポイントを加算
+// ==============================
 
-            // 表示を更新
-            displayCurrentGenju();
-        });
+    statusPoint.s += targetGenju.changePoint.s;
+    statusPoint.a += targetGenju.changePoint.a;
+    statusPoint.d += targetGenju.changePoint.d;
+    statusPoint.l += targetGenju.changePoint.l;
 
-        // ボタンを追加
-        changeContainer.appendChild(button);
-    });
+// ==============================
+// 変化先の幻獣に変更
+// ==============================
+
+    currentGenjuId = targetId;
+
+// ==============================
+// ステータスポイントを表示
+// ==============================
+
+    document.getElementById("pointS").textContent = statusPoint.s;
+    document.getElementById("pointA").textContent = statusPoint.a;
+    document.getElementById("pointD").textContent = statusPoint.d;
+    document.getElementById("pointL").textContent = statusPoint.l;
+
+    // 表示を更新
+    displayCurrentGenju();
+});
+
+    // ボタンを追加
+    changeContainer.appendChild(button);
+});
 }
 
 
