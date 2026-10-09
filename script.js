@@ -55,6 +55,11 @@ function displayChangesTo() {
 
     const targetGenju = genjuData[targetId];
 
+    if (!targetGenju) {
+        console.error("幻獣データが見つかりません。ID:", targetId);
+        return;
+    }
+
     // ボタン作成
     const button = document.createElement("button");
     button.className = "change-button";
