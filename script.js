@@ -5,15 +5,93 @@
 let currentGenjuId = 0;
 
 // ==============================
+// レベル設定
+// ==============================
+
+let currentLevel = 1;
+
+// 転生回数
+let rebirthCount = 0;
+
+// 転生ボーナス
+// 後から変更できるように独立して管理する
+const rebirthBonus = {
+    1: 30,
+    2: 40,
+    3: 50,
+    4: 60,
+    5: 70,
+    6: 80,
+    7: 90,
+    8: 100,
+    9: 110
+};
+
+// 10回目以降の転生ボーナス
+const maxRebirthBonus = 110;
+
+// ==============================
 // ステータスポイント
 // ==============================
 
+// 幻獣変化などで獲得するポイント
 let statusPoint = {
     s: 5,
     a: 5,
     d: 5,
     l: 5
 };
+
+// ==============================
+// 割り振りポイント
+// ==============================
+
+// S・A・D・Lに現在割り振っているポイント
+let allocationPoint = {
+    s: 0,
+    a: 0,
+    d: 0,
+    l: 0
+};
+
+// 最大割り振りポイント
+let maxAllocationPoint = 0;
+
+// 残り割り振りポイント
+let remainingAllocationPoint = 0;
+
+// ==============================
+// 最大割り振りポイントを計算
+// ==============================
+
+function calculateMaxAllocationPoint() {
+
+    // レベルで獲得するポイント
+    const levelPoint = (currentLevel - 1) * 2;
+
+    // 転生ボーナス
+    let bonus = 0;
+
+    if (rebirthCount > 0) {
+        bonus = rebirthBonus[rebirthCount] ?? maxRebirthBonus;
+    }
+
+    // 最大割り振りポイント
+    maxAllocationPoint = levelPoint + bonus;
+
+    // 使用済みポイントを計算
+    const usedPoint =
+        allocationPoint.s +
+        allocationPoint.a +
+        allocationPoint.d +
+        allocationPoint.l;
+
+    // 残りポイント
+    remainingAllocationPoint = Math.max(
+        0,
+        maxAllocationPoint - usedPoint
+    );
+}
 
 // ==============================
 // 現在の幻獣を表示
