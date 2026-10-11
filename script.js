@@ -315,3 +315,106 @@ function setupAllocationButtons() {
 
 setupAllocationButtons();
 displayAllocationPoints();
+
+// ==============================
+// レベル変更ボタン
+// ==============================
+
+// レベル上限を取得
+function getMaxLevel() {
+    return rebirthCount >= 8 ? 250 : 200;
+}
+
+// レベルに応じたポイントを再計算
+function updateLevelPoints() {
+
+    const maxLevel = getMaxLevel();
+
+    // レベルを上限・下限の範囲内に収める
+    currentLevel = Math.max(1, Math.min(currentLevel, maxLevel));
+
+    // レベル表示を更新
+    document.getElementById("genjuLevel").textContent = currentLevel;
+
+    // 最大割り振りポイントを再計算
+    calculateMaxAllocationPoint();
+
+    // 割り振り済みポイントが上限を超えた場合は調整
+    let usedPoint =
+        allocationPoint.s +
+        allocationPoint.a +
+        allocationPoint.d +
+        allocationPoint.l;
+
+    while (usedPoint > maxAllocationPoint) {
+
+        if (allocationPoint.l > 0) {
+            allocationPoint.l--;
+        } else if (allocationPoint.d > 0) {
+            allocationPoint.d--;
+        } else if (allocationPoint.a > 0) {
+            allocationPoint.a--;
+        } else if (allocationPoint.s > 0) {
+            allocationPoint.s--;
+        }
+
+        usedPoint =
+            allocationPoint.s +
+            allocationPoint.a +
+            allocationPoint.d +
+            allocationPoint.l;
+    }
+
+    // ポイント表示を更新
+    displayAllocationPoints();
+}
+
+// レベル変更ボタンを設定
+function setupLevelButtons() {
+
+    // 先頭のnumber-tableがレベル操作用
+    const levelTable = document.querySelector(".number-table");
+
+    if (!levelTable) {
+        console.error("レベル操作用のテーブルが見つかりません。");
+        return;
+    }
+
+    const buttons = levelTable.querySelectorAll(".num-btn");
+
+    buttons.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            const buttonText = button.textContent.trim();
+
+            const levelChanges = {
+                "-100": -100,
+                "-10": -10,
+                "-1": -1,
+                "+1": 1,
+                "+10": 10,
+                "+100": 100
+            };
+
+            const change = levelChanges[buttonText];
+
+            if (change === undefined) {
+                return;
+            }
+
+            // レベルを変更
+            currentLevel += change;
+
+            // 表示とポイントを更新
+            updateLevelPoints();
+        });
+    });
+}
+
+// ==============================
+// レベル変更の初期設定
+// ==============================
+
+setupLevelButtons();
+updateLevelPoints();
