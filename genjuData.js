@@ -9,7 +9,7 @@ changePoint: { s: 0, a: 0, d: 0, l: 0 },
   
   1: { name: "生まれ変わる者", itemName: "転生の鍵", class: "F", attribute: "無",
 uniqueValue: { s: 15, a: 4, d: 4.5, l: 1 },
-changePoint: { s: 0, a: 0, d: 0, l: 0 },
+changePoint: { s: 5, a: 5, d: 5, l: 5 },
   changesTo: [ 0, 1, 2, 3, 4, 438, 99, 140, 190, 516, 672, 673, 674 ],
  changeType: "rebirth"
              },
