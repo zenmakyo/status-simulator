@@ -2,7 +2,7 @@ const genjuData = {
   
   0: { name: "さなぎ", itemName: "幻獣の繭", class: "F", attribute: "無",
 uniqueValue: { s: 14, a: 4, d: 4.5, l: 1 },
-changePoint: { s: 0, a: 0, d: 0, l: 0 },
+changePoint: { s: 5, a: 5, d: 5, l: 5 },
   changesTo: [ 0, 1, 2, 3, 4, 438, 140, 516 ],
  changeType: "resetStatus"
              },
