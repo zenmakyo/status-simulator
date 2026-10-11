@@ -61,6 +61,15 @@ let maxAllocationPoint = 0;
 let remainingAllocationPoint = 0;
 
 // ==============================
+// 繭化ボーナス
+// ==============================
+
+const cocoonBonus = 5;
+
+// 繭化中かどうか
+let isCocooned = false;
+
+// ==============================
 // 最大割り振りポイントを計算
 // ==============================
 
@@ -69,17 +78,24 @@ function calculateMaxAllocationPoint() {
     // レベルで獲得するポイント
     const levelPoint = (currentLevel - 1) * 2;
 
-    // 転生ボーナス
+    // ボーナスポイント
     let bonus = 0;
 
-    if (rebirthCount > 0) {
+    if (isCocooned) {
+
+        // 繭化中は繭化ボーナスのみ
+        bonus = cocoonBonus;
+
+    } else if (rebirthCount > 0) {
+
+        // 通常時は転生回数に応じたボーナス
         bonus = rebirthBonus[rebirthCount] ?? maxRebirthBonus;
     }
 
     // 最大割り振りポイント
     maxAllocationPoint = levelPoint + bonus;
 
-    // 使用済みポイントを計算
+    // 使用済みポイント
     const usedPoint =
         allocationPoint.s +
         allocationPoint.a +
@@ -166,6 +182,10 @@ button.addEventListener("click", () => {
     // 転生する場合
     // ==============================
 
+        // ==============================
+    // 転生する場合
+    // ==============================
+
     if (targetGenju.changeType === "rebirth") {
 
         // 転生前のS・A・D・Lの合計ポイントを取得
@@ -176,7 +196,8 @@ button.addEventListener("click", () => {
             l: statusPoint.l + allocationPoint.l
         };
 
-        // 各ステータスを10分の1にして引き継ぐ
+        // 各ステータスを10分の1にして切り上げ、
+        // 転生先の変化ポイントを加算
         statusPoint = {
             s: Math.ceil(beforeRebirth.s / 10) + targetGenju.changePoint.s,
             a: Math.ceil(beforeRebirth.a / 10) + targetGenju.changePoint.a,
@@ -185,21 +206,43 @@ button.addEventListener("click", () => {
         };
 
         // 割り振りポイントをリセット
-        allocationPoint = {
-            s: 0,
-            a: 0,
-            d: 0,
-            l: 0
-        };
+        allocationPoint = { s: 0, a: 0, d: 0, l: 0 };
 
         // 転生回数を増やす
         rebirthCount++;
-        
-        // 転生回数の表示を更新
         document.getElementById("rebirthCount").textContent = rebirthCount;
+
+        // 繭化状態を解除
+        isCocooned = false;
 
         // レベルを1に戻す
         currentLevel = 1;
+
+    } else if (targetGenju.changeType === "resetStatus") {
+
+        // ==============================
+        // 繭化する場合
+        // ==============================
+
+        // 繭化ボーナスを適用
+        isCocooned = true;
+
+        // ステータスポイントをリセットし、
+        // 変化先の変化ポイントを加算
+        statusPoint = {
+            s: targetGenju.changePoint.s,
+            a: targetGenju.changePoint.a,
+            d: targetGenju.changePoint.d,
+            l: targetGenju.changePoint.l
+        };
+
+        // 割り振りポイントをリセット
+        allocationPoint = { s: 0, a: 0, d: 0, l: 0 };
+
+        // レベルを1に戻す
+        currentLevel = 1;
+
+        // 転生回数は変更しない
 
     } else {
 
