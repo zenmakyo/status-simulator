@@ -194,6 +194,9 @@ button.addEventListener("click", () => {
 
         // 転生回数を増やす
         rebirthCount++;
+        
+        // 転生回数の表示を更新
+        document.getElementById("rebirthCount").textContent = rebirthCount;
 
         // レベルを1に戻す
         currentLevel = 1;
@@ -469,3 +472,4 @@ function setupLevelButtons() {
 
 setupLevelButtons();
 updateLevelPoints();
+document.getElementById("rebirthCount").textContent = rebirthCount;
