@@ -457,6 +457,7 @@ displayAllocationPoints();
 // レベル上限を取得
 function getMaxLevel() {
     return rebirthCount >= 8 ? 250 : 200;
+    document.getElementById("maxLevel").textContent = levelCap;
 }
 
 // レベルに応じたポイントを再計算
