@@ -70,6 +70,122 @@ const cocoonBonus = 5;
 let isCocooned = false;
 
 // ==============================
+// 操作履歴（戻る・進む）
+// ==============================
+
+// 履歴を保存する配列
+let transformationHistory = [];
+
+// 現在の履歴位置
+let historyIndex = -1;
+
+// 履歴の最大保存数
+const maxHistoryCount = 100;
+
+// 現在の状態を保存する
+function saveCurrentState() {
+    return {
+        currentGenjuId: currentGenjuId,
+        currentLevel: currentLevel,
+        rebirthCount: rebirthCount,
+
+        statusPoint: { ...statusPoint },
+        allocationPoint: { ...allocationPoint },
+
+        isCocooned: isCocooned
+    };
+}
+
+// 履歴の状態を復元する
+function restoreState(state) {
+    currentGenjuId = state.currentGenjuId;
+    currentLevel = state.currentLevel;
+    rebirthCount = state.rebirthCount;
+
+    statusPoint = { ...state.statusPoint };
+    allocationPoint = { ...state.allocationPoint };
+
+    isCocooned = state.isCocooned;
+
+    // 表示をまとめて更新
+    updateLevelPoints();
+    displayCurrentGenju();
+    displayAllocationPoints();
+
+    document.getElementById("rebirthCount").textContent = rebirthCount;
+
+    updateHistoryButtons();
+}
+
+// 新しい操作を履歴に記録する
+function recordHistory() {
+
+    // 戻った状態から別の操作をしたら、
+    // それより先の履歴を削除する
+    transformationHistory =
+        transformationHistory.slice(0, historyIndex + 1);
+
+    // 現在の状態を記録
+    transformationHistory.push(saveCurrentState());
+
+    // 履歴数を制限
+    if (transformationHistory.length > maxHistoryCount) {
+        transformationHistory.shift();
+    }
+
+    historyIndex = transformationHistory.length - 1;
+
+    updateHistoryButtons();
+}
+
+// ひとつ前に戻る
+function historyBack() {
+    if (historyIndex <= 0) {
+        return;
+    }
+
+    historyIndex--;
+    restoreState(transformationHistory[historyIndex]);
+}
+
+// ひとつ先に進む
+function historyForward() {
+    if (historyIndex >= transformationHistory.length - 1) {
+        return;
+    }
+
+    historyIndex++;
+    restoreState(transformationHistory[historyIndex]);
+}
+
+// ボタンの有効・無効を更新
+function updateHistoryButtons() {
+    const backButton = document.getElementById("historyBack");
+    const forwardButton = document.getElementById("historyForward");
+
+    if (!backButton || !forwardButton) {
+        return;
+    }
+
+    backButton.disabled = historyIndex <= 0;
+
+    forwardButton.disabled =
+        historyIndex >= transformationHistory.length - 1;
+}
+
+// 戻る・進むボタンを設定
+function setupHistoryButtons() {
+    document.getElementById("historyBack")
+        .addEventListener("click", historyBack);
+
+    document.getElementById("historyForward")
+        .addEventListener("click", historyForward);
+
+    // 初期状態を履歴に保存
+    recordHistory();
+}
+
+// ==============================
 // 最大割り振りポイントを計算
 // ==============================
 
@@ -177,6 +293,9 @@ function displayChangesTo() {
 // ==============================
 
 button.addEventListener("click", () => {
+
+    // 変化前の状態を履歴に保存
+    recordHistory();
 
     // ==============================
     // 転生する場合
@@ -402,6 +521,7 @@ function setupAllocationButtons() {
         buttons.forEach(button => {
 
             button.addEventListener("click", () => {
+                recordHistory();
 
                 const amount = pointButtonValues[button.textContent.trim()];
 
@@ -523,6 +643,7 @@ function setupLevelButtons() {
     buttons.forEach(button => {
 
         button.addEventListener("click", () => {
+            recordHistory();
 
             const buttonText = button.textContent.trim();
 
@@ -557,3 +678,6 @@ function setupLevelButtons() {
 setupLevelButtons();
 updateLevelPoints();
 document.getElementById("rebirthCount").textContent = rebirthCount;
+
+// 戻る・進むボタンの初期設定
+setupHistoryButtons();
