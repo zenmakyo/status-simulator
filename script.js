@@ -160,51 +160,80 @@ function displayChangesTo() {
 // ボタンを押したとき
 // ==============================
 
-    button.addEventListener("click", () => {
+button.addEventListener("click", () => {
 
-// ==============================
-// 変化ポイントを加算
-// ==============================
+    // ==============================
+    // 転生する場合
+    // ==============================
 
-    statusPoint.s += targetGenju.changePoint.s;
-    statusPoint.a += targetGenju.changePoint.a;
-    statusPoint.d += targetGenju.changePoint.d;
-    statusPoint.l += targetGenju.changePoint.l;
+    if (targetGenju.changeType === "rebirth") {
 
-// ==============================
-// 変化先の幻獣に変更
-// ==============================
+        // 転生前のS・A・D・Lの合計ポイントを取得
+        const beforeRebirth = {
+            s: statusPoint.s + allocationPoint.s,
+            a: statusPoint.a + allocationPoint.a,
+            d: statusPoint.d + allocationPoint.d,
+            l: statusPoint.l + allocationPoint.l
+        };
 
-currentGenjuId = targetId;
+        // 各ステータスを10分の1にして引き継ぐ
+        statusPoint = {
+            s: Math.ceil(beforeRebirth.s / 10),
+            a: Math.ceil(beforeRebirth.a / 10),
+            d: Math.ceil(beforeRebirth.d / 10),
+            l: Math.ceil(beforeRebirth.l / 10)
+        };
 
-// ==============================
-// 変化時のレベル加算
-// ==============================
+        // 割り振りポイントをリセット
+        allocationPoint = {
+            s: 0,
+            a: 0,
+            d: 0,
+            l: 0
+        };
 
-// 変化先のクラスを取得
-const targetClass = targetGenju.class;
+        // 転生回数を増やす
+        rebirthCount++;
 
-// クラスF〜Aなら+5、クラスS以上なら+20
-const levelBonus =
-    ["F", "E", "D", "C", "B", "A"].includes(targetClass)
-        ? 5
-        : 20;
+        // レベルを1に戻す
+        currentLevel = 1;
 
-// レベルを加算
-currentLevel += levelBonus;
+    } else {
 
-// レベル・割り振りポイントを更新
-updateLevelPoints();
-// ==============================
-// ステータスポイントを表示
-// ==============================
+        // ==============================
+        // 通常の幻獣変化
+        // ==============================
 
-    document.getElementById("pointS").textContent = statusPoint.s;
-    document.getElementById("pointA").textContent = statusPoint.a;
-    document.getElementById("pointD").textContent = statusPoint.d;
-    document.getElementById("pointL").textContent = statusPoint.l;
+        // 変化ポイントを加算
+        statusPoint.s += targetGenju.changePoint.s;
+        statusPoint.a += targetGenju.changePoint.a;
+        statusPoint.d += targetGenju.changePoint.d;
+        statusPoint.l += targetGenju.changePoint.l;
 
-    // 表示を更新
+        // 変化先のクラスに応じてレベルを加算
+        const targetClass = targetGenju.class;
+
+        const levelBonus =
+            ["F", "E", "D", "C", "B", "A"].includes(targetClass)
+                ? 5
+                : 20;
+
+        currentLevel += levelBonus;
+    }
+
+    // ==============================
+    // 変化先の幻獣に変更
+    // ==============================
+
+    currentGenjuId = targetId;
+
+    // レベル・割り振りポイントを更新
+    updateLevelPoints();
+
+    // ステータスポイントを表示
+    displayAllocationPoints();
+
+    // 幻獣の表示を更新
     displayCurrentGenju();
 });
 
