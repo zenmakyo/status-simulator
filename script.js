@@ -454,11 +454,14 @@ displayAllocationPoints();
 // レベル変更ボタン
 // ==============================
 
-// レベル上限を取得
-function getMaxLevel() {
-    return rebirthCount >= 8 ? 250 : 200;
-    document.getElementById("maxLevel").textContent = levelCap;
-}
+// レベル上限を取得・表示
+
+    function getMaxLevel() {
+        const maxLevel = rebirthCount >= 8 ? 250 : 200;
+    // HTMLの上限レベル表示を更新
+        document.getElementById("maxLevel").textContent = maxLevel;
+        return maxLevel;
+    }
 
 // レベルに応じたポイントを再計算
 function updateLevelPoints() {
