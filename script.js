@@ -294,9 +294,6 @@ function displayChangesTo() {
 
 button.addEventListener("click", () => {
 
-    // 変化前の状態を履歴に保存
-    recordHistory();
-
     // ==============================
     // 転生する場合
     // ==============================
@@ -400,6 +397,9 @@ button.addEventListener("click", () => {
 
     // 幻獣の表示を更新
     displayCurrentGenju();
+
+    // 変化後の状態を履歴に記録
+    recordHistory();
 });
 
     // ボタンを追加
@@ -521,7 +521,6 @@ function setupAllocationButtons() {
         buttons.forEach(button => {
 
             button.addEventListener("click", () => {
-                recordHistory();
 
                 const amount = pointButtonValues[button.textContent.trim()];
 
@@ -555,6 +554,9 @@ function setupAllocationButtons() {
 
                 // 表示を更新
                 displayAllocationPoints();
+                
+                // 操作後の状態を履歴に記録
+                recordHistory();
             });
 
         });
@@ -643,7 +645,6 @@ function setupLevelButtons() {
     buttons.forEach(button => {
 
         button.addEventListener("click", () => {
-            recordHistory();
 
             const buttonText = button.textContent.trim();
 
@@ -667,6 +668,9 @@ function setupLevelButtons() {
 
             // 表示とポイントを更新
             updateLevelPoints();
+            
+            // 操作後の状態を履歴に記録
+            recordHistory();
         });
     });
 }
