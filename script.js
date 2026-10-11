@@ -160,7 +160,7 @@ function displayChangesTo() {
 // ボタンを押したとき
 // ==============================
 
-        button.addEventListener("click", () => {
+    button.addEventListener("click", () => {
 
 // ==============================
 // 変化ポイントを加算
@@ -175,8 +175,26 @@ function displayChangesTo() {
 // 変化先の幻獣に変更
 // ==============================
 
-    currentGenjuId = targetId;
+currentGenjuId = targetId;
 
+// ==============================
+// 変化時のレベル加算
+// ==============================
+
+// 変化先のクラスを取得
+const targetClass = targetGenju.class;
+
+// クラスF〜Aなら+5、クラスS以上なら+20
+const levelBonus =
+    ["F", "E", "D", "C", "B", "A"].includes(targetClass)
+        ? 5
+        : 20;
+
+// レベルを加算
+currentLevel += levelBonus;
+
+// レベル・割り振りポイントを更新
+updateLevelPoints();
 // ==============================
 // ステータスポイントを表示
 // ==============================
