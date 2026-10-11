@@ -343,6 +343,9 @@ function displayAllocationPoints() {
     console.log("最大割り振りポイント:", maxAllocationPoint);
     console.log("使用済みポイント:", usedPoint);
     console.log("残り割り振りポイント:", remainingAllocationPoint);
+
+    // 実際のステータスを更新
+    displayActualStatus();
 }
 
 // ==============================
@@ -377,9 +380,6 @@ function displayActualStatus() {
     document.getElementById("statusA").textContent = actualA;
     document.getElementById("statusD").textContent = actualD;
     document.getElementById("statusL").textContent = actualL;
-
-    // 実際のステータスを更新
-    displayActualStatus();
 }
 
 // ポイント操作ボタンを設定
