@@ -231,7 +231,7 @@ function displayAllocationPoints() {
     document.getElementById("pointL").textContent =
         statusPoint.l + allocationPoint.l;
 
-    // 残りポイントを計算
+        // 残りポイントを計算
     const usedPoint =
         allocationPoint.s +
         allocationPoint.a +
@@ -242,6 +242,10 @@ function displayAllocationPoints() {
         0,
         maxAllocationPoint - usedPoint
     );
+
+    // 「Status Point」の隣にある数字を更新
+    document.getElementById("remainingPoint").textContent =
+        remainingAllocationPoint;
 
     console.log("最大割り振りポイント:", maxAllocationPoint);
     console.log("使用済みポイント:", usedPoint);
