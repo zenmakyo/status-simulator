@@ -178,10 +178,10 @@ button.addEventListener("click", () => {
 
         // 各ステータスを10分の1にして引き継ぐ
         statusPoint = {
-            s: Math.ceil(beforeRebirth.s / 10),
-            a: Math.ceil(beforeRebirth.a / 10),
-            d: Math.ceil(beforeRebirth.d / 10),
-            l: Math.ceil(beforeRebirth.l / 10)
+            s: Math.ceil(beforeRebirth.s / 10) + targetGenju.changePoint.s,
+            a: Math.ceil(beforeRebirth.a / 10) + targetGenju.changePoint.a,
+            d: Math.ceil(beforeRebirth.d / 10) + targetGenju.changePoint.d,
+            l: Math.ceil(beforeRebirth.l / 10) + targetGenju.changePoint.l
         };
 
         // 割り振りポイントをリセット
