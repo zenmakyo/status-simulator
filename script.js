@@ -202,3 +202,116 @@ function displayChangesTo() {
 
 displayCurrentGenju();
 
+// ==============================
+// 割り振りポイントの操作
+// ==============================
+
+// ボタンの増減値
+const pointButtonValues = {
+    "-100": -100,
+    "-10": -10,
+    "-1": -1,
+    "+1": 1,
+    "+10": 10,
+    "+100": 100
+};
+
+// ポイント表示を更新
+function displayAllocationPoints() {
+
+    document.getElementById("pointS").textContent =
+        statusPoint.s + allocationPoint.s;
+
+    document.getElementById("pointA").textContent =
+        statusPoint.a + allocationPoint.a;
+
+    document.getElementById("pointD").textContent =
+        statusPoint.d + allocationPoint.d;
+
+    document.getElementById("pointL").textContent =
+        statusPoint.l + allocationPoint.l;
+
+    // 残りポイントを計算
+    const usedPoint =
+        allocationPoint.s +
+        allocationPoint.a +
+        allocationPoint.d +
+        allocationPoint.l;
+
+    remainingAllocationPoint = Math.max(
+        0,
+        maxAllocationPoint - usedPoint
+    );
+
+    console.log("最大割り振りポイント:", maxAllocationPoint);
+    console.log("使用済みポイント:", usedPoint);
+    console.log("残り割り振りポイント:", remainingAllocationPoint);
+}
+
+// ポイント操作ボタンを設定
+function setupAllocationButtons() {
+
+    // S・A・D・Lの各テーブルを取得
+    const tables = document.querySelectorAll(".number-table");
+
+    // 先頭のテーブルはレベル操作用なので除外
+    const statTables = Array.from(tables).slice(1);
+
+    const statKeys = ["s", "a", "d", "l"];
+
+    statTables.forEach((table, index) => {
+
+        const statKey = statKeys[index];
+
+        const buttons = table.querySelectorAll(".num-btn");
+
+        buttons.forEach(button => {
+
+            button.addEventListener("click", () => {
+
+                const amount = pointButtonValues[button.textContent.trim()];
+
+                if (amount === undefined) {
+                    return;
+                }
+
+                // プラス操作
+                if (amount > 0) {
+
+                    // 残りポイント以上は割り振らない
+                    const actualAmount = Math.min(
+                        amount,
+                        remainingAllocationPoint
+                    );
+
+                    allocationPoint[statKey] += actualAmount;
+                }
+
+                // マイナス操作
+                else {
+
+                    // 現在の割り振り以上は減らさない
+                    const actualAmount = Math.min(
+                        Math.abs(amount),
+                        allocationPoint[statKey]
+                    );
+
+                    allocationPoint[statKey] -= actualAmount;
+                }
+
+                // 表示を更新
+                displayAllocationPoints();
+            });
+
+        });
+
+    });
+
+}
+
+// ==============================
+// ポイント操作の初期設定
+// ==============================
+
+setupAllocationButtons();
+displayAllocationPoints();
