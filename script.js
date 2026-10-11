@@ -345,6 +345,43 @@ function displayAllocationPoints() {
     console.log("残り割り振りポイント:", remainingAllocationPoint);
 }
 
+// ==============================
+// 実際のステータスを計算・表示
+// ==============================
+
+function displayActualStatus() {
+
+    // 現在の幻獣データを取得
+    const genju = genjuData[currentGenjuId];
+
+    if (!genju) {
+        console.error("幻獣データが見つかりません。ID:", currentGenjuId);
+        return;
+    }
+
+    // 実際のステータスを計算
+    const actualS =
+        genju.uniqueValue.s * (statusPoint.s + allocationPoint.s);
+
+    const actualA =
+        genju.uniqueValue.a * (statusPoint.a + allocationPoint.a);
+
+    const actualD =
+        genju.uniqueValue.d * (statusPoint.d + allocationPoint.d);
+
+    const actualL =
+        genju.uniqueValue.l * (statusPoint.l + allocationPoint.l);
+
+    // 計算結果を画面に表示
+    document.getElementById("statusS").textContent = actualS;
+    document.getElementById("statusA").textContent = actualA;
+    document.getElementById("statusD").textContent = actualD;
+    document.getElementById("statusL").textContent = actualL;
+
+    // 実際のステータスを更新
+    displayActualStatus();
+}
+
 // ポイント操作ボタンを設定
 function setupAllocationButtons() {
 
