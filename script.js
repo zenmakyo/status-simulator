@@ -376,10 +376,10 @@ function displayActualStatus() {
         genju.uniqueValue.l * (statusPoint.l + allocationPoint.l);
 
     // 計算結果を画面に表示
-    document.getElementById("statusS").textContent = actualS;
-    document.getElementById("statusA").textContent = actualA;
-    document.getElementById("statusD").textContent = actualD;
-    document.getElementById("statusL").textContent = actualL;
+    document.getElementById("statusS").textContent = Math.floor(actualS);
+    document.getElementById("statusA").textContent = Math.floor(actualA);
+    document.getElementById("statusD").textContent = Math.floor(actualD);
+    document.getElementById("statusL").textContent = Math.floor(actualL);
 }
 
 // ポイント操作ボタンを設定
