@@ -94,7 +94,10 @@ const maxTransformationDisplayHistory = 12;
 function recordTransformationDisplayHistory(genju) {
     transformationDisplayHistory.push({
         name: genju.name,
-        itemName: genju.itemName
+        itemName: genju.itemName,
+
+        // 変化直後の状態を保存
+        state: saveCurrentState()
     });
 
     // 最新12件だけを残す
@@ -120,22 +123,41 @@ function displayTransformationHistory() {
     // 既存の変化先と同じグリッド配置を使用
     historyContent.classList.add("change-genju");
 
+    // 最新の履歴を左上に表示
     [...transformationDisplayHistory].reverse().forEach(entry => {
-        const item = document.createElement("div");
-        item.className = "change-button history-entry";
+        // 履歴項目をボタンとして作成
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "change-button history-entry";
 
+        // 幻獣名
         const name = document.createElement("div");
         name.className = "change-button-name";
         name.textContent = entry.name;
 
+        // 変化名
         const itemName = document.createElement("div");
         itemName.className = "change-button-item";
         itemName.textContent = entry.itemName;
 
-        item.appendChild(name);
-        item.appendChild(itemName);
+        button.appendChild(name);
+        button.appendChild(itemName);
 
-        historyContent.appendChild(item);
+        // クリックした履歴の状態に戻す
+        button.addEventListener("click", () => {
+            if (!entry.state) {
+                console.error("履歴の状態データがありません。");
+                return;
+            }
+
+            // 保存された状態を復元
+            restoreState(entry.state);
+
+            // 復元した状態を「戻る・進む」にも記録
+            recordHistory();
+        });
+
+        historyContent.appendChild(button);
     });
 }
 
