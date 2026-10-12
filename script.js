@@ -120,7 +120,7 @@ function displayTransformationHistory() {
     // 既存の変化先と同じグリッド配置を使用
     historyContent.classList.add("change-genju");
 
-    transformationDisplayHistory.forEach(entry => {
+    [...transformationDisplayHistory].reverse().forEach(entry => {
         const item = document.createElement("div");
         item.className = "change-button history-entry";
 
