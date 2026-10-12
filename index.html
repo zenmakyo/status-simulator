@@ -187,30 +187,32 @@
  </table>
 </div>
 
-<div class="history-container">
+<!-- ==============================
+     変化履歴
+     ============================== -->
 
-    <!-- 履歴の開閉ボタン -->
-    <button
-        type="button"
-        id="historyToggle"
-        class="history-toggle"
-        aria-expanded="false"
-        aria-controls="historyContent"
-    >
-        <span class="history-toggle-text">変化履歴</span>
-        <span id="historyToggleIcon" class="history-toggle-icon">▼</span>
-    </button>
-
-    <!-- 履歴の表示エリア -->
-    <div
-        id="historyContent"
-        class="history-content"
-        hidden
-    >
-        <!-- 変化履歴を最大12個表示するエリア -->
-
-    </div>
-
+<div class="box-master">
+    <table class="history-box" id="historyBox">
+        <tr>
+            <td class="history-title">
+                <button
+                    type="button"
+                    id="historyToggle"
+                    class="history-toggle"
+                    aria-expanded="false"
+                    aria-controls="historyContent"
+                >
+                    <span class="history-toggle-text">変化履歴</span>
+                    <span id="historyToggleIcon" class="history-toggle-icon">▼</span>
+                </button>
+            </td>
+        </tr>
+        <tr id="historyContentRow" hidden>
+            <td class="history-content" id="historyContent">
+                <!-- 変化履歴をあとから表示 -->
+            </td>
+        </tr>
+    </table>
 </div>
 
 <script src="genjuData.js"></script>
