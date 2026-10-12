@@ -323,9 +323,9 @@ h1 {
     width: 100%;
     box-sizing: border-box;
 
-    padding: 10px 14px;
+    padding: 14px 10px;
 
-    border: 1px solid #d4acad;
+    border: 1px solid #333;
     border-radius: 5px;
 
     background-color: #e9dfe5;
@@ -348,9 +348,4 @@ h1 {
     flex-shrink: 0;
     margin-left: 12px;
     text-align: right;
-}
-
-/* ボタンにマウスを合わせたとき */
-.history-toggle:hover {
-    background-color: #e9dfe5;
 }
