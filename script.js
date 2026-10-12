@@ -82,6 +82,85 @@ let historyIndex = -1;
 // 履歴の最大保存数
 const maxHistoryCount = 100;
 
+// ==============================
+// 変化履歴の表示用データ
+// ==============================
+
+// 変化先ボタンを押したときの履歴（最大12件）
+let transformationDisplayHistory = [];
+const maxTransformationDisplayHistory = 12;
+
+// 変化履歴を記録
+function recordTransformationDisplayHistory(genju) {
+    transformationDisplayHistory.push({
+        name: genju.name,
+        itemName: genju.itemName
+    });
+
+    // 最新12件だけを残す
+    if (
+        transformationDisplayHistory.length >
+        maxTransformationDisplayHistory
+    ) {
+        transformationDisplayHistory.shift();
+    }
+
+    displayTransformationHistory();
+}
+
+// 変化履歴を画面に表示
+function displayTransformationHistory() {
+    const historyContent = document.getElementById("historyContent");
+
+    if (!historyContent) return;
+
+    // 履歴エリアを空にする
+    historyContent.innerHTML = "";
+
+    // 既存の変化先と同じグリッド配置を使用
+    historyContent.classList.add("change-genju");
+
+    transformationDisplayHistory.forEach(entry => {
+        const item = document.createElement("div");
+        item.className = "change-button history-entry";
+
+        const name = document.createElement("div");
+        name.className = "change-button-name";
+        name.textContent = entry.name;
+
+        const itemName = document.createElement("div");
+        itemName.className = "change-button-item";
+        itemName.textContent = entry.itemName;
+
+        item.appendChild(name);
+        item.appendChild(itemName);
+
+        historyContent.appendChild(item);
+    });
+}
+
+// 変化履歴の開閉ボタンを設定
+function setupTransformationHistory() {
+    const toggleButton = document.getElementById("historyToggle");
+    const contentRow = document.getElementById("historyContentRow");
+    const toggleIcon = document.getElementById("historyToggleIcon");
+
+    if (!toggleButton || !contentRow || !toggleIcon) {
+        console.error("変化履歴のHTMLが見つかりません。");
+        return;
+    }
+
+    toggleButton.addEventListener("click", () => {
+        const isOpening = contentRow.hidden;
+
+        contentRow.hidden = !isOpening;
+        toggleButton.setAttribute("aria-expanded", String(isOpening));
+        toggleIcon.textContent = isOpening ? "▲" : "▼";
+    });
+
+    displayTransformationHistory();
+}
+
 // 現在の状態を保存する
 function saveCurrentState() {
     return {
@@ -400,6 +479,9 @@ button.addEventListener("click", () => {
 
     // 変化後の状態を履歴に記録
     recordHistory();
+
+    // 変化履歴の表示用データを記録
+    recordTransformationDisplayHistory(targetGenju);
 });
 
     // ボタンを追加
@@ -685,3 +767,6 @@ document.getElementById("rebirthCount").textContent = rebirthCount;
 
 // 戻る・進むボタンの初期設定
 setupHistoryButtons();
+
+// 変化履歴の初期設定
+setupTransformationHistory();
