@@ -302,3 +302,55 @@ h1 {
   background-color: #fef4f4;
   font-size: 16px;
 }
+
+/* ==============================
+   変化履歴の開閉ボタン
+   ============================== */
+
+.history-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 10px auto;
+    box-sizing: border-box;
+}
+
+/* 横長の開閉ボタン */
+.history-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 10px 14px;
+
+    border: 1px solid #d4acad;
+    border-radius: 5px;
+
+    background-color: #e9dfe5;
+    color: #333;
+
+    font-size: 14px;
+    text-align: left;
+
+    cursor: pointer;
+}
+
+/* 変化履歴の文字 */
+.history-toggle-text {
+    flex: 1;
+    text-align: left;
+}
+
+/* 右端の三角 */
+.history-toggle-icon {
+    flex-shrink: 0;
+    margin-left: 12px;
+    text-align: right;
+}
+
+/* ボタンにマウスを合わせたとき */
+.history-toggle:hover {
+    background-color: #e9dfe5;
+}
