@@ -314,7 +314,7 @@ h1 {
     border-collapse: separate;
     border-spacing: 0;
     overflow: hidden;
-    margin-top: 6px;
+    margin-top: 16px;
     margin-bottom: 16px;
 }
 
@@ -385,7 +385,7 @@ h1 {
 
     border: 2px solid #333;
     border-radius: 8px;
-    background-color: #e9dfe5;
+    background-color: #fef4f4;
 
     color: #222;
     font-size: 14px;
