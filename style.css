@@ -304,41 +304,46 @@ h1 {
 }
 
 /* ==============================
-   変化履歴の開閉ボタン
+   変化履歴
    ============================== */
 
-.history-container {
+.history-box {
     width: 100%;
-    max-width: 500px;
-    margin: 10px auto;
-    box-sizing: border-box;
+    border: 2px solid #333;
+    border-radius: 10px;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    margin-top: 6px;
+    margin-bottom: 16px;
 }
 
-/* 横長の開閉ボタン */
+/* 見出し */
+.history-title {
+    padding: 0;
+    background-color: #e9dfe5;
+}
+
+/* 開閉ボタン */
 .history-toggle {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     width: 100%;
-    box-sizing: border-box;
+    padding: 8px;
 
-    /* 変化先ボタンに合わせて調整 */
-    padding: 8px 10px;
+    border: none;
+    background: transparent;
+    color: inherit;
 
-    border: 1px solid #d4acad;
-    border-radius: 5px;
-
-    background-color: #fef4f4;
-    color: #333;
-
-    font-size: 14px;
+    font: inherit;
     text-align: left;
-
     cursor: pointer;
+    box-sizing: border-box;
 }
 
-/* 変化履歴の文字 */
+/* 見出しの文字 */
 .history-toggle-text {
     flex: 1;
     text-align: left;
@@ -349,4 +354,13 @@ h1 {
     flex-shrink: 0;
     margin-left: 12px;
     text-align: right;
+}
+
+/* 履歴の中身 */
+.history-content {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    background-color: #fef4f4;
+    border-top: 1px solid #d4acad;
 }
