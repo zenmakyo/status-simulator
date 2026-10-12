@@ -274,12 +274,6 @@ h1 {
     }
 }
 
-@media (min-width: 500px) {
-    .change-genju {
-        grid-template-columns: repeat(5, 1fr);
-    }
-}
-
 .number-table {
   width: 100%;
   table-layout: fixed;
