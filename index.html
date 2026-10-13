@@ -258,29 +258,37 @@
                     <!-- 幻獣名 -->
                     <div class="status-load-field">
                         <span class="status-load-label">幻獣名</span>
+
                         <div class="status-load-genju-wrapper">
-                            <input
-                                type="text"
-                                id="statusLoadGenju"
-                                autocomplete="off"
-                                aria-autocomplete="list"
-                                aria-controls="statusLoadGenjuList"
-                                placeholder="幻獣名を入力"
-                            >
-                            <button
-                                type="button"
-                                id="statusLoadGenjuClear"
-                                class="status-load-genju-clear"
-                                aria-label="幻獣名をクリア"
-                                hidden
-                            >×</button>
-                        </div>
+
+                            <!-- 入力欄と×ボタンをまとめる -->
+                            <div class="status-load-genju-input-wrapper">
+                                <input
+                                    type="text"
+                                    id="statusLoadGenju"
+                                    autocomplete="off"
+                                    aria-autocomplete="list"
+                                    aria-controls="statusLoadGenjuList"
+                                    placeholder="幻獣名を入力"
+                                >
+
+                                <button
+                                    type="button"
+                                    id="statusLoadGenjuClear"
+                                    class="status-load-genju-clear"
+                                    aria-label="幻獣名をクリア"
+                                    hidden
+                                >×</button>
+                            </div>
+
+                            <!-- 候補リストは入力欄と同じ親要素に置く -->
                             <div
                                 id="statusLoadGenjuList"
                                 class="status-load-genju-list"
                                 role="listbox"
                                 hidden
                             ></div>
+
                         </div>
                     </div>
 
