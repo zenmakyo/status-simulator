@@ -230,137 +230,146 @@
     </button>
 </div>
 
-<!-- 既存データから開始 -->
-<div class="box-master existing-data-box">
+<!-- ステータス読み込み -->
+<div class="box-master">
+    <table class="history-box status-load-box" id="statusLoadBox">
+        <tr>
+            <td class="history-title">
+                <button
+                    type="button"
+                    id="statusLoadToggle"
+                    class="history-toggle"
+                    aria-expanded="false"
+                    aria-controls="statusLoadContentRow"
+                >
+                    <span class="history-toggle-text">ステータス読み込み</span>
+                    <span
+                        id="statusLoadToggleIcon"
+                        class="history-toggle-icon"
+                    >▼</span>
+                </button>
+            </td>
+        </tr>
 
-    <!-- 展開・折りたたみボタン -->
-    <button
-        type="button"
-        id="existingDataToggle"
-        class="existing-data-toggle"
-        aria-expanded="false"
-        aria-controls="existingDataContent"
-    >
-        <span>既存データから開始</span>
-        <span id="existingDataToggleIcon" class="existing-data-toggle-icon">▼</span>
-    </button>
+        <tr id="statusLoadContentRow" hidden>
+            <td class="history-content status-load-content">
 
-    <!-- 入力欄 -->
-    <div id="existingDataContent" class="existing-data-content" hidden>
+                <div class="status-load-form">
 
-        <h3 class="existing-data-heading">既存データの入力</h3>
+                    <!-- 幻獣名 -->
+                    <div class="status-load-field">
+                        <label for="statusLoadGenju">幻獣名</label>
+                        <select id="statusLoadGenju">
+                            <option value="">幻獣を選択</option>
+                        </select>
+                    </div>
 
-        <!-- 幻獣名 -->
-        <div class="existing-data-field">
-            <label for="existingGenjuSelect">幻獣名</label>
-            <select id="existingGenjuSelect">
-                <option value="">幻獣を選択してください</option>
-            </select>
-        </div>
+                    <!-- レベル -->
+                    <div class="status-load-field">
+                        <label for="statusLoadLevel">レベル</label>
+                        <input
+                            type="number"
+                            id="statusLoadLevel"
+                            min="1"
+                            step="1"
+                            inputmode="numeric"
+                            placeholder="レベル"
+                        >
+                    </div>
 
-        <!-- レベル・転生数 -->
-        <div class="existing-data-field">
-            <label for="existingLevel">レベル</label>
-            <input
-                type="number"
-                id="existingLevel"
-                min="1"
-                step="1"
-                inputmode="numeric"
-                placeholder="レベルを入力"
-            >
-        </div>
+                    <!-- 転生数 -->
+                    <div class="status-load-field">
+                        <label for="statusLoadRebirth">転生数</label>
+                        <input
+                            type="number"
+                            id="statusLoadRebirth"
+                            min="0"
+                            step="1"
+                            inputmode="numeric"
+                            placeholder="転生数"
+                        >
+                    </div>
 
-        <div class="existing-data-field">
-            <label for="existingRebirthCount">転生数</label>
-            <input
-                type="number"
-                id="existingRebirthCount"
-                min="0"
-                step="1"
-                inputmode="numeric"
-                placeholder="転生数を入力"
-            >
-        </div>
+                    <!-- 残り割り振りポイント -->
+                    <div class="status-load-field">
+                        <label for="statusLoadPoint">Status Point</label>
+                        <input
+                            type="number"
+                            id="statusLoadPoint"
+                            min="0"
+                            step="1"
+                            inputmode="numeric"
+                            placeholder="残りポイント"
+                        >
+                    </div>
 
-        <!-- 割り振りポイント -->
-        <div class="existing-data-field">
-            <label for="existingAllocationPoint">残り割り振りポイント</label>
-            <input
-                type="number"
-                id="existingAllocationPoint"
-                min="0"
-                step="1"
-                inputmode="numeric"
-                placeholder="残りポイントを入力"
-            >
-        </div>
+                    <!-- 各ステータスポイント -->
+                    <div class="status-load-statuses">
 
-        <!-- ステータスポイント -->
-        <fieldset class="existing-data-status">
-            <legend>ステータスポイント</legend>
+                        <div class="status-load-field">
+                            <label for="statusLoadStamina">Stamina</label>
+                            <input
+                                type="number"
+                                id="statusLoadStamina"
+                                min="0"
+                                step="1"
+                                inputmode="numeric"
+                                placeholder="Stamina"
+                            >
+                        </div>
 
-            <div class="existing-data-status-grid">
-                <div class="existing-data-field">
-                    <label for="existingStatusS">S</label>
-                    <input
-                        type="number"
-                        id="existingStatusS"
-                        min="0"
-                        step="1"
-                        inputmode="numeric"
-                        placeholder="S"
+                        <div class="status-load-field">
+                            <label for="statusLoadAttack">Attack</label>
+                            <input
+                                type="number"
+                                id="statusLoadAttack"
+                                min="0"
+                                step="1"
+                                inputmode="numeric"
+                                placeholder="Attack"
+                            >
+                        </div>
+
+                        <div class="status-load-field">
+                            <label for="statusLoadDefence">Defence</label>
+                            <input
+                                type="number"
+                                id="statusLoadDefence"
+                                min="0"
+                                step="1"
+                                inputmode="numeric"
+                                placeholder="Defence"
+                            >
+                        </div>
+
+                        <div class="status-load-field">
+                            <label for="statusLoadLuck">Luck</label>
+                            <input
+                                type="number"
+                                id="statusLoadLuck"
+                                min="0"
+                                step="1"
+                                inputmode="numeric"
+                                placeholder="Luck"
+                            >
+                        </div>
+
+                    </div>
+
+                    <!-- 読み込みボタン -->
+                    <button
+                        type="button"
+                        id="statusLoadButton"
+                        class="status-load-button"
                     >
+                        読み込む
+                    </button>
+
                 </div>
 
-                <div class="existing-data-field">
-                    <label for="existingStatusA">A</label>
-                    <input
-                        type="number"
-                        id="existingStatusA"
-                        min="0"
-                        step="1"
-                        inputmode="numeric"
-                        placeholder="A"
-                    >
-                </div>
-
-                <div class="existing-data-field">
-                    <label for="existingStatusD">D</label>
-                    <input
-                        type="number"
-                        id="existingStatusD"
-                        min="0"
-                        step="1"
-                        inputmode="numeric"
-                        placeholder="D"
-                    >
-                </div>
-
-                <div class="existing-data-field">
-                    <label for="existingStatusL">L</label>
-                    <input
-                        type="number"
-                        id="existingStatusL"
-                        min="0"
-                        step="1"
-                        inputmode="numeric"
-                        placeholder="L"
-                    >
-                </div>
-            </div>
-        </fieldset>
-
-        <!-- 読み込みボタン -->
-        <button
-            type="button"
-            id="existingDataLoadButton"
-            class="existing-data-load-button"
-        >
-            読み込む
-        </button>
-
-    </div>
+            </td>
+        </tr>
+    </table>
 </div>
 
 <div style="font-size: 12px; text-align:center; background-color: aliceblue; padding: 10px; margin-top: 20px;">
