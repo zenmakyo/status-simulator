@@ -396,3 +396,137 @@ h1 {
     cursor: pointer;
     box-sizing: border-box;
 }
+
+/* ==============================
+   既存データから開始
+============================== */
+
+.existing-data-box {
+    width: 100%;
+    max-width: 500px;
+    margin: 16px auto;
+    box-sizing: border-box;
+}
+
+/* 展開ボタン */
+.existing-data-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 14px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    background-color: #e9dfe5;
+    color: #222;
+    font-size: 16px;
+    font-family: inherit;
+    text-align: left;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.existing-data-toggle-icon {
+    margin-left: 8px;
+    font-size: 12px;
+}
+
+/* 展開された入力欄 */
+.existing-data-content {
+    margin-top: 10px;
+    padding: 14px;
+    border: 2px solid #999;
+    border-radius: 8px;
+    background-color: #f2f2f2;
+    box-sizing: border-box;
+}
+
+/* hidden属性が確実に反映されるようにする */
+.existing-data-content[hidden] {
+    display: none;
+}
+
+.existing-data-heading {
+    margin: 0 0 16px;
+    font-size: 17px;
+    text-align: center;
+}
+
+/* 各入力項目 */
+.existing-data-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+    margin-bottom: 14px;
+}
+
+.existing-data-field label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.existing-data-field input,
+.existing-data-field select {
+    width: 100%;
+    min-width: 0;
+    min-height: 42px;
+    padding: 8px 10px;
+    border: 1px solid #999;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #222;
+    font-size: 16px;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+/* ステータスポイントの入力欄 */
+.existing-data-status {
+    margin: 0 0 16px;
+    padding: 12px;
+    border: 1px solid #999;
+    border-radius: 6px;
+}
+
+.existing-data-status legend {
+    padding: 0 6px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.existing-data-status-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 12px;
+}
+
+.existing-data-status-grid .existing-data-field {
+    margin-bottom: 8px;
+}
+
+/* 開始ボタン */
+.existing-data-load-button {
+    display: block;
+    width: 100%;
+    min-height: 44px;
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    background-color: #d9e8d3;
+    color: #222;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: inherit;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.existing-data-toggle:focus-visible,
+.existing-data-load-button:focus-visible,
+.existing-data-field input:focus-visible,
+.existing-data-field select:focus-visible {
+    outline: 2px solid #3568a8;
+    outline-offset: 2px;
+}
