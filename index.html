@@ -253,54 +253,71 @@
 
         <tr id="statusLoadContentRow" hidden>
             <td class="history-content status-load-content">
-
                 <div class="status-load-form">
 
                     <!-- 幻獣名 -->
                     <div class="status-load-field">
                         <label for="statusLoadGenju">幻獣名</label>
-                        <select id="statusLoadGenju">
-                            <option value="">幻獣を選択</option>
-                        </select>
+                        <div class="status-load-genju-wrapper">
+                            <input
+                                type="text"
+                                id="statusLoadGenju"
+                                autocomplete="off"
+                                aria-autocomplete="list"
+                                aria-controls="statusLoadGenjuList"
+                                placeholder=""
+                            >
+                            <div
+                                id="statusLoadGenjuList"
+                                class="status-load-genju-list"
+                                role="listbox"
+                                hidden
+                            ></div>
+                        </div>
                     </div>
 
                     <!-- レベル -->
                     <div class="status-load-field">
                         <label for="statusLoadLevel">レベル</label>
-                        <input
-                            type="number"
-                            id="statusLoadLevel"
-                            min="1"
-                            step="1"
-                            inputmode="numeric"
-                            placeholder="レベル"
-                        >
+                        <div class="status-load-input-unit">
+                            <input
+                                type="number"
+                                id="statusLoadLevel"
+                                min="1"
+                                step="1"
+                                inputmode="numeric"
+                            >
+                        </div>
                     </div>
 
                     <!-- 転生数 -->
                     <div class="status-load-field">
                         <label for="statusLoadRebirth">転生数</label>
-                        <input
-                            type="number"
-                            id="statusLoadRebirth"
-                            min="0"
-                            step="1"
-                            inputmode="numeric"
-                            placeholder="転生数"
-                        >
+                        <div class="status-load-input-unit">
+                            <input
+                                type="number"
+                                id="statusLoadRebirth"
+                                min="0"
+                                step="1"
+                                inputmode="numeric"
+                            >
+                            <span class="status-load-unit">転生</span>
+                        </div>
                     </div>
 
                     <!-- 残り割り振りポイント -->
                     <div class="status-load-field">
                         <label for="statusLoadPoint">Status Point</label>
-                        <input
-                            type="number"
-                            id="statusLoadPoint"
-                            min="0"
-                            step="1"
-                            inputmode="numeric"
-                            placeholder="残りポイント"
-                        >
+                        <div class="status-load-input-unit">
+                            <input
+                                type="number"
+                                id="statusLoadPoint"
+                                min="0"
+                                step="1"
+                                inputmode="numeric"
+                            >
+                            <span class="status-load-unit">pt</span>
+                        </div>
                     </div>
 
                     <!-- 各ステータスポイント -->
@@ -308,55 +325,63 @@
 
                         <div class="status-load-field">
                             <label for="statusLoadStamina">Stamina</label>
-                            <input
-                                type="number"
-                                id="statusLoadStamina"
-                                min="0"
-                                step="1"
-                                inputmode="numeric"
-                                placeholder="Stamina"
-                            >
+                            <div class="status-load-input-unit">
+                                <input
+                                    type="number"
+                                    id="statusLoadStamina"
+                                    min="0"
+                                    step="1"
+                                    inputmode="numeric"
+                                >
+                                <span class="status-load-unit">pt</span>
+                            </div>
                         </div>
 
                         <div class="status-load-field">
                             <label for="statusLoadAttack">Attack</label>
-                            <input
-                                type="number"
-                                id="statusLoadAttack"
-                                min="0"
-                                step="1"
-                                inputmode="numeric"
-                                placeholder="Attack"
-                            >
+                            <div class="status-load-input-unit">
+                                <input
+                                    type="number"
+                                    id="statusLoadAttack"
+                                    min="0"
+                                    step="1"
+                                    inputmode="numeric"
+                                >
+                                <span class="status-load-unit">pt</span>
+                            </div>
                         </div>
 
                         <div class="status-load-field">
                             <label for="statusLoadDefence">Defence</label>
-                            <input
-                                type="number"
-                                id="statusLoadDefence"
-                                min="0"
-                                step="1"
-                                inputmode="numeric"
-                                placeholder="Defence"
-                            >
+                            <div class="status-load-input-unit">
+                                <input
+                                    type="number"
+                                    id="statusLoadDefence"
+                                    min="0"
+                                    step="1"
+                                    inputmode="numeric"
+                                >
+                                <span class="status-load-unit">pt</span>
+                            </div>
                         </div>
 
                         <div class="status-load-field">
                             <label for="statusLoadLuck">Luck</label>
-                            <input
-                                type="number"
-                                id="statusLoadLuck"
-                                min="0"
-                                step="1"
-                                inputmode="numeric"
-                                placeholder="Luck"
-                            >
+                            <div class="status-load-input-unit">
+                                <input
+                                    type="number"
+                                    id="statusLoadLuck"
+                                    min="0"
+                                    step="1"
+                                    inputmode="numeric"
+                                >
+                                <span class="status-load-unit">pt</span>
+                            </div>
                         </div>
 
                     </div>
 
-                    <!-- 読み込みボタン -->
+                    <!-- 読み込むボタン -->
                     <button
                         type="button"
                         id="statusLoadButton"
@@ -366,7 +391,6 @@
                     </button>
 
                 </div>
-
             </td>
         </tr>
     </table>
