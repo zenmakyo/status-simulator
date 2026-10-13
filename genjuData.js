@@ -138,6 +138,13 @@ uniqueValue: { s: 16.5, a: 8.2, d: 6.3, l: 1 },
 changePoint: { s: 7, a: 10, d: 7, l: 0 },
   changesTo: [ 0, 1, 31, 32, 412, 704 ],
  changeType: "normal"
-             }
+             },
+
+1001: { name: "アマツキツネ", itemName: "天翔る長尾", class: "SS", attribute: "霊",
+uniqueValue: { s: 40.2, a: 21.7, d: 12, l: 1 },
+changePoint: { s: 15, a: 25, d: 14, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
 
 };
