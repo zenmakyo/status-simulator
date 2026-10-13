@@ -821,8 +821,9 @@ function setupStatusLoadToggle() {
 function setupStatusLoadGenjuSearch() {
     const input = document.getElementById("statusLoadGenju");
     const list = document.getElementById("statusLoadGenjuList");
+    const clearButton = document.getElementById("statusLoadGenjuClear");
 
-    if (!input || !list || typeof genjuData === "undefined") {
+    if (!input || !list || !clearButton || typeof genjuData === "undefined") {
         return;
     }
 
@@ -835,6 +836,24 @@ function setupStatusLoadGenjuSearch() {
         }))
         .filter(genju => typeof genju.name === "string")
         .sort((a, b) => Number(a.id) - Number(b.id));
+
+    // ×ボタンの表示を更新
+    function updateClearButton() {
+        clearButton.hidden = input.value.length === 0;
+    }
+
+    // 入力欄と選択状態をリセット
+    function clearGenjuInput() {
+        input.value = "";
+        delete input.dataset.genjuId;
+        list.innerHTML = "";
+        list.hidden = true;
+        updateClearButton();
+        input.focus();
+    }
+
+    // ×ボタン
+    clearButton.addEventListener("click", clearGenjuInput);
 
     // 候補リストを表示
     function displayCandidates(keyword = "") {
@@ -897,6 +916,9 @@ function setupStatusLoadGenjuSearch() {
 
                 // 候補リストを閉じる
                 list.hidden = true;
+
+                // ×ボタンを表示
+                updateClearButton();
             });
 
             list.appendChild(option);
@@ -919,6 +941,7 @@ function setupStatusLoadGenjuSearch() {
         // 手入力で変更された場合は選択済みIDを解除
         delete input.dataset.genjuId;
 
+        updateClearButton();
         displayCandidates(input.value);
     });
 
@@ -933,11 +956,14 @@ function setupStatusLoadGenjuSearch() {
     document.addEventListener("click", event => {
         if (
             !input.contains(event.target) &&
-            !list.contains(event.target)
+            !list.contains(event.target) &&
+            !clearButton.contains(event.target)
         ) {
             list.hidden = true;
         }
     });
+
+    updateClearButton();
 }
 
 // 検索機能を初期化
@@ -1109,6 +1135,17 @@ function setupStatusLoadButton() {
 
         // 読み込み後の状態も履歴に記録
         recordHistory();
+
+        // ステータス読み込み欄を閉じる
+        const toggleButton = document.getElementById("statusLoadToggle");
+        const contentRow = document.getElementById("statusLoadContentRow");
+        const toggleIcon = document.getElementById("statusLoadToggleIcon");
+
+        if (toggleButton && contentRow && toggleIcon) {
+            contentRow.hidden = true;
+            toggleButton.setAttribute("aria-expanded", "false");
+            toggleIcon.textContent = "▼";
+        }
 
         console.log("ステータス読み込み完了");
         console.log("最大割り振りポイント:", maxAllocationPoint);
