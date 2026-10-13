@@ -779,6 +779,29 @@ function setupLevelButtons() {
     });
 }
 
+// ステータス読み込み欄の開閉
+function setupStatusLoadToggle() {
+    const toggleButton = document.getElementById("statusLoadToggle");
+    const contentRow = document.getElementById("statusLoadContentRow");
+    const toggleIcon = document.getElementById("statusLoadToggleIcon");
+
+    if (!toggleButton || !contentRow || !toggleIcon) return;
+
+    toggleButton.addEventListener("click", () => {
+        const isExpanded = toggleButton.getAttribute("aria-expanded") === "true";
+
+        // 開閉を切り替える
+        contentRow.hidden = isExpanded;
+        toggleButton.setAttribute("aria-expanded", String(!isExpanded));
+
+        // アイコンを切り替える
+        toggleIcon.textContent = isExpanded ? "▼" : "▲";
+    });
+}
+
+// ステータス読み込み欄の初期化
+setupStatusLoadToggle();
+
 // ==============================
 // レベル変更の初期設定
 // ==============================
