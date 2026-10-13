@@ -431,7 +431,7 @@ h1 {
     box-sizing: border-box;
 }
 
-.status-load-field label {
+.status-load-label {
     min-width: 0;
     font-size: 14px;
     overflow-wrap: anywhere;
