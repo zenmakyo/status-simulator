@@ -54,6 +54,9 @@ let allocationPoint = {
     l: 0
 };
 
+// 読み込み時の残り割り振りポイントを調整する内部ポイント
+let adjustmentPoint = 0;
+
 // 最大割り振りポイント
 let maxAllocationPoint = 0;
 
@@ -192,6 +195,7 @@ function saveCurrentState() {
 
         statusPoint: { ...statusPoint },
         allocationPoint: { ...allocationPoint },
+        adjustmentPoint: adjustmentPoint,
 
         isCocooned: isCocooned
     };
@@ -205,6 +209,7 @@ function restoreState(state) {
 
     statusPoint = { ...state.statusPoint };
     allocationPoint = { ...state.allocationPoint };
+    adjustmentPoint = state.adjustmentPoint ?? 0;
 
     isCocooned = state.isCocooned;
 
@@ -420,6 +425,7 @@ button.addEventListener("click", () => {
 
         // 割り振りポイントをリセット
         allocationPoint = { s: 0, a: 0, d: 0, l: 0 };
+        adjustmentPoint = 0;
 
         // 転生回数を増やす
         rebirthCount++;
@@ -451,6 +457,7 @@ button.addEventListener("click", () => {
 
         // 割り振りポイントをリセット
         allocationPoint = { s: 0, a: 0, d: 0, l: 0 };
+        adjustmentPoint = 0;
 
         // レベルを1に戻す
         currentLevel = 1;
