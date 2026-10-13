@@ -492,9 +492,9 @@ h1 {
 /* 候補1件 */
 .status-load-genju-option {
     display: grid;
-    grid-template-columns: 76px minmax(0, 1fr);
+    grid-template-columns: 60px minmax(0, 1fr);
     align-items: center;
-    gap: 8px;
+    gap: 2px;
 
     width: 100%;
     min-height: 42px;
@@ -547,7 +547,7 @@ h1 {
 /* 縦線 */
 .status-load-genju-separator {
     display: inline-block;
-    margin-right: 8px;
+    margin-right: 2px;
     color: #888;
 }
 
