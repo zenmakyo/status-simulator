@@ -567,15 +567,16 @@ h1 {
 /* 読み込むボタン */
 .status-load-button {
     display: block;
-    width: 100%;
+    width: 70%;
+    margin: 0 auto;
     min-width: 0;
     min-height: 40px;
     padding: 6px 8px;
 
-    border: 2px solid #333;
+    border: 1px solid #333;
     border-radius: 8px;
 
-    background-color: #fef4f4;
+    background-color: #e9dfe5;
     color: #222;
 
     font-size: 14px;
