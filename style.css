@@ -177,6 +177,72 @@ h1 {
 }
 
 /* ==============================
+   上部ステータス欄の列幅を統一
+   ============================== */
+
+/* 4つのテーブルで共通の幅計算を使用 */
+.genju,
+.genju-item,
+.genju-status,
+.genju-output {
+  width: 100%;
+  box-sizing: border-box;
+  table-layout: fixed;
+}
+
+/* 左側の見出し列を統一 */
+.genju-ex {
+  box-sizing: border-box;
+}
+
+/* 幻獣名の行：25% / 50% / 25% */
+.genju-name {
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.genju-re {
+  width: 25%;
+  box-sizing: border-box;
+}
+
+/* 変化名の行：25% / 75% */
+.genju-item .genju-ex {
+  width: 25%;
+}
+
+.item-name {
+  width: 75%;
+  box-sizing: border-box;
+}
+
+/* ステータス欄：25% / 25% / 25% / 25% */
+.genju-status .genju-ex {
+  width: 25%;
+}
+
+.genju-display,
+.genju-sp {
+  width: 25%;
+  box-sizing: border-box;
+}
+
+/* Luckの行：50% / 25% / 25% */
+.genju-output .output {
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.genju-output .genju-ex {
+  width: 25%;
+}
+
+.genju-output tr > td:last-child {
+  width: 25%;
+  box-sizing: border-box;
+}
+
+/* ==============================
    変化履歴の戻る・進むボタン
    ============================== */
 
