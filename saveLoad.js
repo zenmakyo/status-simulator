@@ -69,7 +69,6 @@ function openSaveStateDialog() {
     renderSaveStateSlots();
 
     dialog.hidden = false;
-    nameInput.focus();
 }
 
 // 保存モーダルを閉じる
