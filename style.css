@@ -526,10 +526,28 @@ h1 {
     outline-offset: -2px;
 }
 
+/* 番号と縦線を含むエリア */
+.status-load-genju-number-area {
+    display: grid;
+    grid-template-columns: 1fr 8px;
+    align-items: center;
+    gap: 4px;
+
+    width: 96px;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+    box-sizing: border-box;
+}
+
 /* 番号欄 */
 .status-load-genju-number {
     white-space: nowrap;
-    font-variant-numeric: tabular-nums;
+}
+
+/* 縦線 */
+.status-load-genju-separator {
+    color: #888;
+    text-align: center;
 }
 
 /* クラスと幻獣名 */
