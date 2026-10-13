@@ -852,21 +852,22 @@ function setupStatusLoadGenjuSearch() {
             number.className = "status-load-genju-number";
             number.textContent = `No.${genju.id}`;
 
-            // 番号欄の右側に縦線を表示
-            const separator = document.createElement("span");
-            separator.className = "status-load-genju-separator";
-            separator.textContent = "|";
+            // 番号エリア
+            const numberArea = document.createElement("span");
+            numberArea.className = "status-load-genju-number-area";
+            numberArea.appendChild(number);
 
             // クラスと幻獣名
             const name = document.createElement("span");
             name.className = "status-load-genju-name";
-            name.textContent = `${genju.class}：${genju.name}`;
 
-            // 横並びに配置するための番号エリア
-            const numberArea = document.createElement("span");
-            numberArea.className = "status-load-genju-number-area";
-            numberArea.appendChild(number);
-            numberArea.appendChild(separator);
+            // クラス名の左端に縦線を配置
+            const separator = document.createElement("span");
+            separator.className = "status-load-genju-separator";
+            separator.textContent = "|";
+
+            name.appendChild(separator);
+            name.append(` ${genju.class}：${genju.name}`);
 
             option.appendChild(numberArea);
             option.appendChild(name);
