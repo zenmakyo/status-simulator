@@ -53,7 +53,7 @@ h1 {
 
 .genju-name {
   color: black;
-  width: 50%;
+  width: 60%;
   height: 36px;
   line-height: 1.1;
   border-top: none;
@@ -66,7 +66,7 @@ h1 {
 
 .genju-re {
   color: black;
-  width: 25%;
+  width: 15%;
   height: 36px;
   line-height: 1.2;
   border-top: none;
@@ -116,7 +116,6 @@ h1 {
   color: black;
   width: 25%;
   height: 36px;
-  box-sizing: border-box;
   border-top: none;
   border-left: none;
   border-right: 1px solid #d4acad;
@@ -127,7 +126,6 @@ h1 {
   color: black;
   width: 25%;
   height: 36px;
-  box-sizing: border-box;
   border-top: none;
   border-left: none;
   border-right: none;
