@@ -462,8 +462,40 @@ h1 {
     min-width: 0;
 }
 
+/* 入力欄と×ボタンを横並びにする */
+.status-load-genju-input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+/* 幻獣名の入力欄 */
 #statusLoadGenju {
     width: 100%;
+    padding-right: 38px;
+}
+
+/* 入力をリセットする×ボタン */
+.status-load-genju-clear {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+
+    width: 28px;
+    height: 28px;
+    padding: 0;
+
+    border: none;
+    background: transparent;
+    color: #666;
+
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.status-load-genju-clear[hidden] {
+    display: none;
 }
 
 /* 幻獣名の候補リスト */
