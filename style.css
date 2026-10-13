@@ -401,32 +401,28 @@ h1 {
    ステータス読み込み
 ============================== */
 
-/* 変化履歴と同じテーブルデザインを使用 */
 .status-load-box {
     margin-top: 16px;
     margin-bottom: 16px;
 }
 
-/* 入力欄の背景 */
 .status-load-content {
     background-color: #fef4f4;
 }
 
-/* 閉じているときは入力欄を非表示 */
 #statusLoadContentRow[hidden] {
     display: none;
 }
 
-/* 入力フォーム全体 */
 .status-load-form {
     width: 100%;
     box-sizing: border-box;
 }
 
-/* 項目名を左、入力欄を右に配置 */
+/* ラベルと入力欄の比率を約2.5：7.5に */
 .status-load-field {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
     align-items: center;
     gap: 8px;
 
@@ -435,16 +431,14 @@ h1 {
     box-sizing: border-box;
 }
 
-/* 項目名 */
 .status-load-field label {
     min-width: 0;
     font-size: 14px;
     overflow-wrap: anywhere;
 }
 
-/* 入力欄 */
-.status-load-field input,
-.status-load-field select {
+/* 入力欄の共通デザイン */
+.status-load-field input {
     width: 100%;
     min-width: 0;
     min-height: 36px;
@@ -461,6 +455,93 @@ h1 {
     box-sizing: border-box;
 }
 
+/* 幻獣名の検索欄 */
+.status-load-genju-wrapper {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+}
+
+#statusLoadGenju {
+    width: 100%;
+}
+
+/* 幻獣名の候補リスト */
+.status-load-genju-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 100;
+
+    width: 100%;
+    max-height: 220px;
+    overflow-y: auto;
+
+    border: 1px solid #aaa;
+    border-radius: 0 0 5px 5px;
+    background-color: #fff;
+
+    box-sizing: border-box;
+}
+
+.status-load-genju-list[hidden] {
+    display: none;
+}
+
+/* 候補1件 */
+.status-load-genju-option {
+    display: block;
+    width: 100%;
+    min-height: 36px;
+    padding: 8px;
+
+    border: none;
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+    color: #222;
+
+    font-size: 14px;
+    font-family: inherit;
+    text-align: left;
+
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.status-load-genju-option:last-child {
+    border-bottom: none;
+}
+
+.status-load-genju-option:active {
+    background-color: #eee;
+}
+
+/* 入力欄と単位を横並びに */
+.status-load-input-unit {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    width: 100%;
+    min-width: 0;
+}
+
+.status-load-input-unit input {
+    flex: 1;
+    width: 0;
+    min-width: 0;
+}
+
+/* 転生・ptの表記 */
+.status-load-unit {
+    flex-shrink: 0;
+    min-width: 24px;
+
+    color: #555;
+    font-size: 12px;
+    text-align: left;
+}
+
 /* 各ステータスのまとまり */
 .status-load-statuses {
     width: 100%;
@@ -468,7 +549,6 @@ h1 {
     box-sizing: border-box;
 }
 
-/* ステータス項目の下余白 */
 .status-load-statuses .status-load-field {
     margin-bottom: 12px;
 }
@@ -496,10 +576,14 @@ h1 {
     box-sizing: border-box;
 }
 
-/* キーボード操作時のフォーカス表示 */
+/* フォーカス表示 */
 .status-load-button:focus-visible,
-.status-load-field input:focus-visible,
-.status-load-field select:focus-visible {
+.status-load-field input:focus-visible {
     outline: 2px solid #3568a8;
     outline-offset: 2px;
+}
+
+.status-load-genju-option:focus-visible {
+    outline: 2px solid #3568a8;
+    outline-offset: -2px;
 }
