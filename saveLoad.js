@@ -43,11 +43,10 @@ function createDefaultSaveName() {
     const state = saveCurrentState();
     const rebirth = state.rebirthCount;
 
-    // 現在の幻獣名を取得
-    const genju = genjuData.find(
-        item => String(item.id) === String(state.currentGenjuId)
-    );
+    // IDをキーにして幻獣データを取得
+    const genju = genjuData[state.currentGenjuId];
 
+    // 幻獣名を取得
     const genjuName = genju ? genju.name : "幻獣名";
 
     return `${rebirth}転生・${genjuName}`;
