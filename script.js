@@ -799,6 +799,133 @@ function setupStatusLoadToggle() {
     });
 }
 
+// ==============================
+// ステータス読み込み：幻獣名検索
+// ==============================
+function setupStatusLoadGenjuSearch() {
+    const input = document.getElementById("statusLoadGenju");
+    const list = document.getElementById("statusLoadGenjuList");
+
+    if (!input || !list || typeof genjuData === "undefined") {
+        return;
+    }
+
+    // 幻獣ID・名前・クラスの一覧を作成
+    const genjuList = Object.entries(genjuData)
+        .map(([id, genju]) => ({
+            id,
+            name: genju.name,
+            class: genju.class
+        }))
+        .filter(genju => typeof genju.name === "string")
+        .sort((a, b) => Number(a.id) - Number(b.id));
+
+    // 候補リストを表示
+    function displayCandidates(keyword = "") {
+        const normalizedKeyword = keyword.trim().toLowerCase();
+
+        // 名前の部分一致で候補を絞り込む
+        const candidates = genjuList.filter(genju =>
+            genju.name.toLowerCase().includes(normalizedKeyword)
+        );
+
+        // 以前の候補を消去
+        list.innerHTML = "";
+
+        // 候補がなければリストを閉じる
+        if (candidates.length === 0) {
+            list.hidden = true;
+            return;
+        }
+
+        // 候補を1件ずつ作成
+        candidates.forEach(genju => {
+            const option = document.createElement("button");
+
+            option.type = "button";
+            option.className = "status-load-genju-option";
+            option.setAttribute("role", "option");
+            option.setAttribute("aria-selected", "false");
+
+            // 番号欄
+            const number = document.createElement("span");
+            number.className = "status-load-genju-number";
+            number.textContent = `No.${genju.id}`;
+
+            // 番号欄の右側に縦線を表示
+            const separator = document.createElement("span");
+            separator.className = "status-load-genju-separator";
+            separator.textContent = "|";
+
+            // クラスと幻獣名
+            const name = document.createElement("span");
+            name.className = "status-load-genju-name";
+            name.textContent = `${genju.class}：${genju.name}`;
+
+            // 横並びに配置するための番号エリア
+            const numberArea = document.createElement("span");
+            numberArea.className = "status-load-genju-number-area";
+            numberArea.appendChild(number);
+            numberArea.appendChild(separator);
+
+            option.appendChild(numberArea);
+            option.appendChild(name);
+
+            // 候補を選択したら入力欄に反映
+            option.addEventListener("click", () => {
+                input.value = genju.name;
+
+                // 選択した幻獣IDを保持
+                input.dataset.genjuId = genju.id;
+
+                // 候補リストを閉じる
+                list.hidden = true;
+            });
+
+            list.appendChild(option);
+        });
+
+        list.hidden = false;
+    }
+
+    // 入力欄をクリックしたら候補を表示
+    input.addEventListener("focus", () => {
+        displayCandidates(input.value);
+    });
+
+    input.addEventListener("click", () => {
+        displayCandidates(input.value);
+    });
+
+    // 入力文字に応じて候補を絞り込む
+    input.addEventListener("input", () => {
+        // 手入力で変更された場合は選択済みIDを解除
+        delete input.dataset.genjuId;
+
+        displayCandidates(input.value);
+    });
+
+    // Escapeキーで候補リストを閉じる
+    input.addEventListener("keydown", event => {
+        if (event.key === "Escape") {
+            list.hidden = true;
+        }
+    });
+
+    // 入力欄・候補リストの外をクリックしたら閉じる
+    document.addEventListener("click", event => {
+        if (
+            !input.contains(event.target) &&
+            !list.contains(event.target)
+        ) {
+            list.hidden = true;
+        }
+    });
+}
+
+// 検索機能を初期化
+setupStatusLoadGenjuSearch();
+
 // ステータス読み込み欄の初期化
 setupStatusLoadToggle();
 
