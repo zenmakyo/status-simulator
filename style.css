@@ -526,10 +526,21 @@ h1 {
     min-width: 0;
 }
 
+/* 数値入力欄の幅を縮める */
 .status-load-input-unit input {
-    flex: 1;
-    width: 0;
+    flex: 0 1 50%;
+    width: 50%;
     min-width: 0;
+}
+
+/* 単位の幅と位置を統一 */
+.status-load-unit {
+    flex: 0 0 32px;
+    width: 32px;
+
+    color: #555;
+    font-size: 12px;
+    text-align: left;
 }
 
 /* 転生・ptの表記 */
@@ -586,4 +597,17 @@ h1 {
 .status-load-genju-option:focus-visible {
     outline: 2px solid #3568a8;
     outline-offset: -2px;
+}
+
+/* 幻獣名の候補表示中は入力欄とリストを一体化 */
+.status-load-genju-wrapper:has(.status-load-genju-list:not([hidden]))
+#statusLoadGenju {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* 候補リストの上側の境界線をなくす */
+.status-load-genju-list {
+    border-top: none;
+    border-radius: 0 0 5px 5px;
 }
