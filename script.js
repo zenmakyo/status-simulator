@@ -945,6 +945,7 @@ setupStatusLoadGenjuSearch();
 
 // ステータス読み込み欄の初期化
 setupStatusLoadToggle();
+setupStatusLoadButton();
 
 // ==============================
 // レベル変更の初期設定
@@ -959,3 +960,159 @@ setupHistoryButtons();
 
 // 変化履歴の初期設定
 setupTransformationHistory();
+
+// ステータス読み込みボタン
+function setupStatusLoadButton() {
+    const button = document.getElementById("statusLoadButton");
+
+    if (!button) {
+        console.error("ステータス読み込みボタンが見つかりません。");
+        return;
+    }
+
+    button.addEventListener("click", () => {
+        const genjuInput = document.getElementById("statusLoadGenju");
+
+        const genjuId = Number(genjuInput.dataset.genjuId);
+        const level = Number(document.getElementById("statusLoadLevel").value);
+        const rebirth = Number(document.getElementById("statusLoadRebirth").value);
+        const remainingPointInput = Number(document.getElementById("statusLoadPoint").value);
+
+        const stamina = Number(document.getElementById("statusLoadStamina").value);
+        const attack = Number(document.getElementById("statusLoadAttack").value);
+        const defence = Number(document.getElementById("statusLoadDefence").value);
+        const luck = Number(document.getElementById("statusLoadLuck").value);
+
+        // 入力欄が空でないことを確認
+        const inputIds = [
+            "statusLoadLevel",
+            "statusLoadRebirth",
+            "statusLoadPoint",
+            "statusLoadStamina",
+            "statusLoadAttack",
+            "statusLoadDefence",
+            "statusLoadLuck"
+        ];
+
+        for (const id of inputIds) {
+            const value = document.getElementById(id).value;
+
+            if (value.trim() === "") {
+                alert("すべての項目を入力してください。");
+                return;
+            }
+        }
+
+        // 幻獣名が選択されているか確認
+        if (
+            genjuInput.dataset.genjuId === undefined ||
+            !Number.isInteger(genjuId) ||
+            !genjuData[genjuId]
+        ) {
+            alert("幻獣名を候補リストから選択してください。");
+            return;
+        }
+
+        // 数値の入力内容を検証
+        const numericValues = [
+            level,
+            rebirth,
+            remainingPointInput,
+            stamina,
+            attack,
+            defence,
+            luck
+        ];
+
+        if (
+            numericValues.some(value => !Number.isFinite(value)) ||
+            !Number.isInteger(level) ||
+            !Number.isInteger(rebirth) ||
+            !Number.isInteger(remainingPointInput) ||
+            !Number.isInteger(stamina) ||
+            !Number.isInteger(attack) ||
+            !Number.isInteger(defence) ||
+            !Number.isInteger(luck) ||
+            level < 1 ||
+            rebirth < 0 ||
+            remainingPointInput < 0 ||
+            stamina < 0 ||
+            attack < 0 ||
+            defence < 0 ||
+            luck < 0
+        ) {
+            alert("数値は0以上の整数で入力してください。レベルは1以上です。");
+            return;
+        }
+
+        // 転生数に応じたレベル上限を確認
+        const maxLevel = rebirth >= 8 ? 250 : 200;
+
+        if (level > maxLevel) {
+            alert(`この転生数で設定できる最大レベルは${maxLevel}です。`);
+            return;
+        }
+
+        // 読み込み時の最大割り振りポイントを計算
+        const levelPoint = (level - 1) * 2;
+
+        let bonus = 0;
+
+        if (rebirth > 0) {
+            bonus = rebirthBonus[rebirth] ?? maxRebirthBonus;
+        }
+
+        const loadMaxAllocationPoint = levelPoint + bonus;
+
+        // 読み込みたい残りポイントが最大ポイントを超えていないか確認
+        if (remainingPointInput > loadMaxAllocationPoint) {
+            alert("残り割り振りポイントが最大割り振りポイントを超えています。");
+            return;
+        }
+
+        // 読み込み前の状態を履歴に記録
+        recordHistory();
+
+        // 読み込んだ状態を反映
+        currentGenjuId = genjuId;
+        currentLevel = level;
+        rebirthCount = rebirth;
+
+        statusPoint = {
+            s: stamina,
+            a: attack,
+            d: defence,
+            l: luck
+        };
+
+        // 読み込み時点では実際の割り振りポイントを0にする
+        allocationPoint = {
+            s: 0,
+            a: 0,
+            d: 0,
+            l: 0
+        };
+
+        // 残りポイントが指定値になるよう調整ポイントを設定
+        adjustmentPoint =
+            loadMaxAllocationPoint - remainingPointInput;
+
+        // 転生状態を反映
+        isCocooned = false;
+
+        // 表示を更新
+        updateLevelPoints();
+        displayCurrentGenju();
+        displayAllocationPoints();
+
+        document.getElementById("rebirthCount").textContent = rebirthCount;
+
+        // 読み込み後の状態も履歴に記録
+        recordHistory();
+
+        console.log("ステータス読み込み完了");
+        console.log("最大割り振りポイント:", maxAllocationPoint);
+        console.log("調整ポイント:", adjustmentPoint);
+        console.log("残り割り振りポイント:", remainingAllocationPoint);
+    });
+}
