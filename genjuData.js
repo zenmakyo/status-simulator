@@ -145,6 +145,6 @@ uniqueValue: { s: 40.2, a: 21.7, d: 12, l: 1 },
 changePoint: { s: 15, a: 25, d: 14, l: 0 },
   changesTo: [ 0, 1 ],
  changeType: "normal"
-             },
+             }
 
 };
