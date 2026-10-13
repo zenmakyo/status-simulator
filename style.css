@@ -877,3 +877,29 @@ h1 {
         padding: 16px;
     }
 }
+
+/* ==============================
+   育成状態の呼び出しモーダル
+============================== */
+
+/* 上部タイトル */
+.load-state-header {
+    flex-shrink: 0;
+    padding-bottom: 16px;
+}
+
+.load-state-header h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* スロット一覧を広く使う */
+.load-state-list-section {
+    padding-top: 0;
+}
+
+/* 呼び出し用モーダルでは、タイトルと一覧の間に線を設けない */
+.load-state-list {
+    border-top: none;
+}
