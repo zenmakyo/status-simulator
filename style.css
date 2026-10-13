@@ -195,14 +195,14 @@ h1 {
   box-sizing: border-box;
 }
 
-/* 幻獣名の行：25% / 50% / 25% */
+/* 幻獣名の行：25% / 60% / 15% */
 .genju-name {
-  width: 50%;
+  width: 60%;
   box-sizing: border-box;
 }
 
 .genju-re {
-  width: 25%;
+  width: 15%;
   box-sizing: border-box;
 }
 
