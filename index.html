@@ -230,26 +230,50 @@
     </button>
 </div>
 
-<!-- 育成状態の保存 -->
-<div id="saveStateDialog" class="save-state-dialog" hidden>
-    <label for="saveStateName">保存名</label>
-
-    <input
-        type="text"
-        id="saveStateName"
-        maxlength="50"
-        placeholder=""
+<!-- 育成状態の保存モーダル -->
+<div id="saveStateDialog" class="save-state-overlay" hidden>
+    <div
+        class="save-state-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="saveStateTitle"
     >
+        <!-- 保存名 -->
+        <div class="save-state-header">
+            <label id="saveStateTitle" for="saveStateName">
+                保存名
+            </label>
 
-    <button type="button" id="saveStateConfirm">
-        保存する
-    </button>
+            <input
+                type="text"
+                id="saveStateName"
+                maxlength="50"
+                placeholder="未入力の場合は自動命名"
+            >
+        </div>
 
-    <button type="button" id="saveStateCancel">
-        キャンセル
-    </button>
+        <!-- 保存スロット一覧 -->
+        <div class="save-state-list-section">
+            <h3 class="save-state-list-title">リスト一覧</h3>
 
-    <p id="saveStateMessage" role="status" aria-live="polite"></p>
+            <div id="saveStateList" class="save-state-list">
+                <!-- saveLoad.jsで30個のスロットを自動生成 -->
+            </div>
+        </div>
+
+        <!-- 下部エリア -->
+        <div class="save-state-footer">
+            <p
+                id="saveStateMessage"
+                role="status"
+                aria-live="polite"
+            ></p>
+
+            <button type="button" id="saveStateCancel">
+                キャンセル
+            </button>
+        </div>
+    </div>
 </div>
  
 <!-- ステータス読み込み -->
