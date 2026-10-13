@@ -116,6 +116,7 @@ h1 {
   color: black;
   width: 25%;
   height: 36px;
+  box-sizing: border-box;
   border-top: none;
   border-left: none;
   border-right: 1px solid #d4acad;
@@ -126,6 +127,7 @@ h1 {
   color: black;
   width: 25%;
   height: 36px;
+  box-sizing: border-box;
   border-top: none;
   border-left: none;
   border-right: none;
