@@ -234,3 +234,232 @@ function setupSaveStateButtons() {
 
 // HTMLの読み込み完了後に設定
 setupSaveStateButtons();
+
+// ========================================
+// 育成状態の呼び出し
+// ========================================
+
+// 呼び出しモーダルを開く
+function openLoadStateDialog() {
+    const dialog = document.getElementById("loadStateDialog");
+    const message = document.getElementById("loadStateMessage");
+
+    if (!dialog || !message) {
+        console.error("呼び出しモーダルのHTML要素が見つかりません。");
+        return;
+    }
+
+    message.textContent = "";
+
+    renderLoadStateSlots();
+
+    dialog.hidden = false;
+}
+
+// 呼び出しモーダルを閉じる
+function closeLoadStateDialog() {
+    const dialog = document.getElementById("loadStateDialog");
+
+    if (dialog) {
+        dialog.hidden = true;
+    }
+}
+
+// 30個の呼び出しスロットを表示
+function renderLoadStateSlots() {
+    const list = document.getElementById("loadStateList");
+
+    if (!list) {
+        console.error("呼び出しスロット一覧が見つかりません。");
+        return;
+    }
+
+    const savedStates = getSavedStates();
+
+    list.replaceChildren();
+
+    for (
+        let slotNumber = 1;
+        slotNumber <= SAVE_STATE_SLOT_COUNT;
+        slotNumber++
+    ) {
+        const saved = savedStates.find(
+            item => item.slot === slotNumber
+        );
+
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "save-state-slot";
+        button.dataset.slot = String(slotNumber);
+
+        const slotLabel = document.createElement("span");
+        slotLabel.textContent = `スロット${slotNumber}：`;
+
+        const nameLabel = document.createElement("span");
+        nameLabel.className = "save-state-slot-name";
+        nameLabel.textContent = saved ? saved.name : "未保存";
+
+        button.append(slotLabel, nameLabel);
+
+        // 未保存スロットは選択できない
+        button.disabled = !saved;
+
+        if (saved) {
+            button.addEventListener("click", () => {
+                loadStateFromSlot(slotNumber);
+            });
+        }
+
+        list.appendChild(button);
+    }
+}
+
+// 状態が同じか比較
+function isSameLoadHistoryState(stateA, stateB) {
+    return JSON.stringify(stateA) === JSON.stringify(stateB);
+}
+
+// 呼び出した状態を操作履歴に追加
+function addLoadedStateToHistory(previousState) {
+    if (
+        !Array.isArray(transformationHistory) ||
+        typeof historyIndex !== "number"
+    ) {
+        console.error("操作履歴が見つかりません。");
+        return false;
+    }
+
+    // 現在の履歴位置が不正でないか確認
+    if (
+        historyIndex < 0 ||
+        historyIndex >= transformationHistory.length
+    ) {
+        console.error("操作履歴の位置が正しくありません。");
+        return false;
+    }
+
+    // 戻った状態から呼び出した場合、先の履歴を削除
+    transformationHistory.splice(historyIndex + 1);
+
+    // 現在の育成状態が履歴の最新状態と異なる場合、
+    // 呼び出し前の状態も履歴に追加しておく
+    const currentHistoryState = transformationHistory[historyIndex];
+
+    if (!isSameLoadHistoryState(currentHistoryState, previousState)) {
+        transformationHistory.push(previousState);
+        historyIndex = transformationHistory.length - 1;
+    }
+
+    // 呼び出し後の状態を最新の履歴として追加
+    transformationHistory.push(saveCurrentState());
+    historyIndex = transformationHistory.length - 1;
+
+    // 既存の履歴上限を超えた場合は古い履歴を削除
+    while (transformationHistory.length > maxHistoryCount) {
+        transformationHistory.shift();
+        historyIndex--;
+    }
+
+    // 戻る・進むボタンの状態を更新
+    updateHistoryButtons();
+
+    return true;
+}
+
+// 指定スロットから育成状態を呼び出す
+function loadStateFromSlot(slotNumber) {
+    const message = document.getElementById("loadStateMessage");
+
+    const savedStates = getSavedStates();
+
+    const saved = savedStates.find(
+        item => item.slot === slotNumber
+    );
+
+    // 保存データがない場合
+    if (!saved) {
+        if (message) {
+            message.textContent =
+                "このスロットには保存データがありません。";
+        }
+        return;
+    }
+
+    // 必要なデータが存在するか確認
+    if (!saved.state) {
+        if (message) {
+            message.textContent =
+                "保存データが正しくありません。";
+        }
+        return;
+    }
+
+    if (typeof restoreState !== "function") {
+        if (message) {
+            message.textContent =
+                "育成状態を復元する機能が見つかりません。";
+        }
+        console.error("restoreState() が見つかりません。");
+        return;
+    }
+
+    // 呼び出し前の状態を記録
+    const previousState = saveCurrentState();
+
+    try {
+        // 保存した育成状態を復元
+        restoreState(saved.state);
+
+        // 呼び出した状態を操作履歴の最新にする
+        const historyAdded = addLoadedStateToHistory(previousState);
+
+        if (!historyAdded) {
+            if (message) {
+                message.textContent =
+                    "状態は呼び出しましたが、操作履歴への登録に失敗しました。";
+            }
+            return;
+        }
+
+        // 呼び出し成功
+        closeLoadStateDialog();
+
+    } catch (error) {
+        console.error("育成状態の呼び出しに失敗しました。", error);
+
+        if (message) {
+            message.textContent =
+                "呼び出しに失敗しました。保存データを確認してください。";
+        }
+    }
+}
+
+// 呼び出し機能の初期設定
+function setupLoadStateButtons() {
+    const loadButton = document.getElementById("historyLoadButton");
+    const cancelButton = document.getElementById("loadStateCancel");
+
+    if (!loadButton || !cancelButton) {
+        console.error("呼び出し機能に必要なHTML要素が見つかりません。");
+        return;
+    }
+
+    // 「リストから呼出」でモーダルを開く
+    loadButton.addEventListener("click", openLoadStateDialog);
+
+    // キャンセルで閉じる
+    cancelButton.addEventListener("click", closeLoadStateDialog);
+
+    // Escapeキーで閉じる
+    document.addEventListener("keydown", event => {
+        if (
+            event.key === "Escape" &&
+            !document.getElementById("loadStateDialog")?.hidden
+        ) {
+            closeLoadStateDialog();
+        }
+    });
+}
+
+// 呼び出し機能を初期化
+setupLoadStateButtons();
