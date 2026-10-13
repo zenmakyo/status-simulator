@@ -546,8 +546,9 @@ h1 {
 
 /* 縦線 */
 .status-load-genju-separator {
+    display: inline-block;
+    margin-right: 8px;
     color: #888;
-    text-align: center;
 }
 
 /* クラスと幻獣名 */
