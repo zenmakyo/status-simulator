@@ -230,6 +230,28 @@
     </button>
 </div>
 
+<!-- 育成状態の保存 -->
+<div id="saveStateDialog" class="save-state-dialog" hidden>
+    <label for="saveStateName">保存名</label>
+
+    <input
+        type="text"
+        id="saveStateName"
+        maxlength="50"
+        placeholder=""
+    >
+
+    <button type="button" id="saveStateConfirm">
+        保存する
+    </button>
+
+    <button type="button" id="saveStateCancel">
+        キャンセル
+    </button>
+
+    <p id="saveStateMessage" role="status" aria-live="polite"></p>
+</div>
+ 
 <!-- ステータス読み込み -->
 <div class="box-master">
     <table class="history-box status-load-box" id="statusLoadBox">
@@ -418,6 +440,7 @@
 
 <script src="genjuData.js"></script>
 <script src="script.js"></script>
+<script src="saveLoad.js"></script>
  
 </body>
 </html>
