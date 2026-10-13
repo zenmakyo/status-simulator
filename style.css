@@ -494,7 +494,7 @@ h1 {
     display: grid;
     grid-template-columns: 60px minmax(0, 1fr);
     align-items: center;
-    gap: 2px;
+    gap: 4px;
 
     width: 100%;
     min-height: 42px;
