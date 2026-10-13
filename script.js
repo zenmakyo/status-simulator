@@ -1009,7 +1009,7 @@ function setupStatusLoadButton() {
             !Number.isInteger(genjuId) ||
             !genjuData[genjuId]
         ) {
-            alert("幻獣名を候補リストから選択してください。");
+            alert("幻獣を候補リストから選択してください。");
             return;
         }
 
@@ -1066,7 +1066,7 @@ function setupStatusLoadButton() {
 
         // 読み込みたい残りポイントが最大ポイントを超えていないか確認
         if (remainingPointInput > loadMaxAllocationPoint) {
-            alert("残り割り振りポイントが最大割り振りポイントを超えています。");
+            alert("Statusポイントが取得最大ポイントを超えています。");
             return;
         }
 
