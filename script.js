@@ -867,7 +867,7 @@ function setupStatusLoadGenjuSearch() {
             separator.textContent = "|";
 
             name.appendChild(separator);
-            name.append(` ${genju.class}：${genju.name}`);
+            name.append(` ${genju.class}: ${genju.name}`);
 
             option.appendChild(numberArea);
             option.appendChild(name);
