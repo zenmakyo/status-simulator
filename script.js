@@ -13,6 +13,33 @@ let currentLevel = 1;
 // 転生回数
 let rebirthCount = 0;
 
+// 転生数に応じた背景色
+
+const rebirthColors = {
+    0: "rgba(220, 221, 221, 0.5)",
+    1: "rgba(187, 200, 230, 0.5)",
+    2: "rgba(44, 169, 225, 0.5)",
+    3: "rgba(102, 255, 102, 0.5)",
+    4: "rgba(255, 255, 0, 0.5)",
+    5: "rgba(255, 204, 0, 0.5)",
+    6: "rgba(255, 153, 0, 0.5)",
+    7: "rgba(204, 0, 0, 0.5)",
+    8: "rgba(255, 51, 204, 0.5)",
+    9: "rgba(153, 0, 204, 0.5)"
+};
+
+// 転生数に応じてセル全体の背景色を更新
+function updateRebirthColor() {
+    const rebirthCell = document.querySelector(".genju-re");
+
+    if (!rebirthCell) return;
+
+    // 9以上は9の色、0～8は対応する色を使用
+    const colorIndex = Math.min(Math.max(rebirthCount, 0), 9);
+
+    rebirthCell.style.backgroundColor = rebirthColors[colorIndex];
+}
+
 // 転生ボーナス
 // 後から変更できるように独立して管理する
 const rebirthBonus = {
@@ -219,6 +246,7 @@ function restoreState(state) {
     displayAllocationPoints();
 
     document.getElementById("rebirthCount").textContent = rebirthCount;
+    updateRebirthColor();
 
     updateHistoryButtons();
 }
@@ -430,6 +458,7 @@ button.addEventListener("click", () => {
         // 転生回数を増やす
         rebirthCount++;
         document.getElementById("rebirthCount").textContent = rebirthCount;
+        updateRebirthColor();
 
         // 繭化状態を解除
         isCocooned = false;
@@ -980,6 +1009,7 @@ setupStatusLoadButton();
 setupLevelButtons();
 updateLevelPoints();
 document.getElementById("rebirthCount").textContent = rebirthCount;
+updateRebirthColor();
 
 // 戻る・進むボタンの初期設定
 setupHistoryButtons();
@@ -1132,6 +1162,7 @@ function setupStatusLoadButton() {
         displayAllocationPoints();
 
         document.getElementById("rebirthCount").textContent = rebirthCount;
+        updateRebirthColor();
 
         // 読み込み後の状態も履歴に記録
         recordHistory();
