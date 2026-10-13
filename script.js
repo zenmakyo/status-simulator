@@ -555,7 +555,8 @@ function displayAllocationPoints() {
         allocationPoint.s +
         allocationPoint.a +
         allocationPoint.d +
-        allocationPoint.l;
+        allocationPoint.l +
+        adjustmentPoint;
 
     remainingAllocationPoint = Math.max(
         0,
@@ -694,7 +695,6 @@ displayAllocationPoints();
 
 // レベルに応じたポイントを再計算
 function updateLevelPoints() {
-
     const maxLevel = getMaxLevel();
 
     // レベルを上限・下限の範囲内に収める
@@ -706,15 +706,21 @@ function updateLevelPoints() {
     // 最大割り振りポイントを再計算
     calculateMaxAllocationPoint();
 
-    // 割り振り済みポイントが上限を超えた場合は調整
-    let usedPoint =
+    // 調整ポイントを除いた、実際に割り振れるポイントの上限
+    const availableAllocationPoint = Math.max(
+        0,
+        maxAllocationPoint - adjustmentPoint
+    );
+
+    // 実際に割り振ったポイントの合計
+    let allocatedPoint =
         allocationPoint.s +
         allocationPoint.a +
         allocationPoint.d +
         allocationPoint.l;
 
-    while (usedPoint > maxAllocationPoint) {
-
+    // 実際の割り振りが上限を超えた場合は調整
+    while (allocatedPoint > availableAllocationPoint) {
         if (allocationPoint.l > 0) {
             allocationPoint.l--;
         } else if (allocationPoint.d > 0) {
@@ -723,9 +729,11 @@ function updateLevelPoints() {
             allocationPoint.a--;
         } else if (allocationPoint.s > 0) {
             allocationPoint.s--;
+        } else {
+            break;
         }
 
-        usedPoint =
+        allocatedPoint =
             allocationPoint.s +
             allocationPoint.a +
             allocationPoint.d +
@@ -770,12 +778,17 @@ function setupLevelButtons() {
                 return;
             }
 
+            // 調整ポイントがある場合、レベルを下げる操作は禁止
+            if (adjustmentPoint > 0 && change < 0) {
+                return;
+            }
+
             // レベルを変更
             currentLevel += change;
 
             // 表示とポイントを更新
             updateLevelPoints();
-            
+
             // 操作後の状態を履歴に記録
             recordHistory();
         });
