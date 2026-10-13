@@ -685,3 +685,195 @@ h1 {
     border-top: none;
     border-radius: 0 0 5px 5px;
 }
+
+/* ==============================
+   育成状態の保存モーダル
+============================== */
+
+/* 画面全体を覆う背景 */
+.save-state-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 16px;
+    box-sizing: border-box;
+
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* hidden属性がある場合は非表示 */
+.save-state-overlay[hidden] {
+    display: none;
+}
+
+/* モーダル本体 */
+.save-state-modal {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: 500px;
+
+    height: 600px;
+    max-height: calc(100% - 32px);
+
+    box-sizing: border-box;
+    padding: 20px;
+
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+
+    color: #333333;
+    overflow: hidden;
+}
+
+/* 保存名エリア */
+.save-state-header {
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    padding-bottom: 18px;
+    border-bottom: 2px solid #dddddd;
+}
+
+.save-state-header label {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.save-state-header input {
+    width: 100%;
+    min-height: 42px;
+
+    box-sizing: border-box;
+    padding: 9px 12px;
+
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+
+    font-size: 16px;
+    background: #ffffff;
+    color: #333333;
+}
+
+/* リスト一覧エリア */
+.save-state-list-section {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+    min-height: 0;
+    padding-top: 16px;
+}
+
+.save-state-list-title {
+    flex-shrink: 0;
+
+    margin: 0 0 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* スロット一覧だけスクロール */
+.save-state-list {
+    flex: 1;
+    min-height: 0;
+
+    overflow-y: auto;
+    overscroll-behavior: contain;
+
+    border-top: 1px solid #eeeeee;
+}
+
+/* 各スロット
+   saveLoad.jsで生成されるボタンに適用 */
+.save-state-slot {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    width: 100%;
+    min-height: 44px;
+
+    box-sizing: border-box;
+    padding: 10px 8px;
+
+    border: none;
+    border-bottom: 1px solid #eeeeee;
+
+    background: #ffffff;
+    color: #333333;
+
+    text-align: left;
+    font-size: 14px;
+    font-family: inherit;
+
+    cursor: pointer;
+}
+
+/* スロット名が長い場合 */
+.save-state-slot-name {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+/* キーボード操作時のフォーカス表示 */
+.save-state-slot:focus-visible,
+#saveStateCancel:focus-visible,
+#saveStateName:focus-visible {
+    outline: 2px solid #6688cc;
+    outline-offset: -2px;
+}
+
+/* 下部エリア */
+.save-state-footer {
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 14px;
+}
+
+/* 保存結果メッセージ */
+#saveStateMessage {
+    margin: 0 0 10px;
+    font-size: 13px;
+    text-align: center;
+}
+
+/* キャンセルボタン */
+#saveStateCancel {
+    min-width: 140px;
+    min-height: 42px;
+
+    padding: 9px 24px;
+
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+
+    background: #f2f2f2;
+    color: #333333;
+
+    font-size: 14px;
+    font-family: inherit;
+
+    cursor: pointer;
+}
+
+/* スマホ */
+@media (max-width: 480px) {
+    .save-state-modal {
+        padding: 16px;
+    }
+}
