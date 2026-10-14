@@ -140,6 +140,13 @@ changePoint: { s: 7, a: 10, d: 7, l: 0 },
  changeType: "normal"
              },
 
+ 20: { name: "桂男", itemName: "誰かの草履", class: "D", attribute: "霊",
+uniqueValue: { s: 22, a: 6.3, d: 6.4, l: 1 },
+changePoint: { s: 9, a: 7, d: 8, l: 0 },
+  changesTo: [ 0, 1, 30, 33 ],
+ changeType: "normal"
+             },
+
 1001: { name: "アマツキツネ", itemName: "天翔る長尾", class: "SS", attribute: "霊",
 uniqueValue: { s: 40.2, a: 21.7, d: 12, l: 1 },
 changePoint: { s: 15, a: 25, d: 14, l: 0 },
