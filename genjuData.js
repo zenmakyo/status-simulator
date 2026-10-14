@@ -146,6 +146,13 @@ changePoint: { s: 9, a: 7, d: 8, l: 0 },
   changesTo: [ 0, 1, 30, 33 ],
  changeType: "normal"
              },
+  
+ 21: { name: "マミー", itemName: "水溶性の包帯", class: "D", attribute: "霊",
+uniqueValue: { s: 22.5, a: 6.9, d: 5.6, l: 1 },
+changePoint: { s: 9, a: 8, d: 7, l: 0 },
+  changesTo: [ 0, 1, 29, 35, 367, 880 ],
+ changeType: "normal"
+             },
 
 1001: { name: "アマツキツネ", itemName: "天翔る長尾", class: "SS", attribute: "霊",
 uniqueValue: { s: 40.2, a: 21.7, d: 12, l: 1 },
