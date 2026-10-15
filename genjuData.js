@@ -357,6 +357,76 @@ changePoint: { s: 13, a: 9, d: 9, l: 0 },
  changeType: "normal"
              },
 
+ 51: { name: "大海の精霊", itemName: "大海の精霊石", class: "B", attribute: "霊",
+uniqueValue: { s: 32, a: 8.25, d: 8.1, l: 1 },
+changePoint: { s: 12, a: 10, d: 9, l: 0 },
+  changesTo: [ 0, 1, 68, 110, 181, 612, 890 ],
+ changeType: "normal"
+             },
+
+ 52: { name: "ヴァルキリーβ", itemName: "正義を誓う羽根", class: "B", attribute: "霊",
+uniqueValue: { s: 34.5, a: 13, d: 7.3, l: 1 },
+changePoint: { s: 13, a: 15, d: 9, l: 0 },
+  changesTo: [ 0, 1, 126, 280, 451 ],
+ changeType: "normal"
+             },
+
+ 53: { name: "幻影", itemName: "幻と影の種", class: "B", attribute: "霊",
+uniqueValue: { s: 36, a: 7.3, d: 7.7, l: 1 },
+changePoint: { s: 14, a: 9, d: 9, l: 0 },
+  changesTo: [ 0, 1, 69, 116, 208, 393, 692, 721, 859 ],
+ changeType: "normal"
+             },
+
+ 54: { name: "リビングソード", itemName: "魔剣新書", class: "B", attribute: "霊",
+uniqueValue: { s: 21, a: 12.5, d: 7.5, l: 1 },
+changePoint: { s: 8, a: 14, d: 9, l: 0 },
+  changesTo: [ 0, 1, 70, 200, 781 ],
+ changeType: "normal"
+             },
+
+ 55: { name: "グランドゴーレム", itemName: "超化丸薬", class: "B", attribute: "地",
+uniqueValue: { s: 26.5, a: 8.7, d: 9.5, l: 1 },
+changePoint: { s: 10, a: 10, d: 11, l: 0 },
+  changesTo: [ 0, 1, 71, 72, 883 ],
+ changeType: "normal"
+             },
+
+ 56: { name: "ランド・レイズ", itemName: "深海の結晶", class: "B", attribute: "地",
+uniqueValue: { s: 25, a: 9.4, d: 9.3, l: 1 },
+changePoint: { s: 10, a: 11, d: 11, l: 0 },
+  changesTo: [ 0, 1, 68, 72, 173, 238, 321, 440, 616 ],
+ changeType: "normal"
+             },
+
+ 57: { name: "イーラ", itemName: "狂気の実", class: "B", attribute: "龍",
+uniqueValue: { s: 24, a: 10.8, d: 8.9, l: 1 },
+changePoint: { s: 9, a: 12, d: 10, l: 0 },
+  changesTo: [ 0, 1, 69, 149, 259, 301 ],
+ changeType: "normal"
+             },
+
+ 58: { name: "ドラグーン", itemName: "黒炎の結晶", class: "B", attribute: "龍",
+uniqueValue: { s: 23, a: 12, d: 9.2, l: 1 },
+changePoint: { s: 9, a: 14, d: 11, l: 0 },
+  changesTo: [ 0, 1, 74 ],
+ changeType: "normal"
+             },
+
+ 59: { name: "水竜", itemName: "枯れない桜枝", class: "B", attribute: "龍",
+uniqueValue: { s: 26, a: 11, d: 8.7, l: 1 },
+changePoint: { s: 10, a: 13, d: 10, l: 0 },
+  changesTo: [ 0, 1, 75, 480, 745 ],
+ changeType: "normal"
+             },
+
+ 60: { name: "グレートベアー", itemName: "激化丸薬", class: "A", attribute: "獣",
+uniqueValue: { s: 30.5, a: 10.35, d: 11.5, l: 1 },
+changePoint: { s: 12, a: 12, d: 13, l: 0 },
+  changesTo: [ 0, 1, 76, 147, 168, 189, 281, 300, 492 ],
+ changeType: "normal"
+             },
+
 1001: { name: "アマツキツネ", itemName: "天翔る長尾", class: "SS", attribute: "霊",
 uniqueValue: { s: 40.2, a: 21.7, d: 12, l: 1 },
 changePoint: { s: 15, a: 25, d: 14, l: 0 },
