@@ -497,6 +497,76 @@ changePoint: { s: 8, a: 23, d: 7, l: 0 },
  changeType: "normal"
              },
 
+ 71: { name: "グランドタートル", itemName: "大自然の力", class: "A", attribute: "地",
+uniqueValue: { s: 28.5, a: 8.5, d: 14, l: 1 },
+changePoint: { s: 11, a: 10, d: 16, l: 0 },
+  changesTo: [ 0, 1, 81, 114, 235, 428, 975 ],
+ changeType: "normal"
+             },
+
+ 72: { name: "ロックイーター", itemName: "岩喰獣の心臓", class: "A", attribute: "地",
+uniqueValue: { s: 26, a: 11.1, d: 12.25, l: 1 },
+changePoint: { s: 10, a: 13, d: 14, l: 0 },
+  changesTo: [ 0, 1, 83, 770 ],
+ changeType: "normal"
+             },
+
+ 73: { name: "デーモンローズ", itemName: "悪魔の薔薇", class: "A", attribute: "地",
+uniqueValue: { s: 31, a: 12.15, d: 9.5, l: 1 },
+changePoint: { s: 12, a: 14, d: 11, l: 0 },
+  changesTo: [ 0, 1, 84, 112 ],
+ changeType: "normal"
+             },
+
+ 74: { name: "ヨルムンガルド", itemName: "巨蛇竜の細胞", class: "A", attribute: "龍",
+uniqueValue: { s: 29, a: 15.3, d: 9.4, l: 1 },
+changePoint: { s: 11, a: 17, d: 11, l: 0 },
+  changesTo: [ 0, 1, 85, 118, 205, 234 ],
+ changeType: "normal"
+             },
+
+ 75: { name: "水竜神", itemName: "潮騒の記憶", class: "A", attribute: "龍",
+uniqueValue: { s: 32.5, a: 12.4, d: 10.7, l: 1 },
+changePoint: { s: 13, a: 14, d: 12, l: 0 },
+  changesTo: [ 0, 1, 115 ],
+ changeType: "normal"
+             },
+
+ 76: { name: "酒呑童子", itemName: "真の救世主", class: "S", attribute: "獣",
+uniqueValue: { s: 31, a: 11.9, d: 12.8, l: 1 },
+changePoint: { s: 12, a: 14, d: 15, l: 0 },
+  changesTo: [ 0, 1, 129, 288, 446, 718 ],
+ changeType: "normal"
+             },
+
+ 77: { name: "夜神", itemName: "闇夜織", class: "S", attribute: "獣",
+uniqueValue: { s: 30.5, a: 10.3, d: 14.55, l: 1 },
+changePoint: { s: 12, a: 12, d: 17, l: 0 },
+  changesTo: [ 0, 1, 93, 122, 246, 474 ],
+ changeType: "normal"
+             },
+
+ 78: { name: "獣王", itemName: "魔界を牛耳る力", class: "S", attribute: "獣",
+uniqueValue: { s: 28, a: 13.1, d: 12.6, l: 1 },
+changePoint: { s: 11, a: 15, d: 14, l: 0 },
+  changesTo: [ 0, 1, 89, 167, 869, 870, 871, 872 ],
+ changeType: "normal"
+             },
+
+ 79: { name: "魔王", itemName: "魔の救世主", class: "S", attribute: "魔",
+uniqueValue: { s: 29.3, a: 15.15, d: 10.1, l: 1 },
+changePoint: { s: 11, a: 17, d: 12, l: 0 },
+  changesTo: [ 0, 1, 90, 188 ],
+ changeType: "normal"
+             },
+
+ 80: { name: "マインドフレア", itemName: "全てを操る力", class: "S", attribute: "魔",
+uniqueValue: { s: 28, a: 16.1, d: 9.5, l: 1 },
+changePoint: { s: 11, a: 18, d: 11, l: 0 },
+  changesTo: [ 0, 1, 111, 157, 162, 204 ],
+ changeType: "normal"
+             },
+
 1001: { name: "アマツキツネ", itemName: "天翔る長尾", class: "SS", attribute: "霊",
 uniqueValue: { s: 40.2, a: 21.7, d: 12, l: 1 },
 changePoint: { s: 15, a: 25, d: 14, l: 0 },
