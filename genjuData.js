@@ -252,6 +252,111 @@ changePoint: { s: 9, a: 9, d: 9, l: 0 },
  changeType: "normal"
              },
 
+ 36: { name: "霊界の魔女", itemName: "霊力の源石", class: "C", attribute: "霊",
+uniqueValue: { s: 23, a: 7.55, d: 7.8, l: 1 },
+changePoint: { s: 9, a: 9, d: 9, l: 0 },
+  changesTo: [ 0, 1, 49, 51, 53, 365, 933 ],
+ changeType: "normal"
+             },
+
+ 37: { name: "ラヴァゴーレム", itemName: "灼熱の溶岩", class: "C", attribute: "地",
+uniqueValue: { s: 19, a: 7.9, d: 8.8, l: 1 },
+changePoint: { s: 8, a: 9, d: 10, l: 0 },
+  changesTo: [ 0, 1, 55, 774 ],
+ changeType: "normal"
+             },
+
+ 38: { name: "巨大クラブ", itemName: "海に彷徨う泡", class: "C", attribute: "地",
+uniqueValue: { s: 19.5, a: 8, d: 8.5, l: 1 },
+changePoint: { s: 8, a: 9, d: 10, l: 0 },
+  changesTo: [ 0, 1, 56, 59, 332 ],
+ changeType: "normal"
+             },
+
+ 39: { name: "マイティーオーク", itemName: "マナの塊", class: "C", attribute: "地",
+uniqueValue: { s: 21, a: 7.85, d: 8.15, l: 1 },
+changePoint: { s: 8, a: 9, d: 10, l: 0 },
+  changesTo: [ 0, 1, 55, 73, 560, 700 ],
+ changeType: "normal"
+             },
+
+ 40: { name: "グレートマンティス", itemName: "量産型増強薬", class: "C", attribute: "地",
+uniqueValue: { s: 17, a: 8.9, d: 8.45, l: 1 },
+changePoint: { s: 7, a: 10, d: 10, l: 0 },
+  changesTo: [ 0, 1, 41, 240, 563, 645 ],
+ changeType: "normal"
+             },
+
+ 41: { name: "ワイバーン", itemName: "翼竜の置物", class: "C", attribute: "龍",
+uniqueValue: { s: 19, a: 9.7, d: 8, l: 1 },
+changePoint: { s: 8, a: 11, d: 9, l: 0 },
+  changesTo: [ 0, 1, 58, 59 ],
+ changeType: "normal"
+             },
+
+ 42: { name: "ケモノリュウ", itemName: "竜の血", class: "B", attribute: "龍",
+uniqueValue: { s: 24.5, a: 9.3, d: 9.55, l: 1 },
+changePoint: { s: 10, a: 11, d: 11, l: 0 },
+  changesTo: [ 0, 1, 60, 87, 216, 569, 906 ],
+ changeType: "normal"
+             },
+
+ 43: { name: "ケルベロス", itemName: "猛獣ステーキ", class: "B", attribute: "獣",
+uniqueValue: { s: 24, a: 9.2, d: 9.8, l: 1 },
+changePoint: { s: 9, a: 11, d: 11, l: 0 },
+  changesTo: [ 0, 1, 60, 63, 108, 630, 642, 723 ],
+ changeType: "normal"
+             },
+
+ 44: { name: "九尾", itemName: "きゅうり", class: "B", attribute: "獣",
+uniqueValue: { s: 25.5, a: 8.55, d: 9.95, l: 1 },
+changePoint: { s: 10, a: 10, d: 10, l: 0 },
+  changesTo: [ 0, 1, 61, 62, 344, 348 ],
+ changeType: "normal"
+             },
+
+ 45: { name: "奥女中", itemName: "真心桜餅", class: "B", attribute: "獣",
+uniqueValue: { s: 24, a: 9.3, d: 9.7, l: 1 },
+changePoint: { s: 9, a: 11, d: 11, l: 0 },
+  changesTo: [ 0, 1, 62, 66, 175, 178, 653 ],
+ changeType: "normal"
+             },
+
+ 46: { name: "デュラハン", itemName: "予言書", class: "B", attribute: "魔",
+uniqueValue: { s: 22.5, a: 10.4, d: 9.1, l: 1 },
+changePoint: { s: 9, a: 12, d: 11, l: 0 },
+  changesTo: [ 0, 1, 63, 64, 214, 215, 416 ],
+ changeType: "normal"
+             },
+
+ 47: { name: "朽ちた堕天使", itemName: "邪悪な羽根", class: "B", attribute: "魔",
+uniqueValue: { s: 23, a: 10.5, d: 8.85, l: 1 },
+changePoint: { s: 9, a: 12, d: 10, l: 0 },
+  changesTo: [ 0, 1, 64, 86, 194, 222, 375 ],
+ changeType: "normal"
+             },
+
+ 48: { name: "以津真天", itemName: "異国の漢方薬", class: "B", attribute: "魔",
+uniqueValue: { s: 23.5, a: 10.25, d: 8.9, l: 1 },
+changePoint: { s: 9, a: 12, d: 10, l: 0 },
+  changesTo: [ 0, 1, 65, 66, 175, 202, 315, 547 ],
+ changeType: "normal"
+             },
+
+ 49: { name: "磯姫", itemName: "血を吸う長髪", class: "B", attribute: "魔",
+uniqueValue: { s: 23, a: 10.3, d: 9.05, l: 1 },
+changePoint: { s: 9, a: 12, d: 11, l: 0 },
+  changesTo: [ 0, 1, 66, 109, 175, 617, 639, 755 ],
+ changeType: "normal"
+             },
+
+ 50: { name: "桜花の精霊", itemName: "枯れない桜枝", class: "B", attribute: "霊",
+uniqueValue: { s: 33, a: 8, d: 8, l: 1 },
+changePoint: { s: 13, a: 9, d: 9, l: 0 },
+  changesTo: [ 0, 1, 67, 257, 623, 733 ],
+ changeType: "normal"
+             },
+
 1001: { name: "アマツキツネ", itemName: "天翔る長尾", class: "SS", attribute: "霊",
 uniqueValue: { s: 40.2, a: 21.7, d: 12, l: 1 },
 changePoint: { s: 15, a: 25, d: 14, l: 0 },
