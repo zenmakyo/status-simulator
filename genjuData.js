@@ -153,6 +153,104 @@ changePoint: { s: 9, a: 8, d: 7, l: 0 },
   changesTo: [ 0, 1, 29, 35, 367, 880 ],
  changeType: "normal"
              },
+  
+ 22: { name: "ドライアド", itemName: "草模様の精霊石", class: "D", attribute: "霊",
+uniqueValue: { s: 23, a: 6, d: 6.4, l: 1 },
+changePoint: { s: 9, a: 7, d: 8, l: 0 },
+  changesTo: [ 0, 1, 34, 36, 39, 94, 297, 373, 525, 801 ],
+ changeType: "normal"
+             },
+
+ 23: { name: "火炎樹", itemName: "呪われた炎", class: "D", attribute: "霊",
+uniqueValue: { s: 24, a: 6.2, d: 5.8, l: 1 },
+changePoint: { s: 9, a: 7, d: 7, l: 0 },
+  changesTo: [ 0, 1, 37, 39, 54, 359 ],
+ changeType: "normal"
+             },
+
+ 24: { name: "ドゥームビートル", itemName: "蟲プリン", class: "D", attribute: "地",
+uniqueValue: { s: 18, a: 7.5, d: 6.5, l: 1 },
+changePoint: { s: 7, a: 9, d: 8, l: 0 },
+  changesTo: [ 0, 1, 38, 40 ],
+ changeType: "normal"
+             },
+
+ 25: { name: "アックスビーク", itemName: "巨大鳥の羽根", class: "C", attribute: "獣",
+uniqueValue: { s: 20, a: 8.1, d: 8.3, l: 1 },
+changePoint: { s: 8, a: 9, d: 10, l: 0 },
+  changesTo: [ 0, 1, 42, 47, 233, 366 ],
+ changeType: "normal"
+             },
+
+ 26: { name: "グリンブルスティ", itemName: "神秘的な大牙", class: "C", attribute: "獣",
+uniqueValue: { s: 19.5, a: 8.4, d: 8.1, l: 1 },
+changePoint: { s: 8, a: 10, d: 9, l: 0 },
+  changesTo: [ 0, 1, 43, 44, 340, 557, 593 ],
+ changeType: "normal"
+             },
+
+ 27: { name: "バロン", itemName: "からくり歯車", class: "C", attribute: "獣",
+uniqueValue: { s: 20, a: 7.9, d: 8.45, l: 1 },
+changePoint: { s: 8, a: 9, d: 10, l: 0 },
+  changesTo: [ 0, 1, 43, 48, 261, 262, 996 ],
+ changeType: "normal"
+             },
+
+ 28: { name: "馬魔", itemName: "和人形", class: "C", attribute: "獣",
+uniqueValue: { s: 19, a: 8.3, d: 8.4, l: 1 },
+changePoint: { s: 8, a: 10, d: 10, l: 0 },
+  changesTo: [ 0, 1, 45, 46, 342 ],
+ changeType: "normal"
+             },
+
+ 29: { name: "インサーニア", itemName: "邪悪な首飾り", class: "C", attribute: "魔",
+uniqueValue: { s: 18.5, a: 9.25, d: 7.6, l: 1 },
+changePoint: { s: 7, a: 11, d: 9, l: 0 },
+  changesTo: [ 0, 1, 46, 57, 887 ],
+ changeType: "normal"
+             },
+
+ 30: { name: "ヴァンパイア", itemName: "悪魔の血", class: "C", attribute: "魔",
+uniqueValue: { s: 18.5, a: 9.35, d: 7.5, l: 1 },
+changePoint: { s: 7, a: 11, d: 9, l: 0 },
+  changesTo: [ 0, 1, 47, 501, 833 ],
+ changeType: "normal"
+             },
+
+ 31: { name: "ジョカ", itemName: "創造するこころ", class: "C", attribute: "魔",
+uniqueValue: { s: 19.5, a: 8.7, d: 7.8, l: 1 },
+changePoint: { s: 8, a: 10, d: 9, l: 0 },
+  changesTo: [ 0, 1, 48, 49 ],
+ changeType: "normal"
+             },
+
+ 32: { name: "清姫", itemName: "純真なこころ", class: "C", attribute: "魔",
+uniqueValue: { s: 19, a: 9.4, d: 7.3, l: 1 },
+changePoint: { s: 8, a: 11, d: 9, l: 0 },
+  changesTo: [ 0, 1, 45, 853, 986 ],
+ changeType: "normal"
+             },
+
+ 33: { name: "魔術師ジョゼ", itemName: "魔力の源石", class: "C", attribute: "霊",
+uniqueValue: { s: 23, a: 8.55, d: 6.8, l: 1 },
+changePoint: { s: 9, a: 10, d: 8, l: 0 },
+  changesTo: [ 0, 1, 46, 51 ],
+ changeType: "normal"
+             },
+
+ 34: { name: "コロポックル", itemName: "大きな蕗の傘", class: "C", attribute: "霊",
+uniqueValue: { s: 24, a: 7.3, d: 7.7, l: 1 },
+changePoint: { s: 9, a: 9, d: 9, l: 0 },
+  changesTo: [ 0, 1, 50, 402, 576, 660 ],
+ changeType: "normal"
+             },
+
+ 35: { name: "大地の精霊", itemName: "大地の精霊石", class: "C", attribute: "霊",
+uniqueValue: { s: 22.5, a: 8, d: 7.5, l: 1 },
+changePoint: { s: 9, a: 9, d: 9, l: 0 },
+  changesTo: [ 0, 1, 44, 52, 236, 593, 728, 938 ],
+ changeType: "normal"
+             },
 
 1001: { name: "アマツキツネ", itemName: "天翔る長尾", class: "SS", attribute: "霊",
 uniqueValue: { s: 40.2, a: 21.7, d: 12, l: 1 },
