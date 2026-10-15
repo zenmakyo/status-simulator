@@ -427,6 +427,76 @@ changePoint: { s: 12, a: 12, d: 13, l: 0 },
  changeType: "normal"
              },
 
+ 61: { name: "獣神", itemName: "狐神の仮面", class: "A", attribute: "獣",
+uniqueValue: { s: 28.5, a: 9.6, d: 12.9, l: 1 },
+changePoint: { s: 11, a: 11, d: 15, l: 0 },
+  changesTo: [ 0, 1, 77, 183, 283, 442, 731 ],
+ changeType: "normal"
+             },
+
+ 62: { name: "妲己", itemName: "美しき者の仮面", class: "A", attribute: "獣",
+uniqueValue: { s: 29.5, a: 10.3, d: 11.9, l: 1 },
+changePoint: { s: 11, a: 12, d: 14, l: 0 },
+  changesTo: [ 0, 1, 92, 153, 252, 855 ],
+ changeType: "normal"
+             },
+
+ 63: { name: "ナイトメア", itemName: "具現化した悪夢", class: "A", attribute: "魔",
+uniqueValue: { s: 26, a: 12.9, d: 10.45, l: 1 },
+changePoint: { s: 10, a: 15, d: 12, l: 0 },
+  changesTo: [ 0, 1, 78, 168, 281, 736 ],
+ changeType: "normal"
+             },
+
+ 64: { name: "マッドデーモン", itemName: "サタンの羽根", class: "A", attribute: "魔",
+uniqueValue: { s: 25, a: 14.5, d: 9.2, l: 1 },
+changePoint: { s: 10, a: 17, d: 11, l: 0 },
+  changesTo: [ 0, 1, 79, 159 ],
+ changeType: "normal"
+             },
+
+ 65: { name: "魂を狩る者", itemName: "魂の蓄壺", class: "A", attribute: "魔",
+uniqueValue: { s: 24, a: 15.2, d: 8.8, l: 1 },
+changePoint: { s: 9, a: 17, d: 10, l: 0 },
+  changesTo: [ 0, 1, 80, 192, 464, 960 ],
+ changeType: "normal"
+             },
+
+ 66: { name: "女郎蜘蛛", itemName: "女郎の魂", class: "A", attribute: "魔",
+uniqueValue: { s: 27, a: 12.9, d: 10.1, l: 1 },
+changePoint: { s: 10, a: 15, d: 12, l: 0 },
+  changesTo: [ 0, 1, 106, 448, 663, 800 ],
+ changeType: "normal"
+             },
+
+ 67: { name: "シルフィード", itemName: "風を司る力", class: "A", attribute: "霊",
+uniqueValue: { s: 36, a: 11, d: 9, l: 1 },
+changePoint: { s: 14, a: 13, d: 10, l: 0 },
+  changesTo: [ 0, 1, 105, 164, 272, 319 ],
+ changeType: "normal"
+             },
+
+ 68: { name: "ウンディーネ", itemName: "アクアマリン", class: "A", attribute: "霊",
+uniqueValue: { s: 37, a: 9.4, d: 10.3, l: 1 },
+changePoint: { s: 14, a: 11, d: 12, l: 0 },
+  changesTo: [ 0, 1, 88, 137, 211, 270, 454, 783 ],
+ changeType: "normal"
+             },
+
+ 69: { name: "フェニックス", itemName: "不死の力", class: "A", attribute: "霊",
+uniqueValue: { s: 45, a: 8.7, d: 8.3, l: 1 },
+changePoint: { s: 17, a: 10, d: 10, l: 0 },
+  changesTo: [ 0, 1, 82, 221, 701 ],
+ changeType: "normal"
+             },
+
+ 70: { name: "ラグナロク", itemName: "秘めたる真価", class: "A", attribute: "霊",
+uniqueValue: { s: 19.5, a: 20, d: 5.5, l: 1 },
+changePoint: { s: 8, a: 23, d: 7, l: 0 },
+  changesTo: [ 0, 1, 125, 266, 453 ],
+ changeType: "normal"
+             },
+
 1001: { name: "アマツキツネ", itemName: "天翔る長尾", class: "SS", attribute: "霊",
 uniqueValue: { s: 40.2, a: 21.7, d: 12, l: 1 },
 changePoint: { s: 15, a: 25, d: 14, l: 0 },
