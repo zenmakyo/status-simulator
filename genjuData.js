@@ -847,6 +847,76 @@ changePoint: { s: 12, a: 19, d: 13, l: 0 },
  changeType: "normal"
              },
 
+121: { name: "闇竜", itemName: "闇というもの", class: "SS", attribute: "龍",
+uniqueValue: { s: 29.2, a: 19, d: 12.9, l: 0.5 },
+changePoint: { s: 11, a: 22, d: 15, l: 0 },
+  changesTo: [ 0, 1, 156, 668 ],
+ changeType: "normal"
+             },
+
+122: { name: "夜叉姫", itemName: "青の根付け", class: "SS", attribute: "獣",
+uniqueValue: { s: 32.42, a: 13.23, d: 15.25, l: 1.01 },
+changePoint: { s: 13, a: 15, d: 17, l: 0 },
+  changesTo: [ 0, 1, 250, 670 ],
+ changeType: "normal"
+             },
+
+123: { name: "ハルモニア", itemName: "調和の音", class: "SS", attribute: "霊",
+uniqueValue: { s: 44.54, a: 12.22, d: 12.73, l: 1.01 },
+changePoint: { s: 17, a: 14, d: 15, l: 0 },
+  changesTo: [ 0, 1, 223, 866 ],
+ changeType: "normal"
+             },
+
+124: { name: "アンドロジナス", itemName: "酒豪の酒樽", class: "SS", attribute: "地",
+uniqueValue: { s: 40.8, a: 15.1, d: 11.6, l: 1 },
+changePoint: { s: 16, a: 17, d: 13, l: 0 },
+  changesTo: [ 0, 1, 309, 318, 936 ],
+ changeType: "normal"
+             },
+
+125: { name: "干将莫耶", itemName: "夫婦の絆", class: "S", attribute: "霊",
+uniqueValue: { s: 23.63, a: 21.84, d: 10.49, l: 1.05 },
+changePoint: { s: 9, a: 25, d: 12, l: 0 },
+  changesTo: [ 0, 1, 337, 506, 644 ],
+ changeType: "normal"
+             },
+
+126: { name: "ベロニカの乙女", itemName: "ベロニカ", class: "S", attribute: "霊",
+uniqueValue: { s: 38, a: 16, d: 9.6, l: 1 },
+changePoint: { s: 15, a: 18, d: 11, l: 0 },
+  changesTo: [ 0, 1, 133, 197, 698 ],
+ changeType: "normal"
+             },
+
+127: { name: "地を穿つ魔", itemName: "古のもの", class: "SS", attribute: "魔",
+uniqueValue: { s: 30.9, a: 15.8, d: 14.5, l: 1 },
+changePoint: { s: 12, a: 18, d: 17, l: 0 },
+  changesTo: [ 0, 1, 138, 152, 788 ],
+ changeType: "normal"
+             },
+
+128: { name: "我来也・朧", itemName: "煙術の巻・朧", class: "SS", attribute: "魔",
+uniqueValue: { s: 30.1, a: 14.9, d: 15.9, l: 1 },
+changePoint: { s: 12, a: 17, d: 18, l: 0 },
+  changesTo: [ 0, 1, 219 ],
+ changeType: "normal"
+             },
+
+129: { name: "伊吹童子", itemName: "酒瓢", class: "SS", attribute: "獣",
+uniqueValue: { s: 32.4, a: 17.5, d: 15.6, l: 1 },
+changePoint: { s: 12, a: 20, d: 18, l: 0 },
+  changesTo: [ 0, 1, 302, 958 ],
+ changeType: "normal"
+             },
+
+130: { name: "蒼緑滓鹿", itemName: "月光蝶", class: "SS", attribute: "獣",
+uniqueValue: { s: 36.2, a: 14.7, d: 14.9, l: 1 },
+changePoint: { s: 14, a: 17, d: 17, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
 1001: { name: "アマツキツネ", itemName: "天翔る長尾", class: "SS", attribute: "霊",
 uniqueValue: { s: 40.2, a: 21.7, d: 12, l: 1 },
 changePoint: { s: 15, a: 25, d: 14, l: 0 },
