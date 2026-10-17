@@ -777,6 +777,76 @@ changePoint: { s: 14, a: 13, d: 14, l: 0 },
  changeType: "normal"
              },
 
+111: { name: "ルシファー", itemName: "叛逆のスープ", class: "SS", attribute: "魔",
+uniqueValue: { s: 38.8, a: 18.3, d: 13.1, l: 1 },
+changePoint: { s: 15, a: 21, d: 15, l: 0 },
+  changesTo: [ 0, 1, 353, 354 ],
+ changeType: "normal"
+             },
+
+112: { name: "宿木", itemName: "すり鉢", class: "S", attribute: "地",
+uniqueValue: { s: 24.44, a: 5.2, d: 5.2, l: 1 },
+changePoint: { s: 10, a: 6, d: 6, l: 0 },
+  changesTo: [ 0, 1, 84, 113 ],
+ changeType: "normal"
+             },
+
+113: { name: "大神実命", itemName: "ももまもり", class: "SS", attribute: "地",
+uniqueValue: { s: 41.2, a: 12.8, d: 14.14, l: 1 },
+changePoint: { s: 16, a: 15, d: 16, l: 0 },
+  changesTo: [ 0, 1, 226 ],
+ changeType: "normal"
+             },
+
+114: { name: "パンプキンころがし", itemName: "カボチャマフィン", class: "A", attribute: "地",
+uniqueValue: { s: 17.9, a: 8, d: 18, l: 1 },
+changePoint: { s: 7, a: 9, d: 20, l: 0 },
+  changesTo: [ 0, 1, 224, 618 ],
+ changeType: "normal"
+             },
+
+115: { name: "ミズチ", itemName: "雲間の幻", class: "S", attribute: "龍",
+uniqueValue: { s: 35, a: 13, d: 11, l: 1 },
+changePoint: { s: 13, a: 15, d: 13, l: 0 },
+  changesTo: [ 0, 1, 103, 120, 260, 646 ],
+ changeType: "normal"
+             },
+
+116: { name: "死を告げる者", itemName: "鎮魂の力", class: "S", attribute: "無",
+uniqueValue: { s: 29, a: 13.3, d: 13.3, l: 1 },
+changePoint: { s: 11, a: 15, d: 15, l: 0 },
+  changesTo: [ 0, 1, 117, 135, 256, 334, 685 ],
+ changeType: "normal"
+             },
+
+117: { name: "時を統べる者", itemName: "クロノス", class: "SS", attribute: "無",
+uniqueValue: { s: 30, a: 15.6, d: 14.9, l: 1 },
+changePoint: { s: 12, a: 18, d: 17, l: 0 },
+  changesTo: [ 0, 1, 184 ],
+ changeType: "normal"
+             },
+
+118: { name: "疎まれし者", itemName: "異次元の魔手", class: "S", attribute: "龍",
+uniqueValue: { s: 22.54, a: 16.32, d: 13.36, l: 1 },
+changePoint: { s: 9, a: 19, d: 15, l: 0 },
+  changesTo: [ 0, 1, 119 ],
+ changeType: "normal"
+             },
+
+119: { name: "災いの根源", itemName: "破壊への誘い", class: "SS", attribute: "龍",
+uniqueValue: { s: 28.88, a: 12.8, d: 16.5, l: 1 },
+changePoint: { s: 11, a: 15, d: 19, l: 0 },
+  changesTo: [ 0, 1, 121 ],
+ changeType: "normal"
+             },
+
+120: { name: "夜色の番竜", itemName: "夜色のオーロラ", class: "S", attribute: "龍",
+uniqueValue: { s: 30.7, a: 17.1, d: 11.3, l: 1 },
+changePoint: { s: 12, a: 19, d: 13, l: 0 },
+  changesTo: [ 0, 1, 166, 599 ],
+ changeType: "normal"
+             },
+
 1001: { name: "アマツキツネ", itemName: "天翔る長尾", class: "SS", attribute: "霊",
 uniqueValue: { s: 40.2, a: 21.7, d: 12, l: 1 },
 changePoint: { s: 15, a: 25, d: 14, l: 0 },
