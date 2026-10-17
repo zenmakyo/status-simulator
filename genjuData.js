@@ -980,10 +980,80 @@ changePoint: { s: 0, a: 0, d: 0, l: 0 },
  changeType: "normal"
              },
 
-140: { name: "遅咲蝶", itemName: "金色の鱗粉", class: "SS", attribute: "地",
+140: { name: "遅咲蝶", itemName: "金色の鱗粉", class: "F", attribute: "地",
 uniqueValue: { s: 16, a: 4.2, d: 6.2, l: 1 },
 changePoint: { s: 6, a: 5, d: 7, l: 0 },
   changesTo: [ 0, 1, 141, 732 ],
+ changeType: "normal"
+             },
+
+141: { name: "小姫蜂", itemName: "華の蜜", class: "D", attribute: "地",
+uniqueValue: { s: 18.5, a: 5.6, d: 8.4, l: 1 },
+changePoint: { s: 7, a: 7, d: 10, l: 0 },
+  changesTo: [ 0, 1, 142, 376, 377, 378 ],
+ changeType: "normal"
+             },
+
+142: { name: "精霊虫", itemName: "世界樹の葉", class: "C", attribute: "地",
+uniqueValue: { s: 22, a: 6.4, d: 9.5, l: 1 },
+changePoint: { s: 9, a: 8, d: 11, l: 0 },
+  changesTo: [ 0, 1, 143, 187, 196, 251, 657, 683, 787 ],
+ changeType: "normal"
+             },
+
+143: { name: "鬼灯提灯", itemName: "鬼灯の実", class: "A", attribute: "地",
+uniqueValue: { s: 32, a: 7, d: 13, l: 1 },
+changePoint: { s: 12, a: 8, d: 15, l: 0 },
+  changesTo: [ 0, 1, 144, 145, 174, 298, 368, 633 ],
+ changeType: "normal"
+             },
+
+144: { name: "ベルゼブル", itemName: "精霊の微笑み", class: "S", attribute: "地",
+uniqueValue: { s: 39.88, a: 11.5, d: 15.1, l: 1 },
+changePoint: { s: 15, a: 13, d: 17, l: 0 },
+  changesTo: [ 0, 1, 148, 203, 325 ],
+ changeType: "normal"
+             },
+
+145: { name: "デスコーピオン", itemName: "禁じられた猛毒", class: "S", attribute: "地",
+uniqueValue: { s: 31, a: 17.88, d: 11.11, l: 1 },
+changePoint: { s: 12, a: 20, d: 13, l: 0 },
+  changesTo: [ 0, 1, 146, 185 ],
+ changeType: "normal"
+             },
+
+146: { name: "破壊神", itemName: "破壊王の魂", class: "SS", attribute: "魔",
+uniqueValue: { s: 34.56, a: 22.22, d: 12.12, l: 1 },
+changePoint: { s: 13, a: 25, d: 14, l: 0 },
+  changesTo: [ 0, 1, 534 ],
+ changeType: "normal"
+             },
+
+147: { name: "牛魔神", itemName: "紫炎の呪宝", class: "S", attribute: "魔",
+uniqueValue: { s: 33.3, a: 16.21, d: 12.6, l: 1 },
+changePoint: { s: 13, a: 19, d: 14, l: 0 },
+  changesTo: [ 0, 1, 151, 287, 443, 773 ],
+ changeType: "normal"
+             },
+
+148: { name: "バアルゼブル", itemName: "女帝の花輪", class: "SS", attribute: "地",
+uniqueValue: { s: 41.11, a: 12.85, d: 19.2, l: 1 },
+changePoint: { s: 16, a: 15, d: 22, l: 0 },
+  changesTo: [ 0, 1, 740 ],
+ changeType: "normal"
+             },
+
+149: { name: "反魂竜", itemName: "蘇生の魂", class: "A", attribute: "龍",
+uniqueValue: { s: 32, a: 18, d: 5.4, l: 1 },
+changePoint: { s: 12, a: 20, d: 6, l: 0 },
+  changesTo: [ 0, 1, 85, 253, 944 ],
+ changeType: "normal"
+             },
+
+150: { name: "皇竜", itemName: "幸運の竜玉", class: "SS", attribute: "龍",
+uniqueValue: { s: 38.4, a: 18, d: 12.6, l: 1.3 },
+changePoint: { s: 15, a: 20, d: 14, l: 0 },
+  changesTo: [ 0, 1, 411 ],
  changeType: "normal"
              },
 
