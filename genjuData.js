@@ -637,6 +637,76 @@ changePoint: { s: 11, a: 20, d: 12, l: 0 },
  changeType: "normal"
              },
 
+ 91: { name: "神竜", itemName: "神竜の魂", class: "SS", attribute: "龍",
+uniqueValue: { s: 31.5, a: 16.9, d: 11.4, l: 1 },
+changePoint: { s: 12, a: 19, d: 13, l: 0 },
+  changesTo: [ 0, 1, 104 ],
+ changeType: "normal"
+             },
+
+ 92: { name: "葛之葉姫", itemName: "天体書筆", class: "S", attribute: "獣",
+uniqueValue: { s: 33, a: 11.9, d: 13, l: 1 },
+changePoint: { s: 13, a: 14, d: 15, l: 0 },
+  changesTo: [ 0, 1, 96, 220, 232, 293, 483, 714 ],
+ changeType: "normal"
+             },
+
+ 93: { name: "月都之姫", itemName: "姫の願い", class: "SS", attribute: "獣",
+uniqueValue: { s: 35.9, a: 12.8, d: 14.15, l: 1 },
+changePoint: { s: 14, a: 15, d: 16, l: 0 },
+  changesTo: [ 0, 1, 352 ],
+ changeType: "normal"
+             },
+
+ 94: { name: "ヒメボタル", itemName: "川縁の光", class: "C", attribute: "霊",
+uniqueValue: { s: 25.55, a: 7.77, d: 7.5, l: 1.2 },
+changePoint: { s: 10, a: 9, d: 9, l: 0 },
+  changesTo: [ 0, 1, 95 ],
+ changeType: "normal"
+             },
+
+ 95: { name: "ゲンジボタル", itemName: "源氏の光", class: "A", attribute: "霊",
+uniqueValue: { s: 37.77, a: 9.99, d: 9.99, l: 1.2 },
+changePoint: { s: 14, a: 12, d: 12, l: 0 },
+  changesTo: [ 0, 1, 165, 218, 296 ],
+ changeType: "normal"
+             },
+
+ 96: { name: "玉藻前", itemName: "妖艶な魂", class: "SS", attribute: "獣",
+uniqueValue: { s: 38.1, a: 13.65, d: 15.1, l: 1.02 },
+changePoint: { s: 15, a: 16, d: 17, l: 0 },
+  changesTo: [ 0, 1, 229, 905 ],
+ changeType: "normal"
+             },
+
+ 97: { name: "熾天使", itemName: "先陣を切る剣", class: "SS", attribute: "霊",
+uniqueValue: { s: 48.82, a: 13.6, d: 10.82, l: 1.03 },
+changePoint: { s: 19, a: 16, d: 13, l: 0 },
+  changesTo: [ 0, 1, 230 ],
+ changeType: "normal"
+             },
+
+ 98: { name: "ダークロードナイトメア", itemName: "闇と蹄", class: "SS", attribute: "魔",
+uniqueValue: { s: 33, a: 19.1, d: 11.6, l: 1.01 },
+changePoint: { s: 13, a: 22, d: 13, l: 0 },
+  changesTo: [ 0, 1, 231 ],
+ changeType: "normal"
+             },
+
+ 99: { name: "幼竜", itemName: "ひときわ大きな卵", class: "F", attribute: "龍",
+uniqueValue: { s: 16, a: 6.5, d: 4.5, l: 1 },
+changePoint: { s: 6, a: 8, d: 5, l: 0 },
+  changesTo: [ 0, 1, 100, 210, 596 ],
+ changeType: "normal"
+             },
+
+100: { name: "原始竜", itemName: "原始の果実", class: "E", attribute: "龍",
+uniqueValue: { s: 18, a: 7, d: 5.6, l: 1 },
+changePoint: { s: 7, a: 8, d: 7, l: 0 },
+  changesTo: [ 0, 1, 101, 245 ],
+ changeType: "normal"
+             },
+
 1001: { name: "アマツキツネ", itemName: "天翔る長尾", class: "SS", attribute: "霊",
 uniqueValue: { s: 40.2, a: 21.7, d: 12, l: 1 },
 changePoint: { s: 15, a: 25, d: 14, l: 0 },
