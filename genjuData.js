@@ -567,6 +567,76 @@ changePoint: { s: 11, a: 18, d: 11, l: 0 },
  changeType: "normal"
              },
 
+ 81: { name: "呪亀", itemName: "魔神の亀壺", class: "S", attribute: "魔",
+uniqueValue: { s: 29, a: 11.5, d: 14.3, l: 1 },
+changePoint: { s: 11, a: 13, d: 16, l: 0 },
+  changesTo: [ 0, 1, 127, 128, 172, 478 ],
+ changeType: "normal"
+             },
+
+ 82: { name: "朱雀", itemName: "炎帝の証", class: "S", attribute: "霊",
+uniqueValue: { s: 45.5, a: 11, d: 8.9, l: 1 },
+changePoint: { s: 17, a: 13, d: 10, l: 0 },
+  changesTo: [ 0, 1, 97, 485, 607 ],
+ changeType: "normal"
+             },
+
+ 83: { name: "サラマンダー", itemName: "灼熱の瞳", class: "S", attribute: "地",
+uniqueValue: { s: 30.5, a: 13.9, d: 11, l: 1 },
+changePoint: { s: 12, a: 16, d: 13, l: 0 },
+  changesTo: [ 0, 1, 107, 158, 169 ],
+ changeType: "normal"
+             },
+
+ 84: { name: "ナイトオブローズ", itemName: "薔薇の香水", class: "S", attribute: "地",
+uniqueValue: { s: 39, a: 13, d: 9, l: 1 },
+changePoint: { s: 15, a: 15, d: 10, l: 0 },
+  changesTo: [ 0, 1, 124, 564, 936 ],
+ changeType: "normal"
+             },
+
+ 85: { name: "竜王", itemName: "世界を司る力", class: "S", attribute: "龍",
+uniqueValue: { s: 30.5, a: 15.3, d: 10.8, l: 1 },
+changePoint: { s: 12, a: 17, d: 12, l: 0 },
+  changesTo: [ 0, 1, 91, 150 ],
+ changeType: "normal"
+             },
+
+ 86: { name: "リリス", itemName: "常闇の使者", class: "A", attribute: "魔",
+uniqueValue: { s: 27.5, a: 13.9, d: 9.1, l: 1 },
+changePoint: { s: 11, a: 16, d: 11, l: 0 },
+  changesTo: [ 0, 1, 79, 134, 163, 308, 565, 649 ],
+ changeType: "normal"
+             },
+
+ 87: { name: "火車", itemName: "悪食の焔", class: "A", attribute: "獣",
+uniqueValue: { s: 29.7, a: 11.5, d: 10.6, l: 1 },
+changePoint: { s: 11, a: 13, d: 12, l: 0 },
+  changesTo: [ 0, 1, 78, 176, 255 ],
+ changeType: "normal"
+             },
+
+ 88: { name: "テティス", itemName: "深海の涙", class: "S", attribute: "霊",
+uniqueValue: { s: 40.5, a: 10.4, d: 11.8, l: 1 },
+changePoint: { s: 15, a: 12, d: 14, l: 0 },
+  changesTo: [ 0, 1, 123, 154, 241 ],
+ changeType: "normal"
+             },
+
+ 89: { name: "春日神鹿", itemName: "榊ノ円鏡", class: "SS", attribute: "獣",
+uniqueValue: { s: 33.53, a: 13.74, d: 14.65, l: 1.01 },
+changePoint: { s: 13, a: 16, d: 17, l: 0 },
+  changesTo: [ 0, 1, 130, 741 ],
+ changeType: "normal"
+             },
+
+ 90: { name: "ダークロード", itemName: "魔神の魂", class: "SS", attribute: "魔",
+uniqueValue: { s: 29.5, a: 17.7, d: 10.6, l: 1 },
+changePoint: { s: 11, a: 20, d: 12, l: 0 },
+  changesTo: [ 0, 1, 98 ],
+ changeType: "normal"
+             },
+
 1001: { name: "アマツキツネ", itemName: "天翔る長尾", class: "SS", attribute: "霊",
 uniqueValue: { s: 40.2, a: 21.7, d: 12, l: 1 },
 changePoint: { s: 15, a: 25, d: 14, l: 0 },
