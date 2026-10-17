@@ -707,6 +707,76 @@ changePoint: { s: 7, a: 8, d: 7, l: 0 },
  changeType: "normal"
              },
 
+101: { name: "蒼翼竜", itemName: "異種族の石盤", class: "D", attribute: "龍",
+uniqueValue: { s: 19.8, a: 8.1, d: 6.2, l: 1 },
+changePoint: { s: 8, a: 9, d: 7, l: 0 },
+  changesTo: [ 0, 1, 41, 102, 909 ],
+ changeType: "normal"
+             },
+
+102: { name: "ヘビードラゴン", itemName: "やみつき肉", class: "C", attribute: "龍",
+uniqueValue: { s: 21.9, a: 9.2, d: 8.4, l: 1 },
+changePoint: { s: 9, a: 11, d: 10, l: 0 },
+  changesTo: [ 0, 1, 58, 326 ],
+ changeType: "normal"
+             },
+
+103: { name: "虹色の番竜", itemName: "虹彩色の水", class: "S", attribute: "龍",
+uniqueValue: { s: 34, a: 14.3, d: 13.1, l: 1 },
+changePoint: { s: 13, a: 16, d: 15, l: 0 },
+  changesTo: [ 0, 1, 161, 598 ],
+ changeType: "normal"
+             },
+
+104: { name: "聖竜", itemName: "聖というもの", class: "SS", attribute: "龍",
+uniqueValue: { s: 34.5, a: 18.8, d: 10.9, l: 1 },
+changePoint: { s: 13, a: 21, d: 13, l: 0 },
+  changesTo: [ 0, 1, 155, 667 ],
+ changeType: "normal"
+             },
+
+105: { name: "ジン", itemName: "魔法のランプ", class: "S", attribute: "霊",
+uniqueValue: { s: 37, a: 12, d: 11.5, l: 1 },
+changePoint: { s: 14, a: 14, d: 13, l: 0 },
+  changesTo: [ 0, 1, 131, 209, 449 ],
+ changeType: "normal"
+             },
+
+106: { name: "鵺", itemName: "紫煙の煙管", class: "S", attribute: "魔",
+uniqueValue: { s: 34.4, a: 13.5, d: 10.9, l: 1 },
+changePoint: { s: 13, a: 15, d: 13, l: 0 },
+  changesTo: [ 0, 1, 132, 845, 882 ],
+ changeType: "normal"
+             },
+
+107: { name: "ファラク", itemName: "地への祈り", class: "SS", attribute: "地",
+uniqueValue: { s: 31.5, a: 14.7, d: 13.6, l: 1 },
+changePoint: { s: 12, a: 17, d: 16, l: 0 },
+  changesTo: [ 0, 1, 314 ],
+ changeType: "normal"
+             },
+
+108: { name: "グリフォン", itemName: "どんぐり", class: "S", attribute: "獣",
+uniqueValue: { s: 30.8, a: 12.1, d: 13.4, l: 1 },
+changePoint: { s: 12, a: 14, d: 15, l: 0 },
+  changesTo: [ 0, 1, 212, 726 ],
+ changeType: "normal"
+             },
+
+109: { name: "ジャッカロープ", itemName: "うさぎとげんえい", class: "S", attribute: "魔",
+uniqueValue: { s: 30, a: 16.3, d: 9.5, l: 1 },
+changePoint: { s: 12, a: 19, d: 11, l: 0 },
+  changesTo: [ 0, 1, 682, 772, 843 ],
+ changeType: "normal"
+             },
+
+110: { name: "フリームスルス", itemName: "スノードーム", class: "S", attribute: "霊",
+uniqueValue: { s: 37.5, a: 10.9, d: 12.5, l: 1 },
+changePoint: { s: 14, a: 13, d: 14, l: 0 },
+  changesTo: [ 0, 1, 415, 520, 619, 752, 964 ],
+ changeType: "normal"
+             },
+
 1001: { name: "アマツキツネ", itemName: "天翔る長尾", class: "SS", attribute: "霊",
 uniqueValue: { s: 40.2, a: 21.7, d: 12, l: 1 },
 changePoint: { s: 15, a: 25, d: 14, l: 0 },
