@@ -917,6 +917,76 @@ changePoint: { s: 14, a: 17, d: 17, l: 0 },
  changeType: "normal"
              },
 
+131: { name: "戦風の皇女", itemName: "風と君の狭間", class: "SS", attribute: "霊",
+uniqueValue: { s: 39.56, a: 15.33, d: 12.55, l: 1 },
+changePoint: { s: 15, a: 18, d: 14, l: 0 },
+  changesTo: [ 0, 1, 322 ],
+ changeType: "normal"
+             },
+
+132: { name: "鶴姫", itemName: "冥婚の契り", class: "SS", attribute: "魔",
+uniqueValue: { s: 42.8, a: 15.87, d: 13.33, l: 1 },
+changePoint: { s: 16, a: 18, d: 15, l: 0 },
+  changesTo: [ 0, 1, 199, 363, 671 ],
+ changeType: "normal"
+             },
+
+133: { name: "アポロン", itemName: "眩い閃光", class: "SS", attribute: "霊",
+uniqueValue: { s: 50.84, a: 18.82, d: 16.37, l: 0.88 },
+changePoint: { s: 19, a: 21, d: 19, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+134: { name: "パンドラ", itemName: "天外の箱", class: "S", attribute: "魔",
+uniqueValue: { s: 29.87, a: 10.9, d: 17.8, l: 1.1 },
+changePoint: { s: 12, a: 13, d: 20, l: 0 },
+  changesTo: [ 0, 1, 177, 237, 729, 884 ],
+ changeType: "normal"
+             },
+
+135: { name: "王家の末路", itemName: "栄光と没落", class: "SS", attribute: "無",
+uniqueValue: { s: 33.33, a: 14.44, d: 14.44, l: 1 },
+changePoint: { s: 13, a: 17, d: 17, l: 0 },
+  changesTo: [ 0, 1, 136, 335, 450, 739 ],
+ changeType: "normal"
+             },
+
+136: { name: "アヌビス", itemName: "死者の書", class: "SS", attribute: "無",
+uniqueValue: { s: 41.06, a: 16.54, d: 15.54, l: 1.02 },
+changePoint: { s: 16, a: 19, d: 18, l: 0 },
+  changesTo: [ 0, 1, 739 ],
+ changeType: "normal"
+             },
+
+137: { name: "ポセイドン", itemName: "海王の車駕", class: "S", attribute: "霊",
+uniqueValue: { s: 38.74, a: 12.3, d: 13.66, l: 1 },
+changePoint: { s: 15, a: 14, d: 16, l: 0 },
+  changesTo: [ 0, 1, 195, 405, 812 ],
+ changeType: "normal"
+             },
+
+138: { name: "雷鳴龍", itemName: "雷鳴の太鼓", class: "SS", attribute: "龍",
+uniqueValue: { s: 35.11, a: 18.1, d: 14.9, l: 1.1 },
+changePoint: { s: 14, a: 21, d: 17, l: 0 },
+  changesTo: [ 0, 1, 788 ],
+ changeType: "normal"
+             },
+
+139: { name: "さなぎ★", itemName: "幻獣の繭", class: "F", attribute: "無",
+uniqueValue: { s: 15, a: 4.5, d: 5.5, l: 1.4 },
+changePoint: { s: 0, a: 0, d: 0, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+140: { name: "遅咲蝶", itemName: "金色の鱗粉", class: "SS", attribute: "地",
+uniqueValue: { s: 16, a: 4.2, d: 6.2, l: 1 },
+changePoint: { s: 6, a: 5, d: 7, l: 0 },
+  changesTo: [ 0, 1, 141, 732 ],
+ changeType: "normal"
+             },
+
 1001: { name: "アマツキツネ", itemName: "天翔る長尾", class: "SS", attribute: "霊",
 uniqueValue: { s: 40.2, a: 21.7, d: 12, l: 1 },
 changePoint: { s: 15, a: 25, d: 14, l: 0 },
