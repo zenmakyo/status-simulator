@@ -1197,6 +1197,76 @@ changePoint: { s: 15, a: 19, d: 15, l: 0 },
  changeType: "normal"
              },
 
+171: { name: "オータムドラゴン", itemName: "秋光のもふ毛", class: "SS", attribute: "地",
+uniqueValue: { s: 39.73, a: 13.15, d: 17.9, l: 1 },
+changePoint: { s: 15, a: 15, d: 20, l: 0 },
+  changesTo: [ 0, 1, 458 ],
+ changeType: "normal"
+             },
+
+172: { name: "我来也・朧【仮装】", itemName: "だるクッション", class: "SS", attribute: "魔",
+uniqueValue: { s: 30.1, a: 14.9, d: 15.9, l: 1 },
+changePoint: { s: 12, a: 17, d: 18, l: 0 },
+  changesTo: [ 0, 1, 219 ],
+ changeType: "normal"
+             },
+
+173: { name: "木霊里", itemName: "木之子木", class: "A", attribute: "地",
+uniqueValue: { s: 27, a: 12, d: 12, l: 1 },
+changePoint: { s: 10, a: 14, d: 14, l: 0 },
+  changesTo: [ 0, 1, 193, 267, 271, 717, 994 ],
+ changeType: "normal"
+             },
+
+174: { name: "哀歌を喚ぶ者", itemName: "応える音色", class: "S", attribute: "魔",
+uniqueValue: { s: 38, a: 11, d: 14, l: 1 },
+changePoint: { s: 15, a: 13, d: 16, l: 0 },
+  changesTo: [ 0, 1, 113, 180, 198, 258, 371, 632, 761, 826, 963 ],
+ changeType: "normal"
+             },
+
+175: { name: "女郎蜘蛛【仮装】", itemName: "レディフラッグ", class: "A", attribute: "魔",
+uniqueValue: { s: 27, a: 12.9, d: 10.1, l: 1 },
+changePoint: { s: 10, a: 15, d: 12, l: 0 },
+  changesTo: [ 0, 1, 106, 448, 663, 800 ],
+ changeType: "normal"
+             },
+
+176: { name: "シャノワール", itemName: "五ッ目の呼び鈴", class: "S", attribute: "魔",
+uniqueValue: { s: 30.1, a: 14, d: 13.6, l: 1.1 },
+changePoint: { s: 12, a: 16, d: 16, l: 0 },
+  changesTo: [ 0, 1, 282, 703 ],
+ changeType: "normal"
+             },
+
+177: { name: "エレシュキガル", itemName: "馬のオブジェ", class: "SS", attribute: "魔",
+uniqueValue: { s: 33.09, a: 18.8, d: 13.3, l: 1 },
+changePoint: { s: 13, a: 21, d: 15, l: 0 },
+  changesTo: [ 0, 1, 311, 738, 884 ],
+ changeType: "normal"
+             },
+
+178: { name: "姑獲鳥", itemName: "おぼこぐるみ", class: "B", attribute: "獣",
+uniqueValue: { s: 25, a: 9.35, d: 10.8, l: 1 },
+changePoint: { s: 10, a: 11, d: 12, l: 0 },
+  changesTo: [ 0, 1, 62, 386 ],
+ changeType: "normal"
+             },
+
+179: { name: "玉姫", itemName: "豊穣の舞扇", class: "SS", attribute: "地",
+uniqueValue: { s: 47.91, a: 13.8, d: 15.4, l: 1.1 },
+changePoint: { s: 18, a: 16, d: 18, l: 0 },
+  changesTo: [ 0, 1, 291, 571 ],
+ changeType: "normal"
+             },
+
+180: { name: "吟遊詩人", itemName: "夢追いのまじない", class: "SS", attribute: "地",
+uniqueValue: { s: 44.3, a: 12, d: 14.2, l: 1 },
+changePoint: { s: 17, a: 14, d: 16, l: 0 },
+  changesTo: [ 0, 1, 286, 826 ],
+ changeType: "normal"
+             },
+
 1001: { name: "アマツキツネ", itemName: "天翔る長尾", class: "SS", attribute: "霊",
 uniqueValue: { s: 40.2, a: 21.7, d: 12, l: 1 },
 changePoint: { s: 15, a: 25, d: 14, l: 0 },
