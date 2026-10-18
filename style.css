@@ -1006,7 +1006,7 @@ button {
     top: 10px;
     left: 10px;
     display: block;
-    width: 90px;
+    width: 40px;
     z-index: 1000;
 }
 
@@ -1014,13 +1014,4 @@ button {
     display: block;
     width: 100%;
     height: auto;
-}
-
-/* スマートフォン */
-@media (max-width: 600px) {
-    .site-logo {
-        top: 8px;
-        left: 8px;
-        width: 65px;
-    }
 }
