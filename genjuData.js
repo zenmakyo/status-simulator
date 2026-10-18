@@ -1057,6 +1057,76 @@ changePoint: { s: 15, a: 20, d: 14, l: 0 },
  changeType: "normal"
              },
 
+151: { name: "キョンシー", itemName: "禁呪の解放", class: "SS", attribute: "地",
+uniqueValue: { s: 34, a: 15.6, d: 18.2, l: 1 },
+changePoint: { s: 13, a: 18, d: 21, l: 0 },
+  changesTo: [ 0, 1, 600 ],
+ changeType: "normal"
+             },
+
+152: { name: "風陣龍", itemName: "疾風袋", class: "SS", attribute: "龍",
+uniqueValue: { s: 36.6, a: 16.2, d: 16.8, l: 1 },
+changePoint: { s: 14, a: 18, d: 19, l: 0 },
+  changesTo: [ 0, 1, 788 ],
+ changeType: "normal"
+             },
+
+153: { name: "烏天狗", itemName: "霊峰の鈴音", class: "S", attribute: "霊",
+uniqueValue: { s: 34.24, a: 14.24, d: 13.42, l: 1 },
+changePoint: { s: 13, a: 16, d: 15, l: 0 },
+  changesTo: [ 0, 1, 160, 170, 248, 387, 718 ],
+ changeType: "normal"
+             },
+
+154: { name: "天空鯨", itemName: "反重力の魔法陣", class: "SS", attribute: "地",
+uniqueValue: { s: 36.8, a: 15.8, d: 13.8, l: 1 },
+changePoint: { s: 14, a: 18, d: 16, l: 0 },
+  changesTo: [ 0, 1, 225, 372, 545, 805 ],
+ changeType: "normal"
+             },
+
+155: { name: "聖竜【覚醒】", itemName: "聖杯", class: "SS", attribute: "龍",
+uniqueValue: { s: 42.8, a: 21.1, d: 13.8, l: 1 },
+changePoint: { s: 16, a: 24, d: 16, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+156: { name: "闇竜【覚醒】", itemName: "支配者の証", class: "SS", attribute: "龍",
+uniqueValue: { s: 34.3, a: 23.2, d: 15.3, l: 0.5 },
+changePoint: { s: 13, a: 26, d: 17, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+157: { name: "星詠の聖女", itemName: "流星雨", class: "SS", attribute: "霊",
+uniqueValue: { s: 43.65, a: 13.1, d: 16.25, l: 1.1 },
+changePoint: { s: 17, a: 15, d: 19, l: 0 },
+  changesTo: [ 0, 1, 460 ],
+ changeType: "normal"
+             },
+
+158: { name: "侵緑のナーガ", itemName: "樹海の種", class: "S", attribute: "地",
+uniqueValue: { s: 39.73, a: 14.15, d: 11.5, l: 1 },
+changePoint: { s: 15, a: 16, d: 13, l: 0 },
+  changesTo: [ 0, 1, 107, 171, 179, 316 ],
+ changeType: "normal"
+             },
+
+159: { name: "タナトス", itemName: "愛憎の魔心", class: "S", attribute: "魔",
+uniqueValue: { s: 29.2, a: 18.1, d: 10.4, l: 1 },
+changePoint: { s: 11, a: 21, d: 12, l: 0 },
+  changesTo: [ 0, 1, 341, 487 ],
+ changeType: "normal"
+             },
+
+160: { name: "小雪姫", itemName: "雪月花", class: "SS", attribute: "魔",
+uniqueValue: { s: 46.8, a: 17.52, d: 12.8, l: 1 },
+changePoint: { s: 18, a: 20, d: 15, l: 0 },
+  changesTo: [ 0, 1, 602 ],
+ changeType: "normal"
+             },
+
 1001: { name: "アマツキツネ", itemName: "天翔る長尾", class: "SS", attribute: "霊",
 uniqueValue: { s: 40.2, a: 21.7, d: 12, l: 1 },
 changePoint: { s: 15, a: 25, d: 14, l: 0 },
