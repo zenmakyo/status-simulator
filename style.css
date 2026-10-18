@@ -999,3 +999,28 @@ h1 {
 button {
     touch-action: manipulation;
 }
+
+/* 左上のホームロゴ */
+.site-logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: block;
+    width: 90px;
+    z-index: 1000;
+}
+
+.site-logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* スマートフォン */
+@media (max-width: 600px) {
+    .site-logo {
+        top: 8px;
+        left: 8px;
+        width: 65px;
+    }
+}
