@@ -1352,7 +1352,7 @@ changePoint: { s: 12, a: 20, d: 12, l: 0 },
              },
 
 193: { name: "ポロウタリ", itemName: "背負子箱", class: "S", attribute: "霊",
-uniqueValue: { s: 35.3, a: 13.5, d: 13,5, l: 1 },
+uniqueValue: { s: 35.3, a: 13.5, d: 13.5, l: 1 },
 changePoint: { s: 14, a: 15, d: 15, l: 0 },
   changesTo: [ 0, 1, 227, 333, 504, 767 ],
  changeType: "normal"
