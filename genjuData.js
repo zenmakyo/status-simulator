@@ -1337,6 +1337,76 @@ changePoint: { s: 6, a: 6, d: 6, l: 0 },
  changeType: "normal"
              },
 
+191: { name: "伏姫", itemName: "いろは牡丹", class: "SS", attribute: "獣",
+uniqueValue: { s: 37.91, a: 12.58, d: 18.23, l: 1 },
+changePoint: { s: 15, a: 14, d: 21, l: 0 },
+  changesTo: [ 0, 1, 535, 841 ],
+ changeType: "normal"
+             },
+
+192: { name: "パヨカムイ", itemName: "病臥の火種", class: "S", attribute: "霊",
+uniqueValue: { s: 31.1, a: 17.9, d: 10.4, l: 1 },
+changePoint: { s: 12, a: 20, d: 12, l: 0 },
+  changesTo: [ 0, 1, 306, 362, 548, 562, 605, 650, 794 ],
+ changeType: "normal"
+             },
+
+193: { name: "ポロウタリ", itemName: "背負子箱", class: "S", attribute: "霊",
+uniqueValue: { s: 35.3, a: 13.5, d: 13,5, l: 1 },
+changePoint: { s: 14, a: 15, d: 15, l: 0 },
+  changesTo: [ 0, 1, 227, 333, 504, 767 ],
+ changeType: "normal"
+             },
+
+194: { name: "カーティル", itemName: "うさりんご", class: "A", attribute: "獣",
+uniqueValue: { s: 29.6, a: 12.8, d: 9.7, l: 1 },
+changePoint: { s: 11, a: 15, d: 11, l: 0 },
+  changesTo: [ 0, 1, 279, 383, 419, 776, 886 ],
+ changeType: "normal"
+             },
+
+195: { name: "オーディン", itemName: "滑走するもの", class: "SS", attribute: "霊",
+uniqueValue: { s: 46.08, a: 17.63, d: 15.21, l: 1 },
+changePoint: { s: 18, a: 20, d: 17, l: 0 },
+  changesTo: [ 0, 1, 294 ],
+ changeType: "normal"
+             },
+
+196: { name: "ココペリ", itemName: "ぽっくり", class: "B", attribute: "魔",
+uniqueValue: { s: 27, a: 6.7, d: 11.25, l: 1 },
+changePoint: { s: 10, a: 8, d: 13, l: 0 },
+  changesTo: [ 0, 1, 143, 187, 213, 584 ],
+ changeType: "normal"
+             },
+
+197: { name: "ジャンヌダルク", itemName: "白百合の髪飾り", class: "SS", attribute: "霊",
+uniqueValue: { s: 46.8, a: 17.62, d: 12.2, l: 0.9 },
+changePoint: { s: 18, a: 20, d: 14, l: 0 },
+  changesTo: [ 0, 1, 355, 356 ],
+ changeType: "normal"
+             },
+
+198: { name: "リャナンシー", itemName: "愛の囁き", class: "SS", attribute: "魔",
+uniqueValue: { s: 42.8, a: 13, d: 16.02, l: 1 },
+changePoint: { s: 16, a: 15, d: 18, l: 0 },
+  changesTo: [ 0, 1, 761 ],
+ changeType: "normal"
+             },
+
+199: { name: "マレビト", itemName: "誰そ彼", class: "SS", attribute: "魔",
+uniqueValue: { s: 44.5, a: 16.82, d: 13.41, l: 1 },
+changePoint: { s: 17, a: 19, d: 15, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+200: { name: "グリモワール", itemName: "禁書の解放", class: "A", attribute: "無",
+uniqueValue: { s: 26, a: 13.5, d: 11.5, l: 1 },
+changePoint: { s: 10, a: 15, d: 13, l: 0 },
+  changesTo: [ 0, 1, 312, 417, 526, 586 ],
+ changeType: "normal"
+             },
+
 1001: { name: "アマツキツネ", itemName: "天翔る長尾", class: "SS", attribute: "霊",
 uniqueValue: { s: 40.2, a: 21.7, d: 12, l: 1 },
 changePoint: { s: 15, a: 25, d: 14, l: 0 },
