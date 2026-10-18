@@ -1267,6 +1267,76 @@ changePoint: { s: 17, a: 14, d: 16, l: 0 },
  changeType: "normal"
              },
 
+181: { name: "氷灯の隠者", itemName: "水銀燈の輝き", class: "A", attribute: "霊",
+uniqueValue: { s: 34.7, a: 10, d: 10.7, l: 1 },
+changePoint: { s: 13, a: 12, d: 12, l: 0 },
+  changesTo: [ 0, 1, 110, 182, 292, 397, 414, 494, 762, 895 ],
+ changeType: "normal"
+             },
+
+182: { name: "スカディ", itemName: "雪山のお土産", class: "S", attribute: "霊",
+uniqueValue: { s: 36.1, a: 12.9, d: 10.8, l: 1 },
+changePoint: { s: 14, a: 15, d: 12, l: 0 },
+  changesTo: [ 0, 1, 201, 277, 389, 436, 691, 730, 850 ],
+ changeType: "normal"
+             },
+
+183: { name: "ヤツフサ", itemName: "時雨牡丹", class: "S", attribute: "獣",
+uniqueValue: { s: 30.9, a: 12, d: 14.4, l: 1 },
+changePoint: { s: 12, a: 14, d: 16, l: 0 },
+  changesTo: [ 0, 1, 191, 666, 841 ],
+ changeType: "normal"
+             },
+
+184: { name: "座天使", itemName: "青輪花", class: "SS", attribute: "無",
+uniqueValue: { s: 46.8, a: 15.6, d: 14.9, l: 1 },
+changePoint: { s: 18, a: 18, d: 17, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+185: { name: "闇に囁く者", itemName: "銀の円筒", class: "SS", attribute: "魔",
+uniqueValue: { s: 30.9, a: 18.1, d: 14.5, l: 1 },
+changePoint: { s: 12, a: 21, d: 17, l: 0 },
+  changesTo: [ 0, 1, 394 ],
+ changeType: "normal"
+             },
+
+186: { name: "カーバンクル", itemName: "瞬くコーラル", class: "S", attribute: "獣",
+uniqueValue: { s: 38.4, a: 12.7, d: 14.9, l: 1.3 },
+changePoint: { s: 15, a: 15, d: 17, l: 0 },
+  changesTo: [ 0, 1, 228 ],
+ changeType: "normal"
+             },
+
+187: { name: "鬼灯提灯【聖夜】", itemName: "冬篭り", class: "A", attribute: "地",
+uniqueValue: { s: 32, a: 7, d: 13, l: 1 },
+changePoint: { s: 12, a: 8, d: 15, l: 0 },
+  changesTo: [ 0, 1, 144, 145, 174, 298, 368, 633 ],
+ changeType: "normal"
+             },
+
+188: { name: "夢魔", itemName: "さるゆめ", class: "SS", attribute: "魔",
+uniqueValue: { s: 33, a: 16.9, d: 14.92, l: 1 },
+changePoint: { s: 13, a: 19, d: 17, l: 0 },
+  changesTo: [ 0, 1, 286, 826 ],
+ changeType: "normal"
+             },
+
+189: { name: "丙申", itemName: "丙とんぼ", class: "A", attribute: "獣",
+uniqueValue: { s: 30.75, a: 11.69, d: 11.72, l: 1.25 },
+changePoint: { s: 12, a: 13, d: 14, l: 0 },
+  changesTo: [ 0, 1, 76, 239, 400, 651, 935 ],
+ changeType: "normal"
+             },
+
+190: { name: "御使い", itemName: "御猪口", class: "F", attribute: "無",
+uniqueValue: { s: 15, a: 5, d: 5, l: 1.1 },
+changePoint: { s: 6, a: 6, d: 6, l: 0 },
+  changesTo: [ 0, 1, 2, 3, 4, 99, 140, 438, 516, 672, 673, 674 ],
+ changeType: "normal"
+             },
+
 1001: { name: "アマツキツネ", itemName: "天翔る長尾", class: "SS", attribute: "霊",
 uniqueValue: { s: 40.2, a: 21.7, d: 12, l: 1 },
 changePoint: { s: 15, a: 25, d: 14, l: 0 },
