@@ -1032,7 +1032,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding: 100px 12px 20px;
+    padding: 80px 12px 20px;
     background: rgba(255, 255, 255, 0.85);
     overflow-y: auto;
     box-sizing: border-box;
@@ -1062,9 +1062,9 @@ button {
     justify-content: space-between;
     gap: 12px;
     width: 100%;
-    min-height: 56px;
-    padding: 16px;
-    margin-bottom: 12px;
+    min-height: 44px;
+    padding: 10px 16px;
+    margin-bottom: 6px;
     border: 1px solid #ddd;
     border-radius: 10px;
     background: #fff;
