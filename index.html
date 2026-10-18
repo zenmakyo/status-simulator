@@ -36,10 +36,37 @@
 
 <body>
 
-<!-- ホームへ戻るロゴボタン -->
-<a href="https://zenmakyo.github.io/genmono2/" class="site-logo" aria-label="ホームへ戻る">
-    <img src="site-logo.png" alt="ぜんま・全魔協">
-</a>
+<!-- メニューを開くロゴボタン -->
+<button type="button" class="site-logo" id="menuOpen" aria-label="メニューを開く" aria-expanded="false" aria-controls="siteMenu">
+    <img src="site-logo.png" alt="">
+</button>
+
+<!-- サイトメニュー -->
+<div id="siteMenu" class="site-menu-overlay" hidden>
+    <nav class="site-menu" aria-label="サイトメニュー">
+
+        <a href="https://zenmakyo.github.io/genmono2/" class="site-menu-item">
+            <span>トップページ</span>
+            <span class="site-menu-arrow" aria-hidden="true">▶︎</span>
+        </a>
+
+        <a href="https://zenmakyo.github.io/fighting-simulator/" class="site-menu-item">
+            <span>討伐シミュレータ</span>
+            <span class="site-menu-arrow" aria-hidden="true">▶︎</span>
+        </a>
+
+        <a href="https://zenmakyo.github.io/status-simulator/" class="site-menu-item">
+            <span>ステータスシミュレータ</span>
+            <span class="site-menu-arrow" aria-hidden="true">▶︎</span>
+        </a>
+
+        <a href="https://zenmakyo.github.io/leveling-simulator/" class="site-menu-item">
+            <span>レベリングシミュレータ</span>
+            <span class="site-menu-arrow" aria-hidden="true">▶︎</span>
+        </a>
+
+    </nav>
+</div>
  
   <h1>育成予測計算</h1>
 
