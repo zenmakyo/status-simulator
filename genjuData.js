@@ -1127,6 +1127,76 @@ changePoint: { s: 18, a: 20, d: 15, l: 0 },
  changeType: "normal"
              },
 
+161: { name: "白澤", itemName: "繰り御霊", class: "SS", attribute: "獣",
+uniqueValue: { s: 29.7, a: 19.65, d: 17.31, l: 1 },
+changePoint: { s: 11, a: 22, d: 20, l: 0 },
+  changesTo: [ 0, 1, 456 ],
+ changeType: "normal"
+             },
+
+162: { name: "ルシファー【真夏】", itemName: "渦潮のスープ", class: "SS", attribute: "魔",
+uniqueValue: { s: 38.8, a: 18.3, d: 13.1, l: 1 },
+changePoint: { s: 15, a: 21, d: 15, l: 0 },
+  changesTo: [ 0, 1, 353, 354 ],
+ changeType: "normal"
+             },
+
+163: { name: "パンドラ【真夏】", itemName: "いもぽよ浮き輪", class: "S", attribute: "魔",
+uniqueValue: { s: 29.87, a: 10.9, d: 17.8, l: 1.1 },
+changePoint: { s: 12, a: 13, d: 20, l: 0 },
+  changesTo: [ 0, 1, 177, 237, 729, 884 ],
+ changeType: "normal"
+             },
+
+164: { name: "ジン【真夏】", itemName: "セレブサンオイル", class: "S", attribute: "霊",
+uniqueValue: { s: 37, a: 12, d: 11.5, l: 1 },
+changePoint: { s: 14, a: 14, d: 13, l: 0 },
+  changesTo: [ 0, 1, 131, 209, 449 ],
+ changeType: "normal"
+             },
+
+165: { name: "ヘイケボタル", itemName: "菊花園", class: "S", attribute: "霊",
+uniqueValue: { s: 41.11, a: 11.11, d: 11.11, l: 1.4 },
+changePoint: { s: 16, a: 13, d: 13, l: 0 },
+  changesTo: [ 0, 1, 620 ],
+ changeType: "normal"
+             },
+
+166: { name: "禍津", itemName: "括り御霊", class: "SS", attribute: "獣",
+uniqueValue: { s: 29.7, a: 17.31, d: 19.65, l: 1 },
+changePoint: { s: 11, a: 20, d: 22, l: 0 },
+  changesTo: [ 0, 1, 457 ],
+ changeType: "normal"
+             },
+
+167: { name: "影獅子", itemName: "影呼玉", class: "SS", attribute: "獣",
+uniqueValue: { s: 31.9, a: 17.5, d: 12.2, l: 1 },
+changePoint: { s: 12, a: 20, d: 14, l: 0 },
+  changesTo: [ 0, 1, 247, 680 ],
+ changeType: "normal"
+             },
+
+168: { name: "バーゲスト", itemName: "焦げ臭い首輪", class: "A", attribute: "獣",
+uniqueValue: { s: 28.2, a: 11.6, d: 10.6, l: 1 },
+changePoint: { s: 11, a: 13, d: 12, l: 0 },
+  changesTo: [ 0, 1, 78, 186, 736, 756 ],
+ changeType: "normal"
+             },
+
+169: { name: "クエイクドラゴン", itemName: "震央の息吹", class: "SS", attribute: "龍",
+uniqueValue: { s: 32, a: 15.4, d: 14.2, l: 1 },
+changePoint: { s: 12, a: 18, d: 16, l: 0 },
+  changesTo: [ 0, 1, 317, 865 ],
+ changeType: "normal"
+             },
+
+170: { name: "スサノオ", itemName: "八尺勾玉", class: "SS", attribute: "霊",
+uniqueValue: { s: 40.27, a: 17.03, d: 13.22, l: 1 },
+changePoint: { s: 15, a: 19, d: 15, l: 0 },
+  changesTo: [ 0, 1, 217 ],
+ changeType: "normal"
+             },
+
 1001: { name: "アマツキツネ", itemName: "天翔る長尾", class: "SS", attribute: "霊",
 uniqueValue: { s: 40.2, a: 21.7, d: 12, l: 1 },
 changePoint: { s: 15, a: 25, d: 14, l: 0 },
