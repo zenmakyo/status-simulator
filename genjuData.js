@@ -1407,6 +1407,76 @@ changePoint: { s: 10, a: 15, d: 13, l: 0 },
  changeType: "normal"
              },
 
+201: { name: "ロキ", itemName: "邪眼", class: "SS", attribute: "魔",
+uniqueValue: { s: 36.1, a: 19.05, d: 12.48, l: 1 },
+changePoint: { s: 14, a: 22, d: 14, l: 0 },
+  changesTo: [ 0, 1, 420, 863 ],
+ changeType: "normal"
+             },
+
+202: { name: "獏", itemName: "夢香炉", class: "B", attribute: "獣",
+uniqueValue: { s: 24.8, a: 12.44, d: 8.95, l: 1 },
+changePoint: { s: 10, a: 14, d: 10, l: 0 },
+  changesTo: [ 0, 1, 65, 242, 560 ],
+ changeType: "normal"
+             },
+
+203: { name: "麒麟", itemName: "春の足音", class: "SS", attribute: "獣",
+uniqueValue: { s: 41.9, a: 14.5, d: 17.32, l: 1 },
+changePoint: { s: 16, a: 17, d: 20, l: 0 },
+  changesTo: [ 0, 1, 459 ],
+ changeType: "normal"
+             },
+
+204: { name: "シャイターン", itemName: "焦熱の業火", class: "SS", attribute: "魔",
+uniqueValue: { s: 40.05, a: 17.92, d: 11.63, l: 1 },
+changePoint: { s: 15, a: 20, d: 13, l: 0 },
+  changesTo: [ 0, 1, 404 ],
+ changeType: "normal"
+             },
+
+205: { name: "ヘル", itemName: "艶紅の雫", class: "S", attribute: "魔",
+uniqueValue: { s: 29.4, a: 15.8, d: 11.2, l: 1 },
+changePoint: { s: 11, a: 18, d: 13, l: 0 },
+  changesTo: [ 0, 1, 206, 310, 527, 641 ],
+ changeType: "normal"
+             },
+
+206: { name: "封じられし者", itemName: "枷の綻び", class: "SS", attribute: "無",
+uniqueValue: { s: 30, a: 17.14, d: 11.47, l: 1 },
+changePoint: { s: 12, a: 20, d: 13, l: 0 },
+  changesTo: [ 0, 1, 207, 923 ],
+ changeType: "normal"
+             },
+
+207: { name: "フェンリル", itemName: "無用の枷杭", class: "SS", attribute: "獣",
+uniqueValue: { s: 32.1, a: 25.2, d: 12.18, l: 1 },
+changePoint: { s: 12, a: 28, d: 14, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+208: { name: "報せを待つ者", itemName: "延命の薬液", class: "B", attribute: "無",
+uniqueValue: { s: 27, a: 10.4, d: 10.4, l: 1 },
+changePoint: { s: 10, a: 12, d: 12, l: 0 },
+  changesTo: [ 0, 1, 116, 274, 721, 859 ],
+ changeType: "normal"
+             },
+
+209: { name: "ティターニア", itemName: "想花雫", class: "SS", attribute: "霊",
+uniqueValue: { s: 48.69, a: 13.78, d: 12.68, l: 1.55 },
+changePoint: { s: 19, a: 16, d: 15, l: 0 },
+  changesTo: [ 0, 1, 380 ],
+ changeType: "normal"
+             },
+
+210: { name: "原始竜【化粧】", itemName: "春いちご", class: "E", attribute: "龍",
+uniqueValue: { s: 18, a: 7, d: 5.6, l: 1 },
+changePoint: { s: 7, a: 8, d: 7, l: 0 },
+  changesTo: [ 0, 1, 101, 245 ],
+ changeType: "normal"
+             },
+
 1001: { name: "アマツキツネ", itemName: "天翔る長尾", class: "SS", attribute: "霊",
 uniqueValue: { s: 40.2, a: 21.7, d: 12, l: 1 },
 changePoint: { s: 15, a: 25, d: 14, l: 0 },
