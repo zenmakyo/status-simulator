@@ -1477,6 +1477,76 @@ changePoint: { s: 7, a: 8, d: 7, l: 0 },
  changeType: "normal"
              },
 
+211: { name: "ポセイドン【化粧】", itemName: "荒波の腰飾り", class: "S", attribute: "霊",
+uniqueValue: { s: 38.74, a: 12.3, d: 13.66, l: 1 },
+changePoint: { s: 15, a: 14, d: 16, l: 0 },
+  changesTo: [ 0, 1, 195, 405, 812 ],
+ changeType: "normal"
+             },
+
+212: { name: "ケツァルカトル", itemName: "ククルカン", class: "SS", attribute: "獣",
+uniqueValue: { s: 39.81, a: 15.1, d: 14.3, l: 1 },
+changePoint: { s: 15, a: 17, d: 16, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+213: { name: "星ノ位・牡羊", itemName: "桃花に添う夜", class: "A", attribute: "獣",
+uniqueValue: { s: 27.48, a: 10.7, d: 13.18, l: 1.1 },
+changePoint: { s: 11, a: 12, d: 15, l: 0 },
+  changesTo: [ 0, 1, 261, 262, 505, 584, 789 ],
+ changeType: "normal"
+             },
+
+214: { name: "赤い頭巾の娘・悲", itemName: "逃避の物語", class: "A", attribute: "獣",
+uniqueValue: { s: 16.5, a: 16.4, d: 11.1, l: 0.8 },
+changePoint: { s: 7, a: 19, d: 13, l: 0 },
+  changesTo: [ 0, 1, 285, 374, 455, 568, 916 ],
+ changeType: "normal"
+             },
+
+215: { name: "赤い頭巾の娘・幸", itemName: "親愛の物語", class: "A", attribute: "獣",
+uniqueValue: { s: 29.7, a: 12.7, d: 11.1, l: 1.1 },
+changePoint: { s: 11, a: 15, d: 13, l: 0 },
+  changesTo: [ 0, 1, 285, 374, 455, 568, 916 ],
+ changeType: "normal"
+             },
+
+216: { name: "ちゃつみ", itemName: "福茶", class: "B", attribute: "獣",
+uniqueValue: { s: 28.1, a: 9.8, d: 9.87, l: 1 },
+changePoint: { s: 11, a: 11, d: 11, l: 0 },
+  changesTo: [ 0, 1, 87 ],
+ changeType: "normal"
+             },
+
+217: { name: "悪路王", itemName: "嶽の意志", class: "SS", attribute: "魔",
+uniqueValue: { s: 40.72, a: 19.02, d: 13.35, l: 1 },
+changePoint: { s: 16, a: 22, d: 15, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+218: { name: "狸娘", itemName: "まりっぱ", class: "A", attribute: "獣",
+uniqueValue: { s: 38, a: 12.88, d: 10.1, l: 1.2 },
+changePoint: { s: 15, a: 15, d: 12, l: 0 },
+  changesTo: [ 0, 1, 77, 249 ],
+ changeType: "normal"
+             },
+
+219: { name: "我来也", itemName: "影術の巻・刹", class: "SS", attribute: "魔",
+uniqueValue: { s: 30.3, a: 19.92, d: 15.95, l: 1 },
+changePoint: { s: 12, a: 23, d: 18, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+220: { name: "コノハナサクヤ", itemName: "桃房の簪", class: "SS", attribute: "無",
+uniqueValue: { s: 41.8, a: 16.87, d: 14.8, l: 1.1 },
+changePoint: { s: 16, a: 19, d: 17, l: 0 },
+  changesTo: [ 0, 1, 713, 856 ],
+ changeType: "normal"
+             },
+
 1001: { name: "アマツキツネ", itemName: "天翔る長尾", class: "SS", attribute: "霊",
 uniqueValue: { s: 40.2, a: 21.7, d: 12, l: 1 },
 changePoint: { s: 15, a: 25, d: 14, l: 0 },
