@@ -1533,7 +1533,7 @@ changePoint: { s: 15, a: 15, d: 12, l: 0 },
  changeType: "normal"
              },
 
-219: { name: "我来也", itemName: "影術の巻・刹", class: "SS", attribute: "魔",
+219: { name: "我来也・刹", itemName: "影術の巻・刹", class: "SS", attribute: "魔",
 uniqueValue: { s: 30.3, a: 19.92, d: 15.95, l: 1 },
 changePoint: { s: 12, a: 23, d: 18, l: 0 },
   changesTo: [ 0, 1 ],
@@ -1544,6 +1544,13 @@ changePoint: { s: 12, a: 23, d: 18, l: 0 },
 uniqueValue: { s: 41.8, a: 16.87, d: 14.8, l: 1.1 },
 changePoint: { s: 16, a: 19, d: 17, l: 0 },
   changesTo: [ 0, 1, 713, 856 ],
+ changeType: "normal"
+             },
+
+221: { name: "難儀鳥", itemName: "袖の下の包", class: "S", attribute: "霊",
+uniqueValue: { s: 45.3, a: 10.81, d: 8.85, l: 1 },
+changePoint: { s: 17, a: 13, d: 10, l: 0 },
+  changesTo: [ 0, 1, 82, 439 ],
  changeType: "normal"
              },
 
