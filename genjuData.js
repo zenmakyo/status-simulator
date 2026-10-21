@@ -1554,6 +1554,69 @@ changePoint: { s: 17, a: 13, d: 10, l: 0 },
  changeType: "normal"
              },
 
+222: { name: "刑罰を記すもの", itemName: "審議鳩", class: "A", attribute: "魔",
+uniqueValue: { s: 24, a: 12.5, d: 9, l: 1 },
+changePoint: { s: 9, a: 14, d: 10, l: 0 },
+  changesTo: [ 0, 1, 64, 493, 581, 627 ],
+ changeType: "normal"
+             },
+
+223: { name: "星ノ位・双子", itemName: "双蝶の夜想", class: "SS", attribute: "霊",
+uniqueValue: { s: 46.47, a: 12.27, d: 16.78, l: 1.1 },
+changePoint: { s: 18, a: 14, d: 19, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+224: { name: "分福茶釜", itemName: "茶釜", class: "S", attribute: "地",
+uniqueValue: { s: 18.7, a: 8.2, d: 18.4, l: 1.25 },
+changePoint: { s: 7, a: 10, d: 21, l: 0 },
+  changesTo: [ 0, 1, 338, 507, 677, 891, 919 ],
+ changeType: "normal"
+             },
+
+225: { name: "ノーム", itemName: "転寝のオカリナ", class: "SS", attribute: "地",
+uniqueValue: { s: 40.1, a: 16.3, d: 14.3, l: 1 },
+changePoint: { s: 15, a: 19, d: 16, l: 0 },
+  changesTo: [ 0, 1, 805 ],
+ changeType: "normal"
+             },
+
+226: { name: "アマテラス", itemName: "八咫鏡", class: "SS", attribute: "霊",
+uniqueValue: { s: 42.54, a: 14.2, d: 17.87, l: 1.2 },
+changePoint: { s: 16, a: 16, d: 20, l: 0 },
+  changesTo: [ 0, 1, 915 ],
+ changeType: "normal"
+             },
+
+227: { name: "常磐の旧主", itemName: "緑樹の言霊", class: "SS", attribute: "地",
+uniqueValue: { s: 41.36, a: 13.9, d: 14.38, l: 1.3 },
+changePoint: { s: 16, a: 16, d: 16, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+228: { name: "双翼のキメラ", itemName: "双翼のらせん", class: "S", attribute: "龍",
+uniqueValue: { s: 36.4, a: 16.51, d: 14.32, l: 1.3 },
+changePoint: { s: 14, a: 19, d: 16, l: 0 },
+  changesTo: [ 0, 1, 423, 424, 427 ],
+ changeType: "normal"
+             },
+
+229: { name: "玉藻御前", itemName: "妖麗な仄灯", class: "SS", attribute: "獣",
+uniqueValue: { s: 40.72, a: 15.48, d: 19.31, l: 1.12 },
+changePoint: { s: 16, a: 18, d: 22, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+230: { name: "熾天什使", itemName: "先陣に坐す杖", class: "SS", attribute: "霊",
+uniqueValue: { s: 51.29, a: 16.71, d: 14.9, l: 1.13 },
+changePoint: { s: 19, a: 19, d: 17, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
 1001: { name: "アマツキツネ", itemName: "天翔る長尾", class: "SS", attribute: "霊",
 uniqueValue: { s: 40.2, a: 21.7, d: 12, l: 1 },
 changePoint: { s: 15, a: 25, d: 14, l: 0 },
