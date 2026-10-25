@@ -2962,7 +2962,7 @@ changePoint: { s: 14, a: 17, d: 14, l: 0 },
              },
 
 423: { name: "系譜継ぐ双翼のキメラ", itemName: "らせんの展望", class: "SS", attribute: "龍",
-uniqueValue: { s: 38.8, a: 17..31, d: 15.1, l: 1.3 },
+uniqueValue: { s: 38.8, a: 17.31, d: 15.1, l: 1.3 },
 changePoint: { s: 15, a: 20, d: 17, l: 0 },
   changesTo: [ 0, 1 ],
  changeType: "normal"
