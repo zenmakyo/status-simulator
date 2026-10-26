@@ -3507,6 +3507,356 @@ changePoint: { s: 16, a: 17, d: 16, l: 0 },
  changeType: "normal"
              },
 
+501: { name: "誓約のスハイル", itemName: "古影の明光", class: "B", attribute: "魔",
+uniqueValue: { s: 21.6, a: 11.3, d: 10.35, l: 1.3 },
+changePoint: { s: 8, a: 13, d: 12, l: 0 },
+  changesTo: [ 0, 1, 541, 971 ],
+ changeType: "normal"
+             },
+
+502: { name: "ミカエル", itemName: "高潔たる剣", class: "SS", attribute: "霊",
+uniqueValue: { s: 42, a: 19.1, d: 11.95, l: 1 },
+changePoint: { s: 16, a: 20, d: 14, l: 0 },
+  changesTo: [ 0, 1, 852 ],
+ changeType: "normal"
+             },
+
+503: { name: "ヘイムダル", itemName: "賢知の角笛", class: "SS", attribute: "霊",
+uniqueValue: { s: 41.25, a: 13.65, d: 18.85, l: 1 },
+changePoint: { s: 16, a: 16, d: 21, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+504: { name: "薬湯殿ゆ屋", itemName: "とんたま", class: "SS", attribute: "獣",
+uniqueValue: { s: 36.21, a: 15.2, d: 15.2, l: 1 },
+changePoint: { s: 14, a: 17, d: 17, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+505: { name: "お仕立て竜ティファ", itemName: "真心紡ぎ糸", class: "S", attribute: "龍",
+uniqueValue: { s: 29.25, a: 14.05, d: 14.9, l: 1.3 },
+changePoint: { s: 11, a: 16, d: 17, l: 0 },
+  changesTo: [ 0, 1, 631, 834, 930 ],
+ changeType: "normal"
+             },
+
+506: { name: "阿【真似】", itemName: "雷招の戦刃", class: "SS", attribute: "霊",
+uniqueValue: { s: 30.93, a: 22.27, d: 11.26, l: 1 },
+changePoint: { s: 12, a: 25, d: 13, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+507: { name: "吽【真似】", itemName: "風招の戦輪", class: "SS", attribute: "霊",
+uniqueValue: { s: 37.53, a: 12.75, d: 18.58, l: 1 },
+changePoint: { s: 14, a: 15, d: 21, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+508: { name: "己亥", itemName: "日向牡丹", class: "A", attribute: "獣",
+uniqueValue: { s: 30.75, a: 11.69, d: 11.72, l: 1.25 },
+changePoint: { s: 12, a: 13, d: 14, l: 0 },
+  changesTo: [ 0, 1, 538, 820 ],
+ changeType: "normal"
+             },
+
+509: { name: "高雅たる詠人", itemName: "幽玄万首", class: "SS", attribute: "霊",
+uniqueValue: { s: 30.36, a: 16.7, d: 15.63, l: 1 },
+changePoint: { s: 12, a: 19, d: 18, l: 0 },
+  changesTo: [ 0, 1, 821 ],
+ changeType: "normal"
+             },
+
+510: { name: "高闇之淤加美神", itemName: "霊峰貴泉", class: "SS", attribute: "龍",
+uniqueValue: { s: 44.58, a: 16.22, d: 19, l: 1.1 },
+changePoint: { s: 17, a: 19, d: 22, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+511: { name: "ダラケモノ", itemName: "惰眠まくら", class: "A", attribute: "獣",
+uniqueValue: { s: 35.1, a: 13.05, d: 10.4, l: 1 },
+changePoint: { s: 13, a: 15, d: 12, l: 0 },
+  changesTo: [ 0, 1, 379, 409 ],
+ changeType: "normal"
+             },
+
+512: { name: "月日を追う者", itemName: "幽明の天道", class: "SS", attribute: "獣",
+uniqueValue: { s: 36.21, a: 19, d: 14.6, l: 1 },
+changePoint: { s: 14, a: 22, d: 17, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+513: { name: "イーリス", itemName: "吉針の追風", class: "SS", attribute: "獣",
+uniqueValue: { s: 34.2, a: 17.1, d: 16.1, l: 1.2 },
+changePoint: { s: 13, a: 19, d: 18, l: 0 },
+  changesTo: [ 0, 1, 785 ],
+ changeType: "normal"
+             },
+
+514: { name: "おちゃめ天使・結", itemName: "恋の援護射撃！", class: "A", attribute: "無",
+uniqueValue: { s: 39, a: 11.2, d: 10.15, l: 1 },
+changePoint: { s: 15, a: 13, d: 12, l: 0 },
+  changesTo: [ 0, 1, 418, 519, 648 ],
+ changeType: "normal"
+             },
+
+515: { name: "うぐいす姫", itemName: "四季折箱", class: "SS", attribute: "地",
+uniqueValue: { s: 49.2, a: 14, d: 14.2, l: 1.1 },
+changePoint: { s: 19, a: 16, d: 16, l: 0 },
+  changesTo: [ 0, 1, 928 ],
+ changeType: "normal"
+             },
+
+516: { name: "神秘占・愚者", itemName: "無邪気な旅支度", class: "F", attribute: "無",
+uniqueValue: { s: 17.1, a: 5.1, d: 5.1, l: 1.35 },
+changePoint: { s: 7, a: 6, d: 6, l: 0 },
+  changesTo: [ 0, 1, 517 ],
+ changeType: "normal"
+             },
+
+517: { name: "神秘占・魔術師", itemName: "志の開花", class: "E", attribute: "魔",
+uniqueValue: { s: 18.75, a: 5.8, d: 5.8, l: 1.35 },
+changePoint: { s: 7, a: 7, d: 7, l: 0 },
+  changesTo: [ 0, 1, 518, 542 ],
+ changeType: "normal"
+             },
+
+518: { name: "神秘占・恋人たち", itemName: "愛しき鼓動", class: "D", attribute: "霊",
+uniqueValue: { s: 20.7, a: 6.5, d: 6.5, l: 1.35 },
+changePoint: { s: 8, a: 8, d: 8, l: 0 },
+  changesTo: [ 0, 1, 521, 542, 544 ],
+ changeType: "normal"
+             },
+
+519: { name: "力天使", itemName: "奇天環", class: "S", attribute: "無",
+uniqueValue: { s: 40.2, a: 10.5, d: 13.5, l: 1 },
+changePoint: { s: 15, a: 12, d: 15, l: 0 },
+  changesTo: [ 0, 1, 637, 945 ],
+ changeType: "normal"
+             },
+
+520: { name: "冬将軍ユキムネ", itemName: "豪雪の牙城", class: "SS", attribute: "霊",
+uniqueValue: { s: 46.5, a: 13.35, d: 13.25, l: 1 },
+changePoint: { s: 18, a: 15, d: 15, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+521: { name: "神秘占・吊るされし者", itemName: "献身フック", class: "C", attribute: "地",
+uniqueValue: { s: 21, a: 8.8, d: 6.9, l: 1.35 },
+changePoint: { s: 8, a: 10, d: 8, l: 0 },
+  changesTo: [ 0, 1, 529 ],
+ changeType: "normal"
+             },
+
+522: { name: "スフレ", itemName: "果実コンフィ", class: "SS", attribute: "獣",
+uniqueValue: { s: 39, a: 16.1, d: 15.5, l: 1.2 },
+changePoint: { s: 15, a: 18, d: 18, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+523: { name: "役小角【修練】", itemName: "猛りし鯉", class: "A", attribute: "霊",
+uniqueValue: { s: 25.2, a: 13.65, d: 11.4, l: 1 },
+changePoint: { s: 10, a: 16, d: 13, l: 0 },
+  changesTo: [ 0, 1, 385, 469, 470, 690, 750 ],
+ changeType: "normal"
+             },
+
+524: { name: "点睛を欠く画龍", itemName: "不完の墨瞳", class: "S", attribute: "龍",
+uniqueValue: { s: 33, a: 16.1, d: 11.15, l: 1 },
+changePoint: { s: 13, a: 18, d: 13, l: 0 },
+  changesTo: [ 0, 1, 592, 635, 722 ],
+ changeType: "normal"
+             },
+
+525: { name: "マシュルム", itemName: "パニック茸", class: "C", attribute: "地",
+uniqueValue: { s: 23.85, a: 7.1, d: 7.55, l: 1 },
+changePoint: { s: 9, a: 8, d: 9, l: 0 },
+  changesTo: [ 0, 1, 34, 554, 801 ],
+ changeType: "normal"
+             },
+
+526: { name: "アルケニマ・イグニス", itemName: "レプリ孵化", class: "A", attribute: "無",
+uniqueValue: { s: 26.31, a: 13.5, d: 12.7, l: 1 },
+changePoint: { s: 10, a: 15, d: 15, l: 0 },
+  changesTo: [ 0, 1, 312 ],
+ changeType: "normal"
+             },
+
+527: { name: "小粒衆", itemName: "隠れオニ", class: "S", attribute: "獣",
+uniqueValue: { s: 329.7, a: 17.8, d: 11.9, l: 1 },
+changePoint: { s: 11, a: 20, d: 14, l: 0 },
+  changesTo: [ 0, 1, 310, 641 ],
+ changeType: "normal"
+             },
+
+528: { name: "千夜の語り部・伝譚", itemName: "佳境の一雫", class: "SS", attribute: "無",
+uniqueValue: { s: 40.2, a: 15.5, d: 16.45, l: 1.3 },
+changePoint: { s: 15, a: 18, d: 19, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+529: { name: "神秘占・隠者", itemName: "孤光の灯実", class: "B", attribute: "地",
+uniqueValue: { s: 25.2, a: 10.2, d: 8.1, l: 1.35 },
+changePoint: { s: 10, a: 12, d: 9, l: 0 },
+  changesTo: [ 0, 1, 539 ],
+ changeType: "normal"
+             },
+
+530: { name: "ヴァイシュラヴァナ", itemName: "退魔の清焔", class: "SS", attribute: "霊",
+uniqueValue: { s: 32.1, a: 17.2, d: 17.1, l: 1 },
+changePoint: { s: 12, a: 20, d: 19, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+531: { name: "ウシャマル", itemName: "密林の恩恵", class: "D", attribute: "地",
+uniqueValue: { s: 21.9, a: 5.7, d: 7, l: 1 },
+changePoint: { s: 9, a: 7, d: 8, l: 0 },
+  changesTo: [ 0, 1, 558 ],
+ changeType: "normal"
+             },
+
+532: { name: "エクチュアフ", itemName: "ポポル・ヴフ", class: "SS", attribute: "魔",
+uniqueValue: { s: 33.1, a: 17.5, d: 14.1, l: 1 },
+changePoint: { s: 13, a: 20, d: 16, l: 0 },
+  changesTo: [ 0, 1, 942 ],
+ changeType: "normal"
+             },
+
+533: { name: "シヴァ", itemName: "三叉置香", class: "SS", attribute: "霊",
+uniqueValue: { s: 41.7, a: 13.1, d: 16.8, l: 1 },
+changePoint: { s: 16, a: 15, d: 19, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+534: { name: "破壊神・狂痕", itemName: "崩壊セシ芽", class: "SS", attribute: "魔",
+uniqueValue: { s: 35.5, a: 23.9, d: 13.1, l: 1 },
+changePoint: { s: 14, a: 27, d: 15, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+535: { name: "伏姫・八徳", itemName: "八士牡丹", class: "SS", attribute: "獣",
+uniqueValue: { s: 42.3, a: 14.4, d: 19.85, l: 1 },
+changePoint: { s: 16, a: 16, d: 23, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+536: { name: "春芳スケイプドラゴン", itemName: "春陽の花冠", class: "SS", attribute: "地",
+uniqueValue: { s: 49.41, a: 13.8, d: 18.15, l: 1 },
+changePoint: { s: 19, a: 16, d: 21, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+537: { name: "薄幸佳人", itemName: "不運終着", class: "SS", attribute: "魔",
+uniqueValue: { s: 43.2, a: 17, d: 12.32, l: 0.9 },
+changePoint: { s: 16, a: 19, d: 14, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+538: { name: "呼福童", itemName: "開運千鳥", class: "S", attribute: "獣",
+uniqueValue: { s: 32.7, a: 13.1, d: 13.8, l: 1.2 },
+changePoint: { s: 13, a: 15, d: 16, l: 0 },
+  changesTo: [ 0, 1, 570, 715 ],
+ changeType: "normal"
+             },
+
+539: { name: "神秘占・月", itemName: "月暗の水鏡", class: "A", attribute: "無",
+uniqueValue: { s: 28.5, a: 14, d: 9.6, l: 1.35 },
+changePoint: { s: 11, a: 16, d: 11, l: 0 },
+  changesTo: [ 0, 1, 559 ],
+ changeType: "normal"
+             },
+
+540: { name: "ノルン三姉妹", itemName: "運命の紡績", class: "SS", attribute: "霊",
+uniqueValue: { s: 48 a: 15.6, d: 12.85, l: 1.2 },
+changePoint: { s: 18, a: 18, d: 15, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+541: { name: "星跳のティアミ", itemName: "天駆の輝導", class: "A", attribute: "魔",
+uniqueValue: { s: 28.05, a: 11.47, d: 13.05, l: 1 },
+changePoint: { s: 11, a: 13, d: 15, l: 0 },
+  changesTo: [ 0, 1, 624, 854, 931 ],
+ changeType: "normal"
+             },
+
+542: { name: "神秘占・女教皇", itemName: "潔浄の律法書", class: "C", attribute: "霊",
+uniqueValue: { s: 22.8, a: 7.6, d: 7.6, l: 1.35 },
+changePoint: { s: 12, a: 14, d: 16, l: 0 },
+  changesTo: [ 0, 1, 549, 551 ],
+ changeType: "normal"
+             },
+
+543: { name: "ツミビト【追憶】", itemName: "追憶の途", class: "SS", attribute: "霊",
+uniqueValue: { s: 29, a: 17.15, d: 16.6, l: 1 },
+changePoint: { s: 11, a: 20, d: 19, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+544: { name: "神秘占・皇帝", itemName: "統治の心髄", class: "C", attribute: "獣",
+uniqueValue: { s: 25.2, a: 7.2, d: 7.1, l: 1.35 },
+changePoint: { s: 10, a: 8, d: 8, l: 0 },
+  changesTo: [ 0, 1, 553 ],
+ changeType: "normal"
+             },
+
+545: { name: "ノーム【南国】", itemName: "トロピカルポンチ", class: "SS", attribute: "地",
+uniqueValue: { s: 40.1, a: 16.3, d: 14.3, l: 1 },
+changePoint: { s: 15, a: 19, d: 16, l: 0 },
+  changesTo: [ 0, 1, 805 ],
+ changeType: "normal"
+             },
+
+546: { name: "黒陸吾", itemName: "寵庭冥護", class: "SS", attribute: "獣",
+uniqueValue: { s: 42.21, a: 13.8, d: 18.05, l: 1.8 },
+changePoint: { s: 16, a: 16, d: 21, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+547: { name: "獏【南国】", itemName: "夏色水鉢", class: "B", attribute: "獣",
+uniqueValue: { s: 24.8, a: 12.44, d: 8.95, l: 1 },
+changePoint: { s: 10, a: 14, d: 10, l: 0 },
+  changesTo: [ 0, 1, 65, 242, 560 ],
+ changeType: "normal"
+             },
+
+548: { name: "パウチカムイ【南国】", itemName: "一夏の享楽", class: "S", attribute: "魔",
+uniqueValue: { s: 31.25, a: 17.92, d: 10.65, l: 1 },
+changePoint: { s: 12, a: 20, d: 12, l: 0 },
+  changesTo: [ 0, 1, 605 ],
+ changeType: "normal"
+             },
+
+549: { name: "神秘占・教皇", itemName: "有徳者の信条", class: "B", attribute: "霊",
+uniqueValue: { s: 26.7, a: 8.9, d: 8.9, l: 1.35 },
+changePoint: { s: 10, a: 10, d: 10, l: 0 },
+  changesTo: [ 0, 1, 575 ],
+ changeType: "normal"
+             },
+
+550: { name: "瘴谷の邪竜", itemName: "凄惨たる瘴霧", class: "SS", attribute: "龍",
+uniqueValue: { s: 29.9, a: 16.1, d: 12.9, l: 1 },
+changePoint: { s: 12, a: 18, d: 15, l: 0 },
+  changesTo: [ 0, 1, 567, 676 ],
+ changeType: "normal"
+             },
+
 1001: { name: "アマツキツネ", itemName: "天翔る長尾", class: "SS", attribute: "霊",
 uniqueValue: { s: 40.2, a: 21.7, d: 12, l: 1 },
 changePoint: { s: 15, a: 25, d: 14, l: 0 },
