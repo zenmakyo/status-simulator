@@ -3781,7 +3781,7 @@ changePoint: { s: 11, a: 16, d: 11, l: 0 },
              },
 
 540: { name: "ノルン三姉妹", itemName: "運命の紡績", class: "SS", attribute: "霊",
-uniqueValue: { s: 48 a: 15.6, d: 12.85, l: 1.2 },
+uniqueValue: { s: 48, a: 15.6, d: 12.85, l: 1.2 },
 changePoint: { s: 18, a: 18, d: 15, l: 0 },
   changesTo: [ 0, 1 ],
  changeType: "normal"
@@ -3854,6 +3854,76 @@ changePoint: { s: 10, a: 10, d: 10, l: 0 },
 uniqueValue: { s: 29.9, a: 16.1, d: 12.9, l: 1 },
 changePoint: { s: 12, a: 18, d: 15, l: 0 },
   changesTo: [ 0, 1, 567, 676 ],
+ changeType: "normal"
+             },
+
+551: { name: "神秘占・力", itemName: "不屈の花和", class: "B", attribute: "霊",
+uniqueValue: { s: 25.2, a: 8, d: 10.3, l: 1.35 },
+changePoint: { s: 10, a: 9, d: 12, l: 0 },
+  changesTo: [ 0, 1, 587 ],
+ changeType: "normal"
+             },
+
+552: { name: "霊騎士シルドラント", itemName: "騎士の未練", class: "SS", attribute: "無",
+uniqueValue: { s: 42.3, a: 13.9, d: 16.75, l: 1 },
+changePoint: { s: 16, a: 16, d: 19, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+553: { name: "神秘占・戦車", itemName: "勇壮凱旋", class: "B", attribute: "獣",
+uniqueValue: { s: 31.2, a: 8.2, d: 8.1, l: 1.35 },
+changePoint: { s: 12, a: 10, d: 9, l: 0 },
+  changesTo: [ 0, 1, 577 ],
+ changeType: "normal"
+             },
+
+554: { name: "画匠カミーリオ", itemName: "独彩の絵具", class: "B", attribute: "地",
+uniqueValue: { s: 25.85, a: 11, d: 9.05, l: 1 },
+changePoint: { s: 10, a: 13, d: 11, l: 0 },
+  changesTo: [ 0, 1, 590, 798, 835, 984 ],
+ changeType: "normal"
+             },
+
+555: { name: "和歌で遊びし者", itemName: "万葉の束", class: "C", attribute: "獣",
+uniqueValue: { s: 20.5, a: 8.15, d: 7.95, l: 1 },
+changePoint: { s: 8, a: 10, d: 9, l: 0 },
+  changesTo: [ 0, 1, 678, 679 ],
+ changeType: "normal"
+             },
+
+556: { name: "双幽デッドワーズ", itemName: "怪園カーニバル", class: "SS", attribute: "魔",
+uniqueValue: { s: 40.5, a: 17.8, d: 13.5, l: 1 },
+changePoint: { s: 15, a: 20, d: 15, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+557: { name: "アルマド【仮装】", itemName: "甘味の勲", class: "C", attribute: "獣",
+uniqueValue: { s: 21, a: 8.6, d: 9.3, l: 1 },
+changePoint: { s: 8, a: 10, d: 11, l: 0 },
+  changesTo: [ 0, 1, 43, 593, 1000 ],
+ changeType: "normal"
+             },
+
+558: { name: "かぼプキン", itemName: "進撃の脚線美", class: "C", attribute: "魔",
+uniqueValue: { s: 22.75, a: 7.8, d: 7.25, l: 1 },
+changePoint: { s: 9, a: 9, d: 9, l: 0 },
+  changesTo: [ 0, 1, 672, 700 ],
+ changeType: "normal"
+             },
+
+559: { name: "神秘占・悪魔", itemName: "煉縛の従鎖", class: "S", attribute: "魔",
+uniqueValue: { s: 33.1, a: 17, d: 10.9, l: 1.35 },
+changePoint: { s: 13, a: 19, d: 13, l: 0 },
+  changesTo: [ 0, 1, 561 ],
+ changeType: "normal"
+             },
+
+560: { name: "花荒神", itemName: "大食環", class: "B", attribute: "魔",
+uniqueValue: { s: 24.9, a: 9.95, d: 10.25, l: 1 },
+changePoint: { s: 10, a: 12, d: 12, l: 0 },
+  changesTo: [ 0, 1, 242 ],
  changeType: "normal"
              },
 
