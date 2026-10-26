@@ -3157,6 +3157,356 @@ changePoint: { s: 15, a: 17, d: 19, l: 0 },
  changeType: "normal"
              },
 
+451: { name: "ヘルヴォル", itemName: "戦天の庇護", class: "A", attribute: "霊",
+uniqueValue: { s: 34.55, a: 8.02, d: 14.05, l: 1 },
+changePoint: { s: 13, a: 9, d: 16, l: 0 },
+  changesTo: [ 0, 1, 280 ],
+ changeType: "normal"
+             },
+
+452: { name: "綾取人形師", itemName: "巡りの風戯", class: "SS", attribute: "霊",
+uniqueValue: { s: 47.2, a: 12.89, d: 16.1, l: 1.1 },
+changePoint: { s: 18, a: 15, d: 18, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+453: { name: "干将莫耶【婚礼】", itemName: "婚娶の絆", class: "S", attribute: "霊",
+uniqueValue: { s: 23.63, a: 21.84, d: 10.49, l: 1.05 },
+changePoint: { s: 9, a: 25, d: 12, l: 0 },
+  changesTo: [ 0, 1, 337, 506, 644 ],
+ changeType: "normal"
+             },
+
+454: { name: "テティス【純白】", itemName: "純愛の涙", class: "S", attribute: "霊",
+uniqueValue: { s: 40.5, a: 10.4, d: 11.8, l: 1 },
+changePoint: { s: 15, a: 12, d: 14, l: 0 },
+  changesTo: [ 0, 1, 123, 154, 241 ],
+ changeType: "normal"
+             },
+
+455: { name: "ルーマリー", itemName: "相思双逢", class: "A", attribute: "獣",
+uniqueValue: { s: 25.7, a: 15, d: 11.1, l: 1 },
+changePoint: { s: 10, a: 17, d: 13, l: 0 },
+  changesTo: [ 0, 1, 285, 374, 916 ],
+ changeType: "normal"
+             },
+
+456: { name: "白澤【覚醒】", itemName: "繰り和御魂", class: "SS", attribute: "獣",
+uniqueValue: { s: 29.72, a: 21.6, d: 17.35, l: 1 },
+changePoint: { s: 12, a: 24, d: 20, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+457: { name: "禍津【覚醒】", itemName: "括り荒御魂", class: "SS", attribute: "獣",
+uniqueValue: { s: 31.9, a: 18.2, d: 20.03, l: 1 },
+changePoint: { s: 12, a: 21, d: 23, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+458: { name: "鎮守オータムドラゴン", itemName: "秋穫のもふもふ毛", class: "SS", attribute: "地",
+uniqueValue: { s: 40.03, a: 15.75, d: 9.25, l: 1.1 },
+changePoint: { s: 15, a: 18, d: 22, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+459: { name: "黒麒麟・華天", itemName: "春雷の足音", class: "SS", attribute: "獣",
+uniqueValue: { s: 37.2, a: 18.9, d: 17.32, l: 1 },
+changePoint: { s: 14, a: 21, d: 20, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+460: { name: "星詠の天極主", itemName: "夜天流星雨", class: "SS", attribute: "霊",
+uniqueValue: { s: 50.9, a: 13.19, d: 18, l: 1.1 },
+changePoint: { s: 19, a: 15, d: 20, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+461: { name: "闇黒龍", itemName: "奈落の屠闇", class: "SS", attribute: "龍",
+uniqueValue: { s: 42, a: 14, d: 17.9, l: 1 },
+changePoint: { s: 16, a: 16, d: 20, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+462: { name: "ククノチ", itemName: "枝垂れ珠榊", class: "A", attribute: "霊",
+uniqueValue: { s: 24, a: 11.5, d: 13.8, l: 1 },
+changePoint: { s: 9, a: 13, d: 16, l: 0 },
+  changesTo: [ 0, 1, 496, 827 ],
+ changeType: "normal"
+             },
+
+463: { name: "エルシャトーレ", itemName: "極彩原石", class: "S", attribute: "地",
+uniqueValue: { s: 36, a: 14.24, d: 16.72, l: 1.3 },
+changePoint: { s: 14, a: 16, d: 19, l: 0 },
+  changesTo: [ 0, 1, 595 ],
+ changeType: "normal"
+             },
+
+464: { name: "燈蝙蝠", itemName: "玻璃の月球", class: "A", attribute: "魔",
+uniqueValue: { s: 26.33, a: 15.71, d: 9.04, l: 1.3 },
+changePoint: { s: 10, a: 18, d: 11, l: 0 },
+  changesTo: [ 0, 1, 80 ],
+ changeType: "normal"
+             },
+
+465: { name: "劇娘のレティ", itemName: "華組フィナーレ", class: "SS", attribute: "無",
+uniqueValue: { s: 36.31, a: 21.03, d: 11.57, l: 1 },
+changePoint: { s: 14, a: 24, d: 13, l: 0 },
+  changesTo: [ 0, 1, 784 ],
+ changeType: "normal"
+             },
+
+466: { name: "盲鬼ト浮鬼", itemName: "帰綱の形", class: "S", attribute: "獣",
+uniqueValue: { s: 28.5, a: 12.5, d: 15.5, l: 1 },
+changePoint: { s: 11, a: 14, d: 18, l: 0 },
+  changesTo: [ 0, 1, 468, 543, 652, 799 ],
+ changeType: "normal"
+             },
+
+467: { name: "青霄龍", itemName: "天空の波浪", class: "SS", attribute: "龍",
+uniqueValue: { s: 34.8, a: 14.9, d: 16.2, l: 1.3 },
+changePoint: { s: 13, a: 17, d: 18, l: 0 },
+  changesTo: [ 0, 1, 901 ],
+ changeType: "normal"
+             },
+
+468: { name: "ツミビト", itemName: "雫の途", class: "SS", attribute: "霊",
+uniqueValue: { s: 29, a: 17.15, d: 16.6, l: 1 },
+changePoint: { s: 11, a: 20, d: 19, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+469: { name: "陰陽師の弟子", itemName: "陽ノ練符", class: "S", attribute: "霊",
+uniqueValue: { s: 26.2, a: 13.8, d: 14.8, l: 1 },
+changePoint: { s: 10, a: 16, d: 17, l: 0 },
+  changesTo: [ 0, 1, 471, 647 ],
+ changeType: "normal"
+             },
+
+470: { name: "道を外れし者", itemName: "陰ノ憑符", class: "S", attribute: "霊",
+uniqueValue: { s: 36.6, a: 13.8, d: 12.3, l: 1 },
+changePoint: { s: 14, a: 16, d: 14, l: 0 },
+  changesTo: [ 0, 1, 472, 491, 757, 913 ],
+ changeType: "normal"
+             },
+
+471: { name: "晴朗な明察者", itemName: "五芒の結印", class: "SS", attribute: "霊",
+uniqueValue: { s: 32, a: 14.8, d: 18, l: 1 },
+changePoint: { s: 12, a: 17, d: 20, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+472: { name: "不道の満悦者", itemName: "蠱惑連呪", class: "SS", attribute: "魔",
+uniqueValue: { s: 42.6, a: 14.8, d: 13.3, l: 1 },
+changePoint: { s: 16, a: 17, d: 15, l: 0 },
+  changesTo: [ 0, 1, 913 ],
+ changeType: "normal"
+             },
+
+473: { name: "名もなき大波", itemName: "凪しらず", class: "S", attribute: "霊",
+uniqueValue: { s: 30.3, a: 12.3, d: 16.5, l: 1.3 },
+changePoint: { s: 12, a: 14, d: 19, l: 0 },
+  changesTo: [ 0, 1, 655, 746, 816 ],
+ changeType: "normal"
+             },
+
+474: { name: "夜叉姫【夕涼】", itemName: "夏空描く羽ペン", class: "SS", attribute: "獣",
+uniqueValue: { s: 32.42, a: 13.23, d: 15.25, l: 1.01 },
+changePoint: { s: 13, a: 15, d: 17, l: 0 },
+  changesTo: [ 0, 1, 250, 670 ],
+ changeType: "normal"
+             },
+
+475: { name: "レヴィアタン", itemName: "逆巻く海域", class: "SS", attribute: "龍",
+uniqueValue: { s: 43.51, a: 18.32, d: 13.07, l: 1 },
+changePoint: { s: 17, a: 21, d: 15, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+476: { name: "海太郎", itemName: "波千里", class: "A", attribute: "霊",
+uniqueValue: { s: 25.3, a: 13.2, d: 12.5, l: 1 },
+changePoint: { s: 10, a: 15, d: 14, l: 0 },
+  changesTo: [ 0, 1, 479, 697, 796, 956 ],
+ changeType: "normal"
+             },
+
+477: { name: "ヒデリガミ【熱波】", itemName: "炎天果", class: "S", attribute: "霊",
+uniqueValue: { s: 33.42, a: 11.9, d: 13.8, l: 1 },
+changePoint: { s: 13, a: 14, d: 16, l: 0 },
+  changesTo: [ 0, 1, 395, 643, 831, 848 ],
+ changeType: "normal"
+             },
+
+478: { name: "地を穿つ魔【熱波】", itemName: "冥土の辣醤油味", class: "SS", attribute: "魔",
+uniqueValue: { s: 30.9, a: 15.8, d: 14.5, l: 1 },
+changePoint: { s: 12, a: 18, d: 17, l: 0 },
+  changesTo: [ 0, 1, 138, 152, 788 ],
+ changeType: "normal"
+             },
+
+479: { name: "海御前", itemName: "翳の水沫", class: "S", attribute: "霊",
+uniqueValue: { s: 29.12, a: 15.05, d: 14.03, l: 1 },
+changePoint: { s: 11, a: 17, d: 16, l: 0 },
+  changesTo: [ 0, 1, 509, 654, 821 ],
+ changeType: "normal"
+             },
+
+480: { name: "嘆く者", itemName: "虚言の因", class: "A", attribute: "魔",
+uniqueValue: { s: 27.3, a: 11.6, d: 12.5, l: 1.3 },
+changePoint: { s: 11, a: 13, d: 14, l: 0 },
+  changesTo: [ 0, 1, 550 ],
+ changeType: "normal"
+             },
+
+481: { name: "埃鳩", itemName: "埃乱流", class: "A", attribute: "霊",
+uniqueValue: { s: 36, a: 10.6, d: 10.5, l: 1.3 },
+changePoint: { s: 14, a: 12, d: 12, l: 0 },
+  changesTo: [ 0, 1, 499 ],
+ changeType: "normal"
+             },
+
+482: { name: "白妙鹿天", itemName: "豊穣の恵", class: "SS", attribute: "獣",
+uniqueValue: { s: 38.19, a: 15.1, d: 16.7, l: 1.15 },
+changePoint: { s: 15, a: 17, d: 19, l: 0 },
+  changesTo: [ 0, 1, 904 ],
+ changeType: "normal"
+             },
+
+483: { name: "濡髪童子【幼姿】", itemName: "おもひで雨", class: "SS", attribute: "霊",
+uniqueValue: { s: 44.48, a: 13.1, d: 14.33, l: 1 },
+changePoint: { s: 17, a: 15, d: 16, l: 0 },
+  changesTo: [ 0, 1, 273, 742 ],
+ changeType: "normal"
+             },
+
+484: { name: "古代式ラモルタ", itemName: "ポテンティアコア", class: "SS", attribute: "地",
+uniqueValue: { s: 34.2, a: 16.72, d: 14.7, l: 1 },
+changePoint: { s: 13, a: 19, d: 17, l: 0 },
+  changesTo: [ 0, 1, 847 ],
+ changeType: "normal"
+             },
+
+485: { name: "ガルーダ", itemName: "飛翔する炯翼", class: "SS", attribute: "地",
+uniqueValue: { s: 45.9, a: 16.73, d: 9.37, l: 1 },
+changePoint: { s: 17, a: 19, d: 11, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+486: { name: "亡霊船フリゲート", itemName: "霧中航路", class: "S", attribute: "無",
+uniqueValue: { s: 40.2, a: 12.15, d: 12.05, l: 1 },
+changePoint: { s: 15, a: 14, d: 14, l: 0 },
+  changesTo: [ 0, 1, 603 ],
+ changeType: "normal"
+             },
+
+487: { name: "冥海からの強奪者", itemName: "紫霧ノ操舵", class: "SS", attribute: "魔",
+uniqueValue: { s: 37.8, a: 18.6, d: 10.8, l: 1 },
+changePoint: { s: 14, a: 21, d: 12, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+488: { name: "遊尾", itemName: "福華の結", class: "B", attribute: "獣",
+uniqueValue: { s: 30, a: 9.7, d: 10.22, l: 1.1 },
+changePoint: { s: 12, a: 11, d: 12, l: 0 },
+  changesTo: [ 0, 1, 410, 712, 735 ],
+ changeType: "normal"
+             },
+
+489: { name: "采牌妃", itemName: "緑燈裁駒", class: "SS", attribute: "霊",
+uniqueValue: { s: 33, a: 16.1, d: 17.6, l: 1 },
+changePoint: { s: 13, a: 18, d: 20, l: 0 },
+  changesTo: [ 0, 1, 966 ],
+ changeType: "normal"
+             },
+
+490: { name: "水母娘娘", itemName: "悠水濫々", class: "S", attribute: "霊",
+uniqueValue: { s: 39, a: 11, d: 13.9, l: 1 },
+changePoint: { s: 15, a: 13, d: 16, l: 0 },
+  changesTo: [ 0, 1, 684, 751, 844 ],
+ changeType: "normal"
+             },
+
+491: { name: "狐狗竜", itemName: "降霊の儀式", class: "SS", attribute: "魔",
+uniqueValue: { s: 39.03, a: 16.4, d: 13.9, l: 1.3 },
+changePoint: { s: 15, a: 19, d: 16, l: 0 },
+  changesTo: [ 0, 1, 757 ],
+ changeType: "normal"
+             },
+
+492: { name: "狢【仮装】", itemName: "いたずら結び", class: "A", attribute: "獣",
+uniqueValue: { s: 31.4, a: 12.55, d: 11.9, l: 1 },
+changePoint: { s: 12, a: 14, d: 14, l: 0 },
+  changesTo: [ 0, 1, 147 ],
+ changeType: "normal"
+             },
+
+493: { name: "アズライール", itemName: "冥魂の裁眼", class: "S", attribute: "魔",
+uniqueValue: { s: 35.1, a: 14.7, d: 10.7, l: 1 },
+changePoint: { s: 13, a: 17, d: 12, l: 0 },
+  changesTo: [ 0, 1, 556, 628 ],
+ changeType: "normal"
+             },
+
+494: { name: "傍灯のカロル", itemName: "寒夜の傍灯", class: "A", attribute: "霊",
+uniqueValue: { s: 36.3, a: 10.4, d: 11.7, l: 1.3 },
+changePoint: { s: 14, a: 12, d: 13, l: 0 },
+  changesTo: [ 0, 1, 110 ],
+ changeType: "normal"
+             },
+
+495: { name: "五十嵐・卍", itemName: "焙烙煙霞", class: "SS", attribute: "魔",
+uniqueValue: { s: 34.02, a: 15.05, d: 18.32, l: 1 },
+changePoint: { s: 13, a: 17, d: 21, l: 0 },
+  changesTo: [ 0, 1, 791 ],
+ changeType: "normal"
+             },
+
+496: { name: "紅酒のポジョン", itemName: "甘幸酒", class: "S", attribute: "獣",
+uniqueValue: { s: 33, a: 11.9, d: 15.8, l: 1 },
+changePoint: { s: 13, a: 14, d: 18, l: 0 },
+  changesTo: [ 0, 1, 582, 719, 992 ],
+ changeType: "normal"
+             },
+
+497: { name: "マグヌム・オプス", itemName: "リゾーマタ", class: "SS", attribute: "地",
+uniqueValue: { s: 38.16, a: 16.6, d: 13.1, l: 1.3 },
+changePoint: { s: 15, a: 19, d: 15, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+498: { name: "ピンヨリ", itemName: "こっこポーチ", class: "A", attribute: "霊",
+uniqueValue: { s: 31.2, a: 11, d: 12.25, l: 1 },
+changePoint: { s: 12, a: 13, d: 14, l: 0 },
+  changesTo: [ 0, 1, 775 ],
+ changeType: "normal"
+             },
+
+499: { name: "キキーモラ", itemName: "クリーンミトラー", class: "S", attribute: "獣",
+uniqueValue: { s: 39, a: 12.1, d: 12, l: 1 },
+changePoint: { s: 15, a: 14, d: 14, l: 0 },
+  changesTo: [ 0, 1, 699, 973 ],
+ changeType: "normal"
+             },
+
+500: { name: "星間を駆ける者", itemName: "後星からの呼応", class: "SS", attribute: "魔",
+uniqueValue: { s: 42.9, a: 14.7, d: 14.2, l: 1 },
+changePoint: { s: 16, a: 17, d: 16, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
 1001: { name: "アマツキツネ", itemName: "天翔る長尾", class: "SS", attribute: "霊",
 uniqueValue: { s: 40.2, a: 21.7, d: 12, l: 1 },
 changePoint: { s: 15, a: 25, d: 14, l: 0 },
