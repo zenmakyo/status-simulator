@@ -976,7 +976,7 @@ changePoint: { s: 14, a: 21, d: 17, l: 0 },
 139: { name: "さなぎ★", itemName: "幻獣の繭", class: "F", attribute: "無",
 uniqueValue: { s: 15, a: 4.5, d: 5.5, l: 1.4 },
 changePoint: { s: 0, a: 0, d: 0, l: 0 },
-  changesTo: [ 0, 1 ],
+  changesTo: [ 0, 1, 2, 3, 4, 139, 438, 140, 516 ],
  changeType: "normal"
              },
 
