@@ -172,7 +172,7 @@ function drawGrowthRouteText(ctx, text, x, y, maxWidth, lineHeight) {
 }
 
 
-// 画像をダウンロード
+// 画像を共有またはダウンロード
 function downloadGrowthRouteImage(canvas, format) {
     const mimeType = format === "jpeg"
         ? "image/jpeg"
@@ -182,12 +182,49 @@ function downloadGrowthRouteImage(canvas, format) {
         ? "jpg"
         : "png";
 
-    canvas.toBlob(blob => {
+    canvas.toBlob(async blob => {
         if (!blob) {
             alert("画像の作成に失敗しました。");
             return;
         }
 
+        const file = new File(
+            [blob],
+            `育成ルート.${extension}`,
+            { type: mimeType }
+        );
+
+        // ファイル共有に対応しているか確認
+        let canShareFile = false;
+
+        try {
+            canShareFile =
+                typeof navigator.share === "function" &&
+                typeof navigator.canShare === "function" &&
+                navigator.canShare({ files: [file] });
+        } catch (error) {
+            canShareFile = false;
+        }
+
+        // 対応していればスマホなどの共有メニューを開く
+        if (canShareFile) {
+            try {
+                await navigator.share({
+                    files: [file],
+                    title: "育成ルート"
+                });
+
+                return;
+
+            } catch (error) {
+                // ユーザーが共有をキャンセルした場合は何もしない
+                if (error.name === "AbortError") {
+                    return;
+                }
+            }
+        }
+
+        // 共有に対応していない場合は従来どおりダウンロード
         const url = URL.createObjectURL(blob);
         const link = document.createElement("a");
 
@@ -198,7 +235,10 @@ function downloadGrowthRouteImage(canvas, format) {
         link.click();
         document.body.removeChild(link);
 
-        URL.revokeObjectURL(url);
+        setTimeout(() => {
+            URL.revokeObjectURL(url);
+        }, 1000);
+
     }, mimeType, format === "jpeg" ? 0.92 : undefined);
 }
 
