@@ -225,6 +225,8 @@ function saveCurrentState() {
         adjustmentPoint: adjustmentPoint,
 
         isCocooned: isCocooned
+
+        routeHistory: getGrowthRouteSnapshot()
     };
 }
 
@@ -239,6 +241,8 @@ function restoreState(state) {
     adjustmentPoint = state.adjustmentPoint ?? 0;
 
     isCocooned = state.isCocooned;
+
+    restoreGrowthRouteSnapshot(state.routeHistory);
 
     // 表示をまとめて更新
     updateLevelPoints();
@@ -521,6 +525,8 @@ button.addEventListener("click", () => {
     // ==============================
 
     currentGenjuId = targetId;
+
+    recordGrowthRouteChange(currentGenjuId, rebirthCount);
 
     // レベル・割り振りポイントを更新
     updateLevelPoints();
@@ -1011,6 +1017,9 @@ updateLevelPoints();
 document.getElementById("rebirthCount").textContent = rebirthCount;
 updateRebirthColor();
 
+// 最初の育成ルートを初期化
+initializeGrowthRoute(currentGenjuId, rebirthCount);
+
 // 戻る・進むボタンの初期設定
 setupHistoryButtons();
 
@@ -1133,6 +1142,9 @@ function setupStatusLoadButton() {
         currentGenjuId = genjuId;
         currentLevel = level;
         rebirthCount = rebirth;
+
+        // 読み込んだ幻獣から新しい育成ルートを開始
+        initializeGrowthRoute(currentGenjuId, rebirthCount);
 
         statusPoint = {
             s: stamina,
