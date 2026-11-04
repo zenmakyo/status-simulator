@@ -224,7 +224,7 @@ function saveCurrentState() {
         allocationPoint: { ...allocationPoint },
         adjustmentPoint: adjustmentPoint,
 
-        isCocooned: isCocooned
+        isCocooned: isCocooned,
 
         routeHistory: getGrowthRouteSnapshot()
     };
