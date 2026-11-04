@@ -3160,7 +3160,7 @@ changePoint: { s: 15, a: 17, d: 19, l: 0 },
 451: { name: "ヘルヴォル", itemName: "戦天の庇護", class: "A", attribute: "霊",
 uniqueValue: { s: 34.55, a: 8.02, d: 14.05, l: 1 },
 changePoint: { s: 13, a: 9, d: 16, l: 0 },
-  changesTo: [ 0, 1, 280 ],
+  changesTo: [ 0, 1, 126, 280 ],
  changeType: "normal"
              },
 
@@ -4287,7 +4287,7 @@ changePoint: { s: 16, a: 17, d: 16, l: 0 },
 612: { name: "天魚", itemName: "うおしずく", class: "B", attribute: "霊",
 uniqueValue: { s: 29.55, a: 9.1, d: 8.55, l: 1 },
 changePoint: { s: 11, a: 11, d: 10, l: 0 },
-  changesTo: [ 0, 1, 68 ],
+  changesTo: [ 0, 1, 68, 181, 890 ],
  changeType: "normal"
              },
 
@@ -7017,6 +7017,20 @@ changePoint: { s: 15, a: 25, d: 14, l: 0 },
 1002:{ name: "祟眼のアイナ", itemName: "天翔る長尾", class: "SS", attribute: "霊",
 uniqueValue: { s: 31.5, a: 16.25, d: 20.3, l: 1 },
 changePoint: { s: 12, a: 19, d: 23, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+1003:{ name: "夜刀神", itemName: "神域隔つ界標", class: "SS", attribute: "龍",
+uniqueValue: { s: 42, a: 13.4, d: 23.6, l: 1 },
+changePoint: { s: 16, a: 15, d: 27, l: 0 },
+  changesTo: [ 0, 1 ],
+ changeType: "normal"
+             },
+
+1004:{ name: "メタトロン", itemName: "天書の黒晶", class: "SS", attribute: "無",
+uniqueValue: { s: 39.6, a: 24.6, d: 13.2, l: 2 },
+changePoint: { s: 15, a: 28, d: 15, l: 0 },
   changesTo: [ 0, 1 ],
  changeType: "normal"
              },
