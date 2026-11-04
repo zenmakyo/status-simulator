@@ -25,11 +25,16 @@ const growthRouteExportSettings = {
     // 転生ごとの見出し色
     // キーが転生回数、値が背景色
     rebirthHeaderColors: {
-        0: "#d9e6f2",
-        1: "#dcebd8",
-        2: "#f5e2c8",
-        3: "#eadcf2",
-        4: "#f2dcdc"
+        0: "rgba(220, 221, 221, 0.5)",
+        1: "rgba(187, 200, 230, 0.5)",
+        2: "rgba(44, 169, 225, 0.5)",
+        3: "rgba(102, 255, 102, 0.5)",
+        4: "rgba(255, 255, 0, 0.5)",
+        5: "rgba(255, 204, 0, 0.5)",
+        6: "rgba(255, 153, 0, 0.5)",
+        7: "rgba(204, 0, 0, 0.5)",
+        8: "rgba(255, 51, 204, 0.5)",
+        "9+": "rgba(153, 0, 204, 0.5)"
     },
 
     // 色が設定されていない転生回数の見出し色
@@ -262,14 +267,10 @@ function exportGrowthRouteImage(format = "png") {
             rebirth
         });
 
-        drawRows.push({
-            type: "header"
-        });
-
         const entries = groupedRoutes.get(rebirth);
 
-        // 同じ転生内は記録順（時系列順）
-        entries.forEach(entry => {
+        // 同じ転生内は逆順（新しい変化を上にする）
+        [...entries].reverse().forEach(entry => {
             const genju = genjuData[entry.genjuId];
 
             if (!genju) {
@@ -294,11 +295,6 @@ function exportGrowthRouteImage(format = "png") {
 
     drawRows.forEach(row => {
         if (row.type === "rebirth") {
-            totalHeight += lineHeight + padding * 2;
-            return;
-        }
-
-        if (row.type === "header") {
             totalHeight += lineHeight + padding * 2;
             return;
         }
@@ -350,9 +346,15 @@ function exportGrowthRouteImage(format = "png") {
     drawRows.forEach(row => {
         // 転生見出し
         if (row.type === "rebirth") {
-            const color =
-                settings.rebirthHeaderColors[row.rebirth] ??
-                settings.defaultRebirthHeaderColor;
+            const color = row.rebirth >= 9
+                ? (
+                    settings.rebirthHeaderColors["9+"] ??
+                    settings.defaultRebirthHeaderColor
+                )
+                : (
+                    settings.rebirthHeaderColors[row.rebirth] ??
+                    settings.defaultRebirthHeaderColor
+                );
 
             const height = lineHeight + padding * 2;
 
@@ -370,46 +372,6 @@ function exportGrowthRouteImage(format = "png") {
                 margin + padding,
                 y + padding
             );
-
-            y += height;
-            return;
-        }
-
-        // 列見出し
-        if (row.type === "header") {
-            const height = lineHeight + padding * 2;
-
-            const labels = [
-                "幻獣名",
-                "クラス",
-                "変化アイテム名"
-            ];
-
-            ctx.font = `bold ${fontSize}px sans-serif`;
-            ctx.fillStyle = "#eeeeee";
-
-            ctx.fillRect(margin, y, tableWidth, height);
-
-            ctx.strokeStyle = settings.borderColor;
-            ctx.strokeRect(margin, y, tableWidth, height);
-
-            labels.forEach((label, index) => {
-                ctx.fillStyle = settings.textColor;
-
-                ctx.fillText(
-                    label,
-                    columnX[index] + padding,
-                    y + padding
-                );
-            });
-
-            // 縦罫線
-            ctx.beginPath();
-            ctx.moveTo(columnX[1], y);
-            ctx.lineTo(columnX[1], y + height);
-            ctx.moveTo(columnX[2], y);
-            ctx.lineTo(columnX[2], y + height);
-            ctx.stroke();
 
             y += height;
             return;
