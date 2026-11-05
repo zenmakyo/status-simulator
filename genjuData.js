@@ -1963,7 +1963,7 @@ changePoint: { s: 13, a: 18, d: 13, l: 0 },
 280: { name: "高潔なる選定者", itemName: "エーデルワイス", class: "S", attribute: "霊",
 uniqueValue: { s: 34.8, a: 14.7, d: 12.55, l: 1 },
 changePoint: { s: 13, a: 17, d: 14, l: 0 },
-  changesTo: [ 0, 1, 284, 437, 540, 957 ],
+  changesTo: [ 0, 1, 284, 437, 540, 957, 1004 ],
  changeType: "normal"
              },
 
@@ -5729,7 +5729,7 @@ changePoint: { s: 14, a: 15, d: 13, l: 0 },
 818: { name: "常世の車掌ワダチ", itemName: "黒轍の官帽", class: "S", attribute: "魔",
 uniqueValue: { s: 30, a: 12.7, d: 16.1, l: 1 },
 changePoint: { s: 12, a: 15, d: 18, l: 0 },
-  changesTo: [ 0, 1, 894 ],
+  changesTo: [ 0, 1, 894, 1003 ],
  changeType: "normal"
              },
 
