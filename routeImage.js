@@ -242,16 +242,133 @@ function downloadGrowthRouteImage(canvas, format) {
     }, mimeType, format === "jpeg" ? 0.92 : undefined);
 }
 
+// ---------- 育成ルートのプレビュー画面 ----------
+function showGrowthRoutePreview(canvas, previewWindow, format) {
+    const doc = previewWindow.document;
+
+    // プレビュー画面のHTML
+    doc.open();
+    doc.write(`
+        <!DOCTYPE html>
+        <html lang="ja">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>育成ルートプレビュー</title>
+
+            <style>
+                * {
+                    box-sizing: border-box;
+                }
+
+                body {
+                    margin: 0;
+                    padding: 20px;
+                    background: #f3f3f3;
+                    font-family: sans-serif;
+                    text-align: center;
+                }
+
+                .preview-container {
+                    max-width: 1000px;
+                    margin: 0 auto;
+                }
+
+                .button-area {
+                    display: flex;
+                    justify-content: center;
+                    gap: 12px;
+                    margin-bottom: 20px;
+                    flex-wrap: wrap;
+                }
+
+                button {
+                    padding: 12px 24px;
+                    border: none;
+                    border-radius: 6px;
+                    font-size: 16px;
+                    cursor: pointer;
+                }
+
+                #saveButton {
+                    background: #3988d6;
+                    color: white;
+                }
+
+                #backButton {
+                    background: #777;
+                    color: white;
+                }
+
+                #previewImage {
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                    background: white;
+                    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+                }
+            </style>
+        </head>
+
+        <body>
+            <div class="preview-container">
+
+                <div class="button-area">
+                    <button id="saveButton">
+                        画像を保存
+                    </button>
+
+                    <button id="backButton">
+                        この画面を閉じる
+                    </button>
+                </div>
+
+                <img id="previewImage" alt="育成ルート">
+
+            </div>
+        </body>
+        </html>
+    `);
+    doc.close();
+
+    // 生成済みCanvasをプレビュー表示
+    doc.getElementById("previewImage").src =
+        canvas.toDataURL("image/png");
+
+    // 保存ボタン
+    doc.getElementById("saveButton").addEventListener("click", () => {
+        downloadGrowthRouteImage(canvas, format);
+    });
+
+    // プレビュー画面を閉じるボタン
+    doc.getElementById("backButton").addEventListener("click", () => {
+        previewWindow.close();
+    });
+
+    previewWindow.focus();
+}
 
 // ---------- 育成ルート画像の出力 ----------
 function exportGrowthRouteImage(format = "png") {
-    if (growthRoute.length === 0) {
+
+    // 出力時点の最新ルートを取得
+    const routeSnapshot = getGrowthRouteSnapshot();
+
+    if (routeSnapshot.length === 0) {
         alert("出力する育成ルートがありません。");
         return;
     }
 
     if (typeof genjuData === "undefined") {
         alert("幻獣データを読み込めません。");
+        return;
+    }
+
+    // 新しいタブを開く
+    const previewWindow = window.open("", "_blank");
+
+    if (!previewWindow) {
+        alert("プレビュー画面を開けませんでした。ポップアップを許可してください。");
         return;
     }
 
@@ -286,7 +403,7 @@ function exportGrowthRouteImage(format = "png") {
     // 転生回数ごとにまとめる
     const groupedRoutes = new Map();
 
-    growthRoute.forEach(entry => {
+    routeSnapshot.forEach(entry => {
         if (!groupedRoutes.has(entry.rebirth)) {
             groupedRoutes.set(entry.rebirth, []);
         }
@@ -472,7 +589,7 @@ function exportGrowthRouteImage(format = "png") {
         y += height;
     });
 
-    downloadGrowthRouteImage(canvas, format);
+    showGrowthRoutePreview(canvas, previewWindow, format);
 }
 
 
