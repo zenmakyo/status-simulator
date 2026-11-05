@@ -173,7 +173,7 @@ function drawGrowthRouteText(ctx, text, x, y, maxWidth, lineHeight) {
 
 
 // 画像を共有またはダウンロード
-function downloadGrowthRouteImage(canvas, format) {
+function downloadGrowthRouteImage(canvas, format, shareWindow = window) {
     const mimeType = format === "jpeg"
         ? "image/jpeg"
         : "image/png";
@@ -194,22 +194,24 @@ function downloadGrowthRouteImage(canvas, format) {
             { type: mimeType }
         );
 
+        const shareNavigator = shareWindow.navigator;
+
         // ファイル共有に対応しているか確認
         let canShareFile = false;
 
         try {
             canShareFile =
-                typeof navigator.share === "function" &&
-                typeof navigator.canShare === "function" &&
-                navigator.canShare({ files: [file] });
+                typeof shareNavigator.share === "function" &&
+                typeof shareNavigator.canShare === "function" &&
+                shareNavigator.canShare({ files: [file] });
         } catch (error) {
             canShareFile = false;
         }
 
-        // 対応していればスマホなどの共有メニューを開く
+        // 対応していれば共有メニューを開く
         if (canShareFile) {
             try {
-                await navigator.share({
+                await shareNavigator.share({
                     files: [file],
                     title: "育成ルート"
                 });
@@ -217,23 +219,23 @@ function downloadGrowthRouteImage(canvas, format) {
                 return;
 
             } catch (error) {
-                // ユーザーが共有をキャンセルした場合は何もしない
+                // 共有をキャンセルした場合はプレビューに留まる
                 if (error.name === "AbortError") {
                     return;
                 }
             }
         }
 
-        // 共有に対応していない場合は従来どおりダウンロード
+        // 共有に対応していない場合はダウンロード
         const url = URL.createObjectURL(blob);
-        const link = document.createElement("a");
+        const link = shareWindow.document.createElement("a");
 
         link.href = url;
         link.download = `育成ルート.${extension}`;
 
-        document.body.appendChild(link);
+        shareWindow.document.body.appendChild(link);
         link.click();
-        document.body.removeChild(link);
+        shareWindow.document.body.removeChild(link);
 
         setTimeout(() => {
             URL.revokeObjectURL(url);
@@ -337,7 +339,7 @@ function showGrowthRoutePreview(canvas, previewWindow, format) {
 
     // 保存ボタン
     doc.getElementById("saveButton").addEventListener("click", () => {
-        downloadGrowthRouteImage(canvas, format);
+    downloadGrowthRouteImage(canvas, format, previewWindow);
     });
 
     // プレビュー画面を閉じるボタン
